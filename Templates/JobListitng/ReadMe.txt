@@ -9,3 +9,5 @@ JobListing: This template demonstrates the following capabilities
    o css embedding
    o Unsubscribe Link
    o Multiple part HTML substitution
+   
+This Postman example sends two emails, each with a different set of personalized job listings
