@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+    </title>
+</head>
+
+<body>
+    <p></p>
+    <p style="font-size: 18px;"><span style="color: {{header_color}}; font-size: 22px;">&nbsp;</span></p>
+    <h2 style="font-size: 22px; height: 30px; color: {{header_color}}; border-bottom: dashed 1px gray;">Thanks for Your Order</h2>
+	<div style="width: 100%; padding: 10px; background-color: {{header_box_color}};">
+        <img alt="" src="https://db.tt/yJkC8Uty">&nbsp; Your order ID is <strong>#{{order_id}}</strong>. A summary of your order
+        is shown below. To view the status of your order <a data-msys-linkname="order" data-msys-clicktrack="1" href='{{order_status}}'>click here</a>.
+    </div>
+    <p></p>
+	<table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+        <tbody>
+            <tr>
+                <td id="Left" valign="top" width="50%">
+                    <h3 style="font-family: Arial; font-size: 18px;">Shipping Address</h3>
+                    <div style="font-family: Arial; font-size: 12px;">
+                        <strong>{{first_name}} {{last_name}}</strong><br>
+                        {{shipping_street_addr1}}<br>
+                        {{if shipping_street_addr2 and shipping_street_addr2 != ""}} {{shipping_street_addr2}}<br> {{end}}
+                        {{shipping_city}}, {{shipping_state}} {{shipping_zip}}<br>
+                        {{shipping_country}}<br>
+                        {{shipping_phone}}
+                        <dl></dl>
+                    </div>
+                    <!--
+                    <div style="display: none">Email: </div>
+                    -->
+                </td>
+                <td id="Right" valign="top" width="50%">
+                    <h3 style="font-family: Arial; font-size: 18px;">Billing Address</h3>
+                    <div style="font-family: Arial; font-size: 12px;">
+                        <strong>{{first_name}} {{last_name}}</strong><br>
+                        {{billing_street_addr1}}<br>
+                        {{if billing_street_addr2 and billing_street_addr2 != ""}} {{billing_street_addr2}}<br> {{end}}
+                        {{billing_city}}, {{billing_state}} {{billing_zip}}<br>
+                        {{billing_country}}<br>
+                        {{billing_phone}}
+                        <dl>
+                        </dl>
+                    </div>
+                    <!--
+                    <div style="">Email: {{email_address}}</div>
+                    -->
+                </td>
+                <td id="Right" valign="top" width="50%">
+                    <a data-msys-linkname="Home" style="text-decoration:none; color:#000000;" href="{{company_home_url}}" target="_blank">
+                          <img alt="New drops from the communities you're subscribed to." src="{{company_logo}}" width="75" height="20" border="0" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; padding-bottom: 0; display: inline !important; vertical-align: bottom;">
+                        </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <p><br>
+    <br>
+    </p>
+
+
+    <div style="font-size:12px;">
+        <h3 style='font-size:18px'>Order Comments</h3>
+        {{order_generic_comments}}. {{order_specific_comments}}
+    </div>
+    <p></p>
+
+    <h3 style="font-size: 18px;">Your Order Contains...</h3>
+
+
+    <p>
+    </p>
+
+
+    <table cellpadding="0" cellspacing="0" id="CheckoutCartGrid" width="100%">
+        <tr>
+            <td nowrap style="font-family:Arial; font-size:12px; background-color:#020B6F; color:white; padding:5px; font-weight:bold">Cart Items</td>
+
+            <td nowrap="nowrap" style="font-family:Arial; font-size:12px; background-color:#020B6F; color:white; padding:5px; font-weight:bold" width="100">SKU</td>
+
+            <td nowrap="nowrap" style="font-family:Arial; font-size:12px; background-color:#020B6F; color:white; padding:5px; font-weight:bold" width="100">Qty</td>
+
+            <td nowrap="nowrap" style="font-size:12px; background-color:#020B6F; color:white; padding:5px; font-weight:bold" width="150">Item Price</td>
+
+            <td align="right" nowrap="nowrap" style="font-family:Arial; font-size:12px; background-color:#020B6F; color:white; padding:5px; font-weight:bold" width="200">Item Total</td>
+        </tr>
+    </table>
+
+	{{each productlist}}
+    <table cellpadding="0" cellspacing="0" style="border: 1px solid #c7d7db;" width="100%">
+        <tr>
+            <td style="padding:5px; font-size:12px; border-bottom:solid 1px #CACACA">
+                <strong>{{loop_var.item_name}}</strong><br>
+
+
+                <table style="font-family: Arial; font-size:11px">
+                    {{each productlist.line_details}}
+                    <tr>
+                        <td>{{line_details.description}}</td>
+
+                        <td>{{line_details.value}}</td>
+                    </tr>
+					{{end}}   
+                </table>
+            </td>
+
+            <td style="padding:5px; font-size:12px; border-bottom:solid 1px #CACACA" width="100">{{loop_vars.productlist.sku}}</td>
+
+            <td style="padding:5px; font-size:12px; border-bottom:solid 1px #CACACA" width="100">{{loop_vars.productlist.quantity}}</td>
+
+            <td style="padding:5px; font-size:12px; border-bottom:solid 1px #CACACA" width="150">{{loop_vars.productlist.item_price}}</td>
+
+            <td align="right" style="padding:5px; font-size:12px; border-bottom:solid 1px #CACACA" width="200"><strong>{{loop_vars.productlist.item_total}}</strong>
+            </td>
+        </tr>
+    </table>
+	{{end}}
+
+    <table cellpadding="4" cellspacing="0" id="CheckoutCartGrid" width="100%">
+        <tr>
+            <td align="right" style="font-family: Arial; font-size:12px"><strong>Subtotal:</strong>
+            </td>
+
+            <td align="right" style="font-family:Arial; font-size:12px" width="100"><strong>{{sub_total}}</strong>
+            </td>
+        </tr>
+    </table>
+
+
+    <table cellpadding="4" cellspacing="0" id="CheckoutCartGrid" width="100%">
+        <tr>
+            <td align="right" style="font-family: Arial; font-size:12px"><strong>Shipping:</strong>
+            </td>
+
+            <td align="right" style="font-family:Arial; font-size:12px" width="100"><strong>{{shipping}}</strong>
+            </td>
+        </tr>
+    </table>
+
+
+    <table cellpadding="4" cellspacing="0" id="CheckoutCartGrid" width="100%">
+        <tr>
+            <td align="right" style="font-family: Arial; font-size:12px"><strong>Grand Total:</strong>
+            </td>
+
+            <td align="right" style="font-family:Arial; font-size:12px" width="100"><strong>{{grand_total}}</strong>
+            </td>
+        </tr>
+    </table>
+
+
+    <p style="margin-top: 12px"><strong>{{company_name}}</strong><br>
+    <a href="http://ridefullgas.com/">{{company_url}}</a>
+    </p>
+
+    <hr size="1" style="height: 1px; border-style: none; color: #444; background: #000; margin-top: 8px">
+
+    <p></p>
+</body>
+</html>
