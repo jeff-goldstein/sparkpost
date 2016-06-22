@@ -1,0 +1,247 @@
+{
+	"options": {
+		"open_tracking": true,
+		"click_tracking": true
+	},
+	"content": {
+		"from": {
+			"name": "Outdoor Man",
+			"email": "support@outdoorman.com"
+		},
+		"template_id": "retail",
+		"use_draft_template": false
+	},
+	"campaign_id": "Marketing: Daily Promotional",
+	"substitution_data": {
+	    "subject" : "More Wonderful Items Picked for You",
+		"link_format": "style= 'font-family: arial, helvetica, sans-serif; color: rgb(85,85, 90); font-size: 12px; text-decoration: none;'",
+		"dynamic_html":     {
+        "member_level" : "<strong>GOLD</strong>",
+        "next1" : "<td align='left' class='ClearCell' style='border-right-width: 1px; border-right-style: solid; border-right-color: rgb(215, 213, 213); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(215, 213, 213);' valign='top' width='50%'><table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse;'><tbody><tr><td align='left' id='Box2LeftPadding' style='padding: 20px;' valign='top'><table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse;'><tbody><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(100, 100, 100); font-size: 15px; line-height: 19px; font-weight: bold; padding-bottom: 12px;' valign='top'><div class='mktEditable' id='Box2LeftPre'>NEXT WEEK</div></td></tr><tr><td style='padding-bottom: 20px;' valign='top'><div class='mktEditable' id='Box2LeftGraphic'><img alt='' height='182' src=https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_alps_1420x720.jpg width='360' /></div></td></tr><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(100, 100, 100); font-size: 18px; line-height: 22px; font-weight: bold; padding-bottom: 10px;' valign='top'><div class='mktEditable' id='Box2LeftSubhead'>ALPS Mountaineering On Sale Next Month</div></td></tr><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(100, 100, 100); font-size: 13px; line-height: 17px; padding-bottom: 15px;' valign='top'><div class='mktEditable' id='Box2LeftBody'>The Razor is a mummy version of our Fleece Cover. It can be used year round - as an accessory or as a standalone bag. It is a great 'accessory', even if you already have several bags. It can help add extra warmth on those extra cold nights. As a standalone bag, it can be used in warmer temperatures when you only need a very lightweight bag. With a bag that works, whether it is warm or cold, and with mummy or rectangle bags, you can't go wrong with this choice... a value that lasts all year long!</div></td></tr><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(255, 255, 255); font-size: 15px; line-height: 19px;' valign='top'><div class='mktEditable' id='Box2LeftCTA'><span style='color: rgb(250, 155, 60);'><strong><a data-msys-linkname=\"news\" href='http://www.steepandcheap.com/rc/alps-mountaineering-on-sale' style='color: rgb(250, 155, 60); text-decoration: none;' target='_blank'>Read More &gt;</a></strong></span></div></td></tr></tbody></table></td></tr></tbody></table></td>",
+        "job1" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"https://www.messagesystems.com/careers\">Inside Sales Representative, San Francisco, CA</a>",
+        "job2" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"https://www.messagesystems.com/careers\">Sales Development Representative, San Francisco, CA</a>",
+        "job3" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"https://www.messagesystems.com/careers\">Social Media Marketing, San Francisco, CA</a>",
+        "job4" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Platform Developer, Columbia, MD</a>",
+        "job5" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Rain Catcher & Beer Drinker, Seattle, WA</a>",
+        "17823": {
+            "url": "http://www.steepandcheap.com/rc/alps-mountaineering-on-sale",
+            "height" : "720",
+            "width" : "1420",
+            "price" : "$355.00",
+            "reduction" : "$10",
+            "title": "ALPS Mountaineering On Sale",
+            "owner" : "",
+            "category" : "Outdoor",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/alps.jpg"
+        },
+        "18056": {
+            "url": "http://www.steepandcheap.com/rc/ski-snowboard-clearance",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "$199.99 and Up",
+            "reduction" : "Up To 62%",
+            "owner" : "EggWedge",
+            "category" : "Outdoor",
+            "title": "Ski & Snowboard",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_skisnowboard_1200x952.jpg"
+        },
+        "18111": {
+            "url": "http://www.steepandcheap.com/rc/mountain-hardwear-on-sale",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "$259.00",
+            "reduction" : "Up To 65% Off",
+            "category" : "Outdoor",
+            "title": "Mountain Hardwear On Sale",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_MHW_1200x952.jpg"
+        },
+        "18152": {
+            "url": "http://www.steepandcheap.com/rc/outdoor-research-on-sale",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "$295.00",
+            "reduction" : "Up to 60% Off",
+            "owner" : "Stanza",
+            "category" : "Research",
+            "title": "Outdoor Research On Sale",
+            "image": "https://dl.dropboxusercontent.com/u/outdoor/fashion/SAC_OR_1200x952.jpg"
+        },
+        "18289": {
+            "url": "http://www.steepandcheap.com/rc/patagonia-on-sale",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "$24",
+            "reduction" : "Up to 65% Off",
+            "owner" : "Patagonia",
+            "category" : "Fashion",
+            "title": "Apparel, Outerwear & More From Patagonia",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_patagonia_1200x952.jpg"
+        },
+        "18315": {
+            "url": "http://www.steepandcheap.com/rc/mens-shorts-boardshorts-on-sale",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "$33.33",
+            "reduction" : "7%",
+            "onwer" : "Board",
+            "category" : "Clothing",
+            "title": "Men's Shorts & Boardshorts On Sale",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_mensshorts_1200x952.jpg"
+        },
+        "18396": {
+            "url": "http://www.steepandcheap.com/rc/the-north-face-on-sale",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "$34",
+            "reduction" : "Up to 65% Off",
+            "owner" : "gonza",
+            "category" : "Relaxed Fashion",
+            "title": "The North Face On Sale",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_TNF_1200x952.jpg"
+        },
+        "18405": {
+            "url": "http://www.steepandcheap.com/rc/backpacks-on-sale",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "$125.45",
+            "reduction" : "84%",
+            "owner" : "EggWedge",
+            "category" : "Backpacks",
+            "title": "Backpacks On Sale",
+            "image" : "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_packs_1200x952.jpg"
+        },
+        "18408": {
+            "url": "http://www.steepandcheap.com/rc/dakine-on-sale",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "$238",
+            "reduction" : "Free Shipping",
+            "owner" : "EggWedge",
+            "category" : "Dakine",
+            "title": "Dakine On Sale",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_dakine_1200x952.jpg"
+        },
+        "18439": {
+            "url": "http://www.steepandcheap.com/rc/prana-on-sale",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "$55.",
+            "reduction" : "Up to 60% Off",
+            "category" : "Clothing",
+            "title": "Prana On Sale",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_prana_1200x952.jpg"
+        },
+        "18454": {
+            "url": "http://www.steepandcheap.com/rc/salomon-on-sale",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "$55",
+            "reduction" : "Up to 55% Off",
+            "owner" : "Salomon",
+            "category" : "Hicking Boots",
+            "title": "Salomon On Sale",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_salomen_1200x952.jpg"
+        },
+        "18465": {
+            "url": "http://www.steepandcheap.com/rc/sunglasses-on-sale",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "€65",
+            "reduction" : "€10 or more, plus free shipping",
+            "owner" : "Style",
+            "category" : "Oakley",
+            "title": "Premium Sunglasses On Sale",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_sunglasses_1200x952.jpg"
+        }
+    },
+		"default_personal": ["personal1", "personal2"],
+		"default_news": ["next1"],
+		"override_standard_height" : "350",
+        "override_standard_width" : "550",
+        "override_standard_height_long" : "160",
+        "override_standard_width_long" : "535",
+        "backgroundColor" : "#ffffff",
+        "company_home_url" : "www.sparkpost.com",
+        "company_logo" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTVYSp0xUPD8yNMYOyTS20VZBwbzt4J-pjta3FtjcT_0rM-cj2o"
+    },
+	"recipients": [{
+		"return_path": "postman@sparkpost.com",
+		"address": {
+			"email": "jeff.goldstein@sparkpost.com"
+		},
+		"substitution_data": {
+			"first_name": "Sam the Man 2",
+			"job": ["job3", "job1"],
+			"news": ["next1"],
+			"leadDrop": {
+				"id": "18465",
+				"url": ""
+			},
+			"grouping": [{
+				"column": [{
+					"id": "18111",
+					"url": ""
+				}, {
+					"id": "18289",
+					"url": ""
+				}]
+			}, {
+				"column": [{
+					"id": "18439",
+					"url": ""
+				}, {
+					"id": "18408",
+					"url": ""
+				}]
+			}, {
+				"column": [{
+					"id": "18315",
+					"url": ""
+				}]
+			},{
+				"down": [{
+					"id": "18405",
+					"url": ""
+				},{
+					"id": "18454",
+					"url": ""
+				},{
+					"id": "18465",
+					"url": ""
+				}]
+			}]
+		}
+	},
+	{
+		"return_path": "postman@sparkpost.com",
+		"address": {
+			"email": "jeff.goldstein@messagesystems.com"
+		},
+		"substitution_data": {
+			"first_name": "Mountain Jeff",
+			"job": ["job4", "job5"],
+			"news": [],
+			"leadDrop": {
+				"id": "18465",
+				"url": ""
+			},
+			"grouping": [{
+				"column": [{
+					"id": "18315",
+					"url": ""
+				}]
+			},{
+				"down": [{
+					"id": "18396",
+					"url": ""
+				},{
+					"id": "18439",
+					"url": ""
+				},{
+					"id": "18289",
+					"url": ""
+				}]
+			}]
+		}
+	}]
+}
