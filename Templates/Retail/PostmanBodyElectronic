@@ -1,0 +1,421 @@
+{
+	"options": {
+		"open_tracking": true,
+		"click_tracking": true
+	},
+	"content": {
+		"from": {
+			"name": "Retail Deals",
+			"email": "support@deals.com"
+		},
+		"template_id": "retail",
+		"use_draft_template": false
+	},
+	"campaign_id": "Marketing: Daily Promotional",
+	"substitution_data": {
+	    "subject" : "More Wonderful Items Picked for You",
+		"link_format": "style= 'font-family: arial, helvetica, sans-serif; color: rgb(85,85, 90); font-size: 12px; text-decoration: none;'",
+		"dynamic_html":     {
+        "member_level" : "<strong>GOLD</strong>",
+        "next1" : "<td align='left' class='ClearCell' style='border-right-width: 1px; border-right-style: solid; border-right-color: rgb(215, 213, 213); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(215, 213, 213);' valign='top' width='50%'><table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse;'><tbody><tr><td align='left' id='Box2LeftPadding' style='padding: 20px;' valign='top'><table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse;'><tbody><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(100, 100, 100); font-size: 15px; line-height: 19px; font-weight: bold; padding-bottom: 12px;' valign='top'><div class='mktEditable' id='Box2LeftPre'>NEXT WEEK</div></td></tr><tr><td style='padding-bottom: 20px;' valign='top'><div class='mktEditable' id='Box2LeftGraphic'><img alt='' height='182' src=https://dl.dropboxusercontent.com/u/4387255/electronics/drum.jpeg width='182' /></div></td></tr><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(100, 100, 100); font-size: 18px; line-height: 22px; font-weight: bold; padding-bottom: 10px;' valign='top'><div class='mktEditable' id='Box2LeftSubhead'>Alesis DM10 Studio Kit Six-Piece Professional Electronic Drum Set</div></td></tr><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(100, 100, 100); font-size: 13px; line-height: 17px; padding-bottom: 15px;' valign='top'><div class='mktEditable' id='Box2LeftBody'>The DM10 Studio Kit is a professional, six-piece electronic drum set with the groundbreaking DM10 drum module, natural-feeling RealHead drum pads, low-noise DMPad Cymbals, and the compact, flexible StageRack. You will immediately notice the DM10’s outstanding sound quality. This new drum sound module contains authentic drum, cymbal, and percussion sounds built from real samples of classic studio drums and prized cymbals. Drummers will find some of the most in-demand acoustic drum sounds from legendary drum brands, a huge arsenal of top producers' go-to snare drums, real American, Canadian, Chinese, and Turkish cymbals, and a choice selection of classic drum machine and electronic percussion sounds that have fueled the biggest hit records.</div></td></tr><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(255, 255, 255); font-size: 15px; line-height: 19px;' valign='top'><div class='mktEditable' id='Box2LeftCTA'><span style='color: rgb(250, 155, 60);'><strong><a data-msys-linkname=\"news\" href='http://page.messagesystems.com/F4RLf008r0S0w165000DuC5' style='color: rgb(250, 155, 60); text-decoration: none;' target='_blank'>Read More &gt;</a></strong></span></div></td></tr></tbody></table></td></tr></tbody></table></td>",
+        "next3" : "<td align='left' class='ClearCell' style='border-right-width: 1px; border-right-style: solid; border-right-color: rgb(215, 213, 213); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(215, 213, 213);' valign='top' width='50%'><table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse;'><tbody><tr><td align='left' id='Box2LeftPadding' style='padding: 20px;' valign='top'><table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse;'><tbody><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(100, 100, 100); font-size: 15px; line-height: 19px; font-weight: bold; padding-bottom: 12px;' valign='top'><div class='mktEditable' id='Box2LeftPre'>NEXT WEEK</div></td></tr><tr><td style='padding-bottom: 20px;' valign='top'><div class='mktEditable' id='Box2LeftGraphic'><img alt='' height='182' src=https://dl.dropboxusercontent.com/u/4387255/electronics/tomtom_gps.jpeg width='182' /></div></td></tr><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(100, 100, 100); font-size: 18px; line-height: 22px; font-weight: bold; padding-bottom: 10px;' valign='top'><div class='mktEditable' id='Box2LeftSubhead'>TomTom VIA 1605TM 6-Inch GPS Navigator with Lifetime Traffic & Maps</div></td></tr><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(100, 100, 100); font-size: 13px; line-height: 17px; padding-bottom: 15px;' valign='top'><div class='mktEditable' id='Box2LeftBody'>Once you drive with a TomTom device, you’ll never want to drive without one. TomTom created the first digital maps for drivers; we are a world leader in navigation. At TomTom, we realize that the best in-car navigation should be easy to use and have the best quality maps. We’re here to ensure your journey is smooth, from start to finish.</div></td></tr><tr><td style='font-family: Arial, Helvetica, sans-serif; color: rgb(255, 255, 255); font-size: 15px; line-height: 19px;' valign='top'><div class='mktEditable' id='Box2LeftCTA'><span style='color: rgb(250, 155, 60);'><strong><a data-msys-linkname=\"news\" href='http://page.messagesystems.com/F4RLf008r0S0w165000DuC5' style='color: rgb(250, 155, 60); text-decoration: none;' target='_blank'>Read More &gt;</a></strong></span></div></td></tr></tbody></table></td></tr></tbody></table></td>",
+        "job1" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"https://www.messagesystems.com/careers\">Inside Sales Representative, San Francisco, CA</a>",
+        "job2" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"https://www.messagesystems.com/careers\">Sales Development Representative, San Francisco, CA</a>",
+        "job3" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"https://www.messagesystems.com/careers\">Social Media Marketing, San Francisco, CA</a>",
+        "job4" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Platform Developer, Columbia, MD</a>",
+        "job5" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Rain Catcher & Beer Drinker, Seattle, WA</a>",
+        "17823": {
+            "url": "https://www.massdrop.com/buy/mionix-nash-20-gaming-headset?1=1",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$55.23",
+            "reduction" : "$10",
+            "title": "Mionix Nash 20 Gaming Headset",
+            "owner" : "gonza",
+            "category" : "computers",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/NashGaming.jpg"
+        },
+        "18056": {
+            "url": "https://www.massdrop.com/buy/campfire-audio-nova?1=1",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$49.99",
+            "reduction" : "15%",
+            "owner" : "EggWedge",
+            "category" : "Audio",
+            "title": "Campfire Audio Nova Exclusive Launch",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/campfireaudionova.jpg"
+        },
+        "18111": {
+            "url": "http://www.crutchfield.com/p_150VIRBRAC/Garmin-VIRB-XE-Auto-Racing-Bundle.html?tp=36196&awkw=158763222505&awat=pla&awnw=g&awcr=82960749865&awdv=c",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$499.00",
+            "reduction" : "$100",
+            "category" : "Sports",
+            "title": "Garmin VIRB XE Auto Racing Camcorder",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/garmin.png"
+        },
+        "18152": {
+            "url": "https://www.massdrop.com/buy/lg-34-21-9-ultrawide-freesync-monitor?1=1",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$295.00",
+            "reduction" : "$19",
+            "owner" : "Stanza",
+            "category" : "Monitor",
+            "title": "34 Inch Ultrawide LG Freesync Monitor",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/lg34monitor.jpg"
+        },
+        "18289": {
+            "url": "https://www.massdrop.com/buy/keycool-104-rgb-mechanical-keyboard?1=1",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$15.75",
+            "reduction" : "5%",
+            "owner" : "gonza",
+            "category" : "Keyboards",
+            "title": "Keycool 104 RGB Mechanical Keyboard",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/keycoolRGB.jpg"
+        },
+        "18315": {
+            "url": "https://www.massdrop.com/buy/topre-realforce-104u-keyboard-with-pbt-spacebars?1=1",
+            "height" : "160",
+            "width" : "535",
+            "price" : "$33.33",
+            "reduction" : "7%",
+            "onwer" : "gonza",
+            "category" : "Keyboards",
+            "title": "Topre Realforce 104U Keyboard with PBT Spacebars",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/toprerealforcekeyboard.jpg"
+        },
+        "18396": {
+            "url": "https://www.toynk.com/index.php/doctor-who-small-inflatable-30-desk-white-dalek?fee=2&fep=24634&utm_source=google&utm_medium=Google+shopping&utm_campaign=Gshop&gclid=CjwKEAjw1Iq6BRDY_tK-9OjdmBESJABlzoY7hKNp5hBcUN8sE35ZN7sjettmewn8Ul7g8wAwiZv6jhoCMDDw_wcB",
+            "height" : "300",
+            "width" : "470",
+            "price" : "$59.99",
+            "reduction" : "",
+            "owner" : "gonza",
+            "category" : "Robots",
+            "title": "Dalek Desktop Killing Machine",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/dalek.jpg"
+        },
+        "18405": {
+            "url": "https://www.massdrop.com/buy/massdrop-x-hifiman-he-350?1=1",
+            "height" : "160",
+            "width" : "535",
+            "price" : "$125.45",
+            "reduction" : "65%",
+            "owner" : "EggWedge",
+            "category" : "Audio",
+            "title": "Massdrop x HiFiMAN HE-350",
+            "image" : "https://dl.dropboxusercontent.com/u/4387255/electronics/hifi350.jpg"
+        },
+        "18408": {
+            "url": "https://www.massdrop.com/buy/massdrop-x-hifiman-re-00?1=1",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$255.99",
+            "reduction" : "50%",
+            "owner" : "EggWedge",
+            "category" : "Audio",
+            "title": "Massdrop x HiFiMAN RE-00",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/hifimanRE00.jpg"
+        },
+        "18439": {
+            "url": "https://www.massdrop.com/buy/smash-up-complete-collection?1=1",
+            "height" : "160",
+            "width" : "535",
+            "price" : "$55.",
+            "reduction" : "$16",
+            "category" : "MISC",
+            "title": "Smash Up: The Complete Collection",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/smashupcomics.jpg"
+        },
+        "18454": {
+            "url": "https://www.massdrop.com/buy/lg-ergotech-battlestation?1=1",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$1000.23",
+            "reduction" : "$249.77",
+            "owner" : "Viewage",
+            "category" : "Video",
+            "title": "LG-Ergotech 144hz Battlestation",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/battlestation.jpg"
+        },
+        "18465": {
+            "url": "https://www.massdrop.com/buy/enerplex-kikr-iv-portable-solar-charger?1=1",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$65",
+            "reduction" : "$10",
+            "owner" : "PosNeg",
+            "category" : "Electronics",
+            "title": "EnerPlex Kickr IV Portable Solar Charger",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/KickrSolarCharger.jpg"
+        },
+        "18475": {
+            "url": "https://www.massdrop.com/buy/a-buds-bluetooth-earbuds?1=1",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$39.65",
+            "reduction" : "80%",
+            "owner" : "EggWedge",
+            "category" : "Audio",
+            "title": "A.Buds Bluetooth Earbuds",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/Abudsearbuds.jpg"
+        },
+        "18490": {
+            "url": "https://www.massdrop.com/buy/dark-lord-helmet-artisan-keycap?1=1",
+            "height" : "175",
+            "width" : "580",
+            "price" : "$19.99",
+            "reduction" : "$10.50",
+            "title": "High efficient laser beam shaper for High Power laser",
+            "category" : "MISC",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/laser.jpg"
+        },
+        "18495": {
+            "url": "https://www.massdrop.com/buy/cooler-master-switch-testerv2?1=1",
+            "height" : "200",
+            "width" : "320",
+            "owner" : "PosNeg",
+            "price" : "$99.99",
+            "reduction" : "$25.01",
+            "category" : "Electronics",
+            "title": "Cooler Master Switch Tester V2",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/coolermasterswitchv2.jpg"
+        },
+        "18519": {
+            "url": "https://www.massdrop.com/buy/just-mobile-stand?1=1",
+            "height" : "200",
+            "width" : "320",
+            "owner" : "EggWedge",
+            "category" : "Video",
+            "price" : "$45",
+            "reduction" : "$11",
+            "title": "Just Mobile HeadStand",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/mobilestand.jpg"
+        },
+        "18537": {
+            "url": "https://www.massdrop.com/buy/brainwavz-exclusive-mass-ive-grab-bag?1=1",
+            "height" : "160",
+            "width" : "535",
+            "price" : "$45",
+            "reduction" : "$5",
+            "owner" : "PosNeg",
+            "category" : "Brain",
+            "title": "Massdrop Blue Box - Brainwavz IEMs",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/brainwavz.jpg"
+        },
+        "18548": {
+            "url": "https://www.massdrop.com/buy/8bitdo-nes30-wireless-bluetooth-controller?1=1",
+            "height" : "150",
+            "width" : "300",
+            "price" : "$105.50",
+            "reduction" : "65%",
+            "owner" : "EggWedge",
+            "category" : "Audio",
+            "title": "8Bitdo NES30 Wireless Bluetooth Controller",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/8Bitdo.jpg"
+        },
+        "18550": {
+            "url": "https://www.massdrop.com/buy/lg-24gm77-b-full-hd-led-gaming-monitor?1=1",
+            "height" : "160",
+            "width" : "535",
+            "price" : "$450",
+            "reduction" : "75%",
+            "owner" : "Viewage",
+            "category" : "Video",
+            "title": "LG 24\" 144hz Full HD LED Gaming Monitor",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/lg24monitor.jpg"
+        },
+        "18585": {
+            "url": "https://www.massdrop.com/buy/juiced-systems-10-port-hub?1=1",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$55.88",
+            "reduction" : "$10.12",
+            "owner" : "Colletor",
+            "category" : "Hub",
+            "title": "Juiced Systems USB 3.0 10-Port Hub",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/juicedusb10port.jpg"
+        },
+        "18615": {
+            "url": "http://www.rme-audio.de/en/products/multiface_2.php",
+            "height" : "160",
+            "width" : "535",
+            "price" : "$85.99",
+            "reduction" : "$22.01",
+            "owner" : "Collector",
+            "category" : "Audio",
+            "title": "Hammerfall Multiface II",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/hammerfall.jpg"
+        },
+        "18653": {
+            "url": "http://www.drone-world.com/phantom-3-executive-kit-professional-bundle-all-accessories",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$2249.99",
+            "reduction" : "$300",
+            "owner" : "",
+            "category" : "Video",
+            "title": "Phantom 3 Executive Kit w/Long Range System",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/phantom_3_advanced.jpg"
+        },
+        "18662": {
+            "url": "https://www.massdrop.com/buy/seeed-mini-soldering-iron-deluxe-kit?1=1",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$18.00",
+            "reduction" : "10%",
+            "owner" : "PosNeg",
+            "category" : "Electronics",
+            "title": "SEEED Mini Soldering Iron Deluxe Kit",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/seeedsoldering.jpg"
+        },
+        "18674": {
+            "url": "https://www.massdrop.com/buy/inked-screened-limited-edition-may-the-4th-prints?1=1",
+            "height" : "160",
+            "width" : "535",
+            "price" : "$25",
+            "reduction" : "$5",
+            "owner" : "Unknowns",
+            "category" : "MISC",
+            "title": "Inked & Screened Limited Edition May the 4th Prints",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/screenedink.jpg"
+        },
+        "18694": {
+            "url": "https://www.massdrop.com/buy/roccat-nyth-modular-mmo-gaming-mouse?1=1",
+            "height" : "160",
+            "width" : "535",
+            "price" : "$35.99",
+            "reduction" : "$10",
+            "owner" : "Rodent",
+            "category" : "Gaming",
+            "title": "Roccat Nyth Modular MMO Gaming Mouse",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/roccatmouse.jpg"
+        },
+        "18784": {
+            "url": "https://www.massdrop.com/buy/seiko-premier-ssa-watch?1=1",
+            "height" : "200",
+            "width" : "320",
+            "price" : "$155.00",
+            "reduction" : "$145",
+            "owner" : "Vintage",
+            "category" : "Jewlery",
+            "title": "Seiko Premier SSA Watch",
+            "image": "https://dl.dropboxusercontent.com/u/4387255/electronics/siekossa.jpg"
+        }
+    },
+		"default_jobs": ["job1", "job3"],
+		"default_news": ["next1"],
+		"override_standard_height" : "200",
+        "override_standard_width" : "320",
+        "override_standard_height_long" : "160",
+        "override_standard_width_long" : "535",
+        "backgroundColor" : "#ffffff",
+        "company_home_url" : "www.sparkpost.com",
+        "company_logo" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTVYSp0xUPD8yNMYOyTS20VZBwbzt4J-pjta3FtjcT_0rM-cj2o"
+	},
+	"recipients": [{
+		"return_path": "return@deals.com",
+		"address": {
+			"email": "jeff.goldstein@sparkpost.com"
+		},
+		"substitution_data": {
+			"first_name": "Sam the Man 2",
+			"job": ["job3", "job1"],
+			"news": ["next1", "next3"],
+			"leadDrop": {
+				"id": "18490",
+				"url": "&utm_placement=0&referer=Z7N49F&mode=guest_open"
+			},
+			"grouping": [{
+				"column": [{
+					"id": "18396"
+				}, {
+					"id": "18662"
+				}],
+				"down": [{
+					"id": "18674"
+				}, {
+					"id": "18550"
+				}]
+			}, {
+				"column": [{
+					"id": "17823"
+				}, {
+					"id": "18408"
+				}],
+				"down": [{
+					"id": "18405"
+				}]
+			}, {
+				"column": [{
+					"id": "18548",
+					"url": ""
+				}, {
+					"id": "18152",
+					"url": ""
+				}],
+				"down": [{
+					"id": "18315",
+					"url": ""
+				}]
+			}, {
+				"column": [{
+					"id": "18465",
+					"url": ""
+				}, {
+					"id": "18475",
+					"url": ""
+				}],
+				"down": [{
+					"id": "18694"
+				}]
+			}, {
+				"column": [{
+					"id": "18056"
+				}, {
+					"id": "18519"
+				}],
+				"down": [{
+					"id": "18439"
+				}]
+			}, {
+				"column": [{
+					"id": "18495"
+				}, 
+				{
+					"id": "18454"
+				},{
+					"id": "18585"
+				}],
+				"down": [{
+					"id": "18537"
+				}]
+			}, {
+				"column": [{
+					"id": "18784"
+				}, {
+					"id": "18289"
+				}],
+				"down": [{
+					"id": "18615"
+				}]
+			}, {
+				"column": [{
+					"id": "18653"
+				}, {
+					"id": "18454"
+				},{
+					"id": "18111"
+				}],
+				"down": [{
+					"id": "18550"
+				}]
+			}]
+		}
+	}]
+}
