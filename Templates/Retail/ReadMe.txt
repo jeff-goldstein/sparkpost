@@ -31,5 +31,14 @@ Retail: This template demonstrates the following capabilities
           identify it).  Each product has multiple fields that are generic across anyone who would recieve the product in their email.
           The template will merge the product.url field with the users url field to create a personalized link for each product.  If the
           personalized URL does not exist, the product link simply won't be personalized but should work.  In the Postman samples, some
-          of the user profile URL entries have been used, while others are either blank for missing all together.  This is done on purpose
-          to show the flexibility of the templates and the templating engine.
+          of the user profile URL entries have been used, while others are either blank for missing all together.  This is done on 
+          purpose to show the flexibility of the templates and the templating engine.
+        o In order to allow for different size and shapes for the pictures, each add can set what it's size is that should be used.  
+          There is an override variable that is checked first and will be used for all pictures of that type.  If that override
+          variable does not exist, the system will use the specific product size variables.  If you want the product sizes to be the
+          default, then change the logic in the template.
+          
+   Since much of the data resides in the dynamic html json section, the render_dynamic_content macro
+   is used a lot. (i.e.  {{render_dynamic_content(dynamic_html )  Because the product data is not using html code and/or 
+   substitutions within substitution varialbes, this data can be removed from the dynamic content section.  That removes the need
+   for the render_dynamic_content macro for the products.
