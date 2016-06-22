@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+    <style>
+        
+        td.inset {border-style: inset;}
+        
+        .button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+
+        .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+        
+        .button {
+        /*adjust the roundness*/
+            border-radius: 4px;
+            border-bottom-right-radius: 0;
+            moz-border-radius: 4px;
+            webkit-border-radius: 4px;
+            -webkit-border-bottom-right-radius: 2;
+            color: white;
+            background: 2AA7D9;
+        /*adjust height and width*/
+            height: 21px;
+            width: 110px; 
+        /*change border colour*/
+        border:0px #245ec6 solid;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+    
+	<title>Looking Forward</title>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+</head>
+
+<body>
+<a data-msys-linkname="home" href="http://www.sparkpost.com"><button class="button-success"> Home </button></a>
+<a data-msys-linkname="state" href="https://jobs.ca.gov/Public/JobVacancySearch.aspx"><button class="button-error">State Jobs</button></a>
+<a data-msys-linkname="federal" href="https://www.usajobs.gov/"><button class="button-warning">Federal Jobs</button></a>
+<a data-msys-linkname="dhs" href="https://www.dhs.gov/topic/homeland-security-jobs"><button class="button-secondary">DHS Jobs</button></a>
+<div class="body undoreset" style="display: table; width: 843px; box-sizing: border-box; background-color: rgb(255, 255, 255); padding-top: 12px; padding-left: 0px; font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 13px;" tabindex="0">
+<div class="email-wrapped" style="display: table-cell; width: auto; word-wrap: break-word; word-break: break-word;">
+<div>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word; background-color: rgb(255, 255, 255);" width="100%">
+	<tbody style="width: 843px;">
+		<tr>
+			<td align="center" style="border-spacing: 2px; padding: 0px;" valign="middle">
+			<table border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="600">
+				<tbody style="width: 600px;">
+					<tr>
+						<td align="center" style="border-spacing: 2px;" valign="middle">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="600">
+							<tbody style="width: 600px;">
+								<tr>
+									<td align="center" bgcolor="#ffffff" style="border-spacing: 2px; background-color: rgb(255, 255, 255); padding: 3px;" valign="top">
+									<table border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="100%">
+										<tbody style="width: 594px;">
+											<tr>
+												<td border="1" align="center" style="border-spacing: 2px; font-size: 14px; font-family: Helvetica;" valign="top">{{first_name}}, based on your searches, you may like these jobs. |&nbsp;<a data-msys-unsubscribe="1" href="{{{unsubscribe_page}}}?{{address.email}}" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(220, 20, 60); outline: none;" target="_blank">Unsubscribe&nbsp;</a></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="600">
+							<tbody style="width: 600px;">
+								<tr>
+									<td align="left" bgcolor="ffffff" style="border-spacing: 2px; padding: 0px; " valign="top">
+									<table align="left" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="140">
+										<tbody style="width: 185px;">
+											<tr>
+												<td align="center" style="border-spacing: 2px;" valign="top">
+												<table align="left" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="100%">
+													<tbody style="width: 185px;">
+														<tr>
+															<td align="left" style="border-spacing: 2px;" valign="top"><a href="{{{home_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(103, 101, 101); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank"><img alt="Company Name" border="0" src="{{logo}}" style="border: 0px; display: block; outline: none;" width="185" /></a></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="600">
+							<tbody style="width: 600px;">
+								<tr>
+									<td align="center" bgcolor="#ffffff" style="border-spacing: 2px; background-color: rgb(0, 191, 255); padding: 15px 10px 10px; font-size: 33px; font-family: Helvetica; color: rgb(255, 255, 255); min-height: 38px;" valign="middle">Daily Job Alert</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="600">
+							<tbody style="width: 600px;">
+								<tr>
+									<td align="center" style="border-spacing: 2px;" valign="top">
+									<table align="left" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="600">
+										<tbody style="width: 600px;">
+											<tr>
+												<td style="border-spacing: 2px;">
+												<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="600">
+													<tbody style="width: 600px;">
+														{{each job}}
+														<tr>
+														    <td align="left" bgcolor="#ffffff" style="border-spacing: 2px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 20px; padding: 0px;" valign="top" width="40">&nbsp; </td>
+															<td align="left" bgcolor="#ffffff" style="border-spacing: 2px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 20px; padding: 0px;" valign="top" height="50" width="400">&nbsp;<br>
+															   <table>
+															      <tr align="Left" style="color:red; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 20px; padding: 0px;"> <strong><font color="blue" size="5"> {{{jobs[loop_var.id].job_title}}} </font></strong> <br></tr>
+															      <tr align="Left" style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 20px; padding: 0px;"> <font color="black" size="3"> &nbsp;{{{jobs[loop_var.id].job_location}}} </font><br></tr>
+															      <tr align="Left" style="color: rgb(34, 165, 34); font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 20px; padding: 0px;"> <font color="green" size="3"> &nbsp;{{{jobs[loop_var.id].job_notes}}} </font></tr>
+															   </table>
+															</td>
+															<td align="right" bgcolor="#ffffff" style="border-spacing: 2px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 20px; padding: 0px;" valign="top" width="210">&nbsp;</td>
+															<td align="center" valign="center" bgcolor="#ffffff" style="border-spacing: 2px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 20px; padding: 2px 0px;" valign="top" width="192">
+															   <a data-msys-linkname="job listing" href="{{{jobs[loop_var.id].job_html}}}" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(103, 101, 101); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank"><img alt="Apply" border="0" height="36" src="{{apply_image}}" style="border: 0px; display: block; outline: none;" width="110" /></a>
+															</td>
+														</tr>
+														{{end}}
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td style="border-spacing: 2px;">
+												<table align="center" border="0" cellpadding="0" cellspacing="0" class="yiv5569281883mobile320" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="600">
+													<tbody style="width: 600px;">
+														<tr>
+															<td align="left" bgcolor="#ffffff" style="border-spacing: 2px; color: rgb(59, 203, 245); font-family: Helvetica; font-size: 12px; line-height: 20px; padding: 0px;" valign="top" width="50">&nbsp;</td>
+															<td align="left" bgcolor="#ffffff" style="border-spacing: 2px; color: rgb(59, 203, 245); font-family: Helvetica; font-size: 12px; line-height: 20px; padding: 0px;" valign="middle" width="180">&nbsp;</td>
+															<td align="left" bgcolor="#ffffff" style="border-spacing: 2px; color: rgb(0, 0, 255); font-family: Helvetica; text-decoration: underline; font-size: 16px; line-height: 20px; padding: 11px 0px;" valign="top" width="485">
+															    <a data-msys-linkname="view all" href="{{{base_job_site}}}" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(0, 0, 255); outline: none;" target="_blank"><span style="font-weight: 700;">View more recommended jobs</span></a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+                        {{each row}} 
+						<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="600">
+							<tbody style="width: 600px;">
+								<tr>
+									<td align="center" bgcolor="#ffffff" style="border-spacing: 2px; background-color: rgb(255, 255, 255);" valign="top">
+									<table align="center" border="0" cellpadding="5" cellspacing="5" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="294">
+										<tbody style="width: 300px;">
+											<tr>
+											{{each row.column}}
+												<td style="border-spacing: 2px;">
+												<table align="center" bgcolor="#ffffff" border="0" cellpadding="5" cellspacing="5" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="100%">
+													<tbody style="width: 300px;">
+														<td align="center" colspan="2" style="border-spacing: 2px;" valign="middle"><a data-msys-linkname="ads" href="{{{offers[loop_var.id].offer_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(103, 101, 101); outline: none; display: block; width: 300px; min-height: 250px; background-position: initial initial; background-repeat: initial initial;" target="_blank"><img border="0" height="250" src="{{{offers[loop_var.id].offer_pict}}}" style="box-shadow: 10px 10px 5px #888888; border: 0px; display: block; outline: none;" width="300" /></a></td>
+													</tbody>
+												</table>
+												</td>
+											{{end}}
+											</tr>
+										</tbody>
+									</table>
+									<td align="center" bgcolor="#ffffff" style="border-spacing: 2px;" valign="top">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+                        {{end}}
+						
+
+						<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="yiv5569281883main" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="100%">
+							<tbody style="width: 600px;">
+								<tr>
+									<td bgcolor="#FFFFFF" style="border-spacing: 2px; min-height: 10px;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td align="center" style="border-spacing: 2px;">
+									<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="300">
+										<tbody style="width: 300px;">
+											<tr>
+												<td align="center" bgcolor="#FFFFFF" style="border-spacing: 2px;">
+												<table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;">
+													<tbody style="width: 300px;">
+														<tr>
+															<td align="center" bgcolor="#FFFFFF" style="border-spacing: 2px; width: 51px;" valign="middle"><a data-link-name="facebook" href="http://click.snagajob-email.com/?qs=24ab5f581f20a2459734bd99473dff23f4cc87296431375941b4ec6c4342c8e47ea06ecc20a271ba" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(103, 101, 101); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank"><img alt="facebook" border="0" height="35" src="http://image.snagajob-email.com/lib/fe9c12727764047574/m/1/facebook_black.png" style="border: 0px; display: block; outline: none;" /></a></td>
+															<td align="center" bgcolor="#FFFFFF" style="border-spacing: 2px;" valign="middle" width="50"><a data-link-name="twitter" href="http://click.snagajob-email.com/?qs=24ab5f581f20a24504e34fa4ad2e937c9c8446e8a8a1bd263b5c9dfe0474e398732a7c841d389600" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(103, 101, 101); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank"><img alt="twitter" border="0" height="35" src="http://image.snagajob-email.com/lib/fe9c12727764047574/m/1/twitter_black.png" style="border: 0px; display: block; outline: none;" /></a></td>
+															<td align="center" bgcolor="#FFFFFF" style="border-spacing: 2px;" valign="middle" width="50"><a data-link-name="pinterest" href="http://click.snagajob-email.com/?qs=cebad1a60fa1690373913b4da552497a5defa6361133a62a356788c526e2943b4a10472fb832b27c" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(103, 101, 101); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank"><img alt="pinterest" border="0" height="35" src="http://image.snagajob-email.com/lib/fe9c12727764047574/m/1/pinterest_black.png" style="border: 0px; display: block; outline: none;" /></a></td>
+															<td align="center" bgcolor="#FFFFFF" style="border-spacing: 2px;" valign="middle" width="50"><a data-link-name="instagram" href="http://click.snagajob-email.com/?qs=cebad1a60fa1690392029fa51e3c1cd3aa76a22cf7cff9cfcc85ce2405a8013606e4fdf31c0969c3" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(103, 101, 101); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank"><img alt="instagram" border="0" height="35" src="http://image.snagajob-email.com/lib/fe9c12727764047574/m/1/instagram_black.png" style="border: 0px; display: block; outline: none;" /></a></td>
+															<td align="center" bgcolor="#FFFFFF" style="border-spacing: 2px;" valign="middle" width="50"><a data-link-name="tumblr" href="http://click.snagajob-email.com/?qs=cebad1a60fa169033829c8f390d76527e7beeba1b505c3c5d2eeaeada6492003ebf5f383472a6d59" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(103, 101, 101); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank"><img alt="tumblr" border="0" height="35" src="http://image.snagajob-email.com/lib/fe9c12727764047574/m/1/tumblr_black.png" style="border: 0px; display: block; outline: none;" /></a></td>
+															<td align="center" bgcolor="#FFFFFF" style="border-spacing: 2px;" valign="middle" width="50"><a data-link-name="You Tube" href="http://click.snagajob-email.com/?qs=cebad1a60fa16903b2a758e3f44b1687369e65ffdcf5745b4c33d488aeb9f462dc48506ba04b33cc" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(103, 101, 101); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank"><img alt="YouTube" border="0" height="35" src="http://image.snagajob-email.com/lib/fe9c12727764047574/m/1/youtube_black.png" style="border: 0px; display: block; outline: none;" /></a></td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF" style="border-spacing: 2px; min-height: 10px; width: 51px;">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table align="center" border="0" cellpadding="0" cellspacing="0" class="yiv5569281883main" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word; background-color: rgb(241, 238, 226);" width="600px">
+										<tbody style="width: 600px;">
+											<tr>
+												<td align="center" bgcolor="#F1EEE2" style="border-spacing: 2px; padding: 10px;" valign="top">
+												<p style="margin: 0px; padding: 0px; font-size: 11px; font-family: Helvetica, Arial, sans-serif; line-height: 18px;"><a href="http://click.snagajob-email.com/?qs=cebad1a60fa169037107e082d5a0f0ed88cbc8bf27be6ff12d23e6fb23ca5688e4dd574a823bb949" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(0, 0, 0); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank">View this email as a webpage</a>.</p>
+												</td>
+											</tr>
+											<tr>
+												<td align="center" style="border-spacing: 2px;" valign="top">
+												<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; border-collapse: collapse; word-break: break-word;" width="275">
+													<tbody style="width: 281px;">
+														<tr>
+															<td align="center" bgcolor="#F1EEE2" colspan="3" style="border-spacing: 2px; padding: 10px;" valign="top">
+															<p style="margin: 0px; padding: 0px; font-size: 12px; font-family: Helvetica, Arial, sans-serif; line-height: 18px;"><span style="font-weight: 700;">Download our app:</span></p>
+															</td>
+														</tr>
+														<tr>
+															<td align="center" bgcolor="#F1EEE2" style="border-spacing: 2px; padding: 5px;"><a href="http://click.snagajob-email.com/?qs=cebad1a60fa169038ddc13d568581abcf2e4f406c7d6e04c1aa516611e165f3b5b6b8caea2cb50e1" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(103, 101, 101); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank"><img alt="Download our app for Android" border="0" src="http://media.snagajob.com/email/Campaigns/Welcome_Series/googleplaystore.png" style="border: 0px; display: block; outline: none;" width="130" /></a></td>
+															<td bgcolor="#F1EEE2" style="border-spacing: 2px;" width="10">&nbsp;</td>
+															<td align="center" bgcolor="#F1EEE2" style="border-spacing: 2px; padding: 5px;"><a href="http://click.snagajob-email.com/?qs=cebad1a60fa169038b2089c1f3eb82390da59f0c8724c8cabdeca670834d05cbfe9f2d3fa7aa545b" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(103, 101, 101); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank"><img alt="Download our app for iPhone" border="0" src="http://media.snagajob.com/email/Campaigns/Welcome_Series/applestore.png" style="border: 0px; display: block; outline: none;" width="130" /></a></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td align="center" bgcolor="#F1EEE2" style="border-spacing: 2px; padding: 10px;" valign="top">
+												<p style="margin: 0px; padding: 0px; font-size: 14px; font-family: Helvetica, Arial, sans-serif; line-height: 18px;"><a data-msys-linkname = "profile update" href="http://click.snagajob-email.com/?qs=cebad1a60fa1690327a2f65a1b09eb032a25c80b036a9cb6ecd822e3eecaca1445d39cdbd5218560" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(0, 0, 0); outline: none; font-weight: bold;" target="_blank">Update Profile</a>&nbsp;|&nbsp;<a href="http://click.snagajob-email.com/?qs=40a5b0b4aad1842aa435fec47bc6a91866d06dc8c6dbb115f7b427e096b867b29bc3a52b2d8b62ae" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(0, 0, 0); outline: none; font-weight: bold;" target="_blank">Unsubscribe</a>&nbsp;|&nbsp;<a href="http://click.snagajob-email.com/?qs=cebad1a60fa169033d8b804b1faa8ce189e59036a4d5e64bd3f1085326b6cd8d740c9746a0050618" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(0, 0, 0); outline: none; font-weight: bold;" target="_blank">Forward to Friend</a></p>
+
+												<p style="margin: 0px; padding: 0px; font-size: 11px; font-family: Helvetica, Arial, sans-serif; line-height: 15px;">Please do not respond to this message. Instead contact&nbsp;<a data-msys-linkname="customer service" href="http://click.snagajob-email.com/?qs=cebad1a60fa16903452eac51ab6a0db02aeec8eb871a1b0658787bead4c65409d67b77401029f9ce" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(0, 0, 0); outline: none;" target="_blank">customer service</a>.<br />
+												4851 Sunny Lake Brook Drive, Pleasantville, EU 23099.</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
