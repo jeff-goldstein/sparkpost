@@ -14,6 +14,17 @@
    o Simple substitution
    o White Labelling
    o css embedding
-   o Unsubscribe Link
+   o Unsubscribe Link defined
    o Multiple part HTML substitution
    
+3) Retail: This template demonstrates the following capabilities
+   This template is a very advanced template with a lot of capabilities meant to show how flexible SparkPost templates can be.  There 
+   is a lot of flexibility built in to allow for White Labelling, Picture size modification, any number of products per row and any
+   number of rows.
+   o Array's within Arrays.  The top level are rows, the next level are columns (products) within the rows
+   o Setting Link Names
+   o Unsubscribe Link defined
+   o Conditional Statements
+   o css embedding that uses substitution variables
+   o Dynamic html that allows for substitutions within substitution variables
+   o White Labelling
