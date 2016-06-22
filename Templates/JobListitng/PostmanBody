@@ -1,0 +1,208 @@
+{
+    "options":
+    {
+      "open_tracking" : true,
+      "click_tracking" : true
+	},
+	
+	"content" :
+	{
+	  "template_id": "joblisting",
+	  "use_draft_template" : true
+	},
+    "campaign_id" : "DailyJobs",
+    "env_from":"jeff.goldstein@mail.geekwithapersonality.com",
+    "return_path": "jeff.goldstein@mail.geekwithapersonality.com",
+    "substitution_data": {
+        "SubjectLine": "Your Daily Jobs As Requested",
+		"DelivChannel": "trans",
+		"apply_image" : "https://dl.dropboxusercontent.com/u/4387255/jobs/Apply-Button-Blue.jpg",
+		"logo" : "https://dl.dropboxusercontent.com/u/4387255/jobs/Jobs-Logo.png",
+		"company_name" : "Job Finder",
+		"home_url" : "http://www.jobfinder.com",
+		"unsubscribe_page" : "http://unsubscribe.jobfinder.com/",
+		"caption_font_color" : "green",
+		"jobs" : {
+           "12345" :  {
+            	"job_html" : "<job url>",
+            	"job_title" : "Evening Sitter For",
+            	"job_location" : "Pleasanton",
+                "job_notes" : "Updated Today"
+            },
+          "12363" :  {
+            	"job_html" : "<job url>",
+            	"job_title" : "Housekeeping",
+            	"job_location" : "Pleasanton, CA",
+                "job_notes" : "Updated this week"
+            },	
+            "38723" : {
+            	"job_html" : "<job url>",
+            	"job_title" : "Cashier Lead",
+            	"job_location" : "Pleasanton, CA",
+                "job_notes" : "Updated this week"
+            },
+           "87346" : {
+            	"job_html" : "<job url>",
+            	"job_title" : "Home Instead",
+            	"job_location" : "Milpitas, CA"
+            },	
+           "75232" : {
+            	"job_html" : "<job url>",
+            	"job_title" : "Sales Associate",
+            	"job_location" : "Pleasanton, CA"
+            },	
+           "99003" : {
+            	"job_html" : "<job url>",
+            	"job_title" : "*Now Hiring* Assistant",
+            	"job_location" : "Livermore, CA"
+            },	
+            "62271" :{
+            	"job_html" : "<job url>",
+            	"job_title" : "Toys R Us Off Hours",
+            	"job_location" : "Dublin, CA"
+            },	
+            "77099" :{
+            	"job_html" : "<job url>",
+            	"job_title" : "Retail Merchandising",
+            	"job_location" : "Dublin, CA (Updated this week)",
+                "job_notes" : "Updated this week"
+            },
+            "00366" : {
+            	"job_html" : "<job url>",
+            	"job_title" : "Crew - Driver - Shift",
+            	"job_location" : "Dublin, CA",
+                "job_notes" : "1 Click apply"
+            },		
+            "52998" :{
+            	"job_html" : "<job url>",
+            	"job_title" : "Cashiers",
+            	"job_location" : "Dublin, CA"
+            },	
+            "27623" : {
+            	"job_html" : "<job url>",
+            	"job_title" : "Retail Sales Specialist",
+            	"job_location" : "Dublin, CA"
+            },	
+            "76050" : {
+            	"job_html" : "<job url>",
+            	"job_title" : "Teavana (a Starbucks Company)",
+            	"job_location" : "Walnut Creek, CA (Updated this week)",
+                "job_notes" : "Updated this week"
+            },	
+            "91128" : {
+            	"job_html" : "<job url>",
+            	"job_title" : "General Manager",
+            	"job_location" : "Pleasanton, CA"
+            }
+        },
+        "offers" : {
+           "1" :  {
+            	"offer_url" : "http://money.usnews.com/money/blogs/outside-voices-careers/2015/06/08/3-reasons-youre-not-getting-promoted",
+            	"offer_pict" : "https://dl.dropboxusercontent.com/u/4387255/jobs/3Reasons.png",
+            	"caption" : "3 Reasons You're Not Getting Promoted"
+            },
+           "2" :  {
+            	"offer_url" : "http://money.usnews.com/money/careers/articles/2015/01/13/infographic-the-best-jobs-of-2015",
+            	"offer_pict" : "https://dl.dropboxusercontent.com/u/4387255/jobs/BestJobs.png",
+            	"caption" : "Best Jobs of 2016!"
+            },	
+            "3" : {
+            	"offer_url" : "https://www.creditkarma.com",
+            	"offer_pict" : "https://dl.dropboxusercontent.com/u/4387255/jobs/creditscore.png",
+            	"caption" : "Free Credit Score"
+            },
+           "4" : {
+            	"offer_url" : "http://www.seemypersonality.com/#q1",
+            	"offer_pict" : "https://dl.dropboxusercontent.com/u/4387255/jobs/quiz.png",
+            	"caption" : "Understand Your Personality"
+            }
+        },
+        "row": [{
+				"column": [{
+					"id": "1"
+				}, {
+					"id": "2"
+				}]
+			}, {
+				"column": [{
+					"id": "3"
+				}, {
+					"id": "4"
+				}]
+			}],
+    "metadata" : 
+    {
+        "job": "Sales Engineer",
+        "month" : "February"
+    }},
+   "recipients":[
+   {
+   		"return_path": "jeff.goldstein@mail.geekwithapersonality.com",
+		"address":{"email":"jeff.goldstein@sparkpost.com"},
+    	"metadata":{"region" : "Oakland"},
+    	"tags":[
+    	  "Sales",
+    	  "Engineer"],
+	    "substitution_data":
+		{
+			"id":1,
+			"base_job_site" : "http://www.snagajob.com/job-search/w-94588",
+			"first_name":"Sam",
+			"last_name":"Goldstein",
+			"headerTo":"jeffsam0@ucsd.edu",
+			"country":"United States",
+			"city":"Pleasanton",
+			"region":"CA",
+			"membershipid":"2014376",
+			"time_zone":"America/Chicago",
+			"phone":"(355)535-2977",
+			"number_of_interviews":"7",
+			"username":"jgold",
+			"gender":"Male",
+			"registered":"FALSE",
+			"education":"College Degree",
+			"university":"Chico State University, Chico California",
+			"job": [
+			    {"id": "99003"},
+    			{"id": "76050"},
+    			{"id": "12363"},
+    			{"id": "91128"},
+    			{"id": "77099"}
+    		]
+        }
+  },
+  {
+   		"return_path": "jeff.goldstein@mail.geekwithapersonality.com",
+		"address":{"email":"austein@hotmail.com"},
+    	"metadata":{"region" : "San Jose"},
+    	"tags":[
+    	  "Sales",
+    	  "Engineer"],
+	    "substitution_data":
+		{
+			"id":267432,
+			"base_job_site" : "http://www.snagajob.com/job-search/w-95050",
+			"first_name":"Jeff",
+			"last_name":"Goldstein",
+			"headerTo":"jgold",
+			"country":"United States",
+			"city":"San Jose",
+			"region":"CA",
+			"membershipid":"2014376",
+			"time_zone":"America/Chicago",
+			"phone":"(355)535-2977",
+			"number_of_interviews":"7",
+			"username":"jgold",
+			"gender":"Male",
+			"registered":"FALSE",
+			"education":"College Degree",
+			"university":"Chico State University, Chico California",
+			"job": [
+			    {"id": "99003"},
+    			{"id": "12345"},
+				{"id": "91128"}
+			]
+        }
+  }
+]
+}
