@@ -160,5 +160,17 @@
     <hr size="1" style="height: 1px; border-style: none; color: #444; background: #000; margin-top: 8px">
 
     <p></p>
+        <!-- BEGIN NEWS SECTION WHICH DEMONSTRATES USAGE OF DYNAMIC HTML CHUNKS -->
+    <table style="width:100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+    <tr>
+    {{if offers}}
+        {{each offers}} 
+            {{render_dynamic_content(dynamic_html[loop_var])}}
+        {{end}}
+    {{end}}
+    </tr>
+    </table>
+    <!-- END NEWS SECTION WHICH DEMONSTRATES USAGE OF DYNAMIC HTML CHUNKS -->
+    
 </body>
 </html>
