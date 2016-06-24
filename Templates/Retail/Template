@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=600, initial-scale=1"/>
+  <style type="text/css">
+    #outlook a {
+      padding: 0;
+    }
+
+    body {
+      width: 100% !important;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: {{backgroundColor}};
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body, td {
+      font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    body, td, p {
+      line-height: 24px;
+    }
+
+    .ExternalClass {
+      width: 100%;
+    }
+
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+      line-height: 100%;
+    }
+
+    img {
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    a img {
+      border: none;
+    }
+
+    .image_fix {
+      display: block;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: black !important;
+      line-height: 1;
+    }
+
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+      color: #00afd8 !important;
+    }
+
+    h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+      color: red !important;
+    }
+
+    h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+      color: #0086a5 !important;
+    }
+
+    table td {
+      border-collapse: collapse;
+    }
+
+    table {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    a {
+      color: #00afd8;
+    }
+
+    h1 {
+      font-size: 2em;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<!-- HEADER LOGO BEGIN-->
+<body bgcolor="{{backgroundColor}}" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; background-color: {{backgroundColor}}; height: 100%; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 300; font-size: 16px; line-height: 24px; width: 100%;">
+<table style="width:100%" align="center" cellpadding="0" cellspacing="0" border="0" style="background-color: {{backgroundColor}}; min-width: 600px; width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+  <tr>
+    <td valign="top">
+      <table width="600" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <tr>
+          <td valign="top" style="padding: 10px;">
+            <table style="width:100%" align="center" cellpadding="0" cellspacing="0" border="0" style="background-color: {{backgroundColor}}; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px;">
+              <tr>
+                <td style="padding: 10px 0;">
+                  <!-- HEADER LOGO -->
+                  <table style="width:100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                    <tr>
+                      <td valign="middle" align="center" style="padding: 5px 0 15px; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; line-height: 20px; font-weight: 400; vertical-align: middle;">
+                        <a style="text-decoration:none; color:#000000;" href="{{company_home_url}}" target="_blank">
+                          <img alt="New products selected for you." src="{{company_logo}}" width="75" height="20" border="0" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; padding-bottom: 0; display: inline !important; vertical-align: bottom;">
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- HEADER LOGO END -->
+
+<!--
+#################################################
+# CONTENT BEGIN
+#################################################
+-->
+
+<!-- BEGIN HERO -->
+<table align="center" cellpadding="0" cellspacing="0" border="0" style="width:100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+  <tr>
+    <td align="center" style="padding: 0;">
+      <a style="text-decoration:none;" href="{{render_dynamic_content(dynamic_html[leadDrop.id].url)}}{{{leadDrop.url}}}" target="_blank">
+        <img alt="{{render_dynamic_content(dynamic_html[leadDrop.id].title)}}" src="{{render_dynamic_content(dynamic_html[leadDrop.id].image)}}?w=580&h=175&fit=crop" width="580" height="175" border="0" style="box-shadow: 10px 10px 5px #888888; outline: none;text-decoration: none;-ms-interpolation-mode: bicubic; padding-bottom: 0; display: inline !important; vertical-align: center;">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 24px 0 0; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; line-height: 24px; font-weight: 400;">
+      <a style="text-decoration:none;color:#000000;" href="{{render_dynamic_content(dynamic_html[leadDrop.id].url)}}{{{leadDrop.url}}}" target="_blank">
+        {{render_dynamic_content(dynamic_html[leadDrop.id].title)}}
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 12px 0 0; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: 100; color: #999999;">
+      <a style="text-decoration:none;color:#999999;" href="{{render_dynamic_content(dynamic_html[leadDrop.id].url)}}{{{leadDrop.url}}}" target="_blank">
+          Limited offer for {{render_dynamic_content(dynamic_html.member_level)}} level members at a rediculously reduced price of {{render_dynamic_content(dynamic_html[leadDrop.id].price)}}.
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 24px 0 24px;">
+      <a style="text-decoration: none; color: #ffffff;" href="{{render_dynamic_content(dynamic_html[leadDrop.id].url)}}{{{leadDrop.url}}}" target="_blank">
+        <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #00afd8; border-radius: 3px;" bgcolor="#00afd8">
+          <tr>
+            <td style="padding: 15px 30px; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 14px; font-weight: 400; color: #ffffff;">
+              <a data-msys-linkname='Lead' style="text-decoration: none; color: #ffffff;" href="{{render_dynamic_content(dynamic_html[leadDrop.id].url)}}{{{leadDrop.url}}}" target="_blank">
+                SEE MORE
+              </a>
+            </td>
+          </tr>
+        </table>
+      </a>
+    </td>
+  </tr>
+</table>
+<!-- END HERO -->
+
+
+<!-- BEGIN DIVIDER -->
+<table align="center" cellpadding="0" cellspacing="0" border="0" style="width:100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+  <tr>
+    <td align="center" style="padding: 0; border-top: 1px dashed #cccccc; font-size: 20px; line-height: 20px;">&nbsp;</td>
+  </tr>
+</table>
+<!-- END DIVIDER -->
+
+{{each grouping}}
+<!-- BEGIN 2X PRODUCT CARD -->
+<table align="center" cellpadding="0" cellspacing="0" border="0" style="width:100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+  <tr>
+    <td style="padding: 0 20px 20px;">
+      <table align="center" cellpadding="0" cellspacing="0" border="0" style="width:100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <tr>
+            {{each grouping.column}}
+            <td valign="top" align="center">
+            <!-- BEGIN SUBPRODUCT CARD -->
+                <table cellpadding="0" cellspacing="0" border="0" style="width:100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                <tr>
+                    <td align="center" style="padding: 0;">
+                    <a data-msys-linkname="multiple row" href="{{render_dynamic_content(dynamic_html[loop_var.id].url)}}{{{loop_var.url}}}" target="_blank" style="text-decoration: none;">
+                      <img alt="{{render_dynamic_content(dynamic_html[loop_var.id].title)}}" src="{{render_dynamic_content(dynamic_html[loop_var.id].image)}}" height="{{ if override_standard_height }} {{override_standard_height}} {{else}} {{render_dynamic_content(dynamic_html[loop_var.id].height)}} {{end}}" width="{{ if override_standard_width }} {{override_standard_width}} {{else}} {{render_dynamic_content(dynamic_html[loop_var.id].width)}} {{end}}" border="0" style="box-shadow: 10px 10px 5px #888888; outline: none;text-decoration: none;-ms-interpolation-mode: bicubic; border: 1px solid #dddddd; padding-bottom: 0; display: inline !important; vertical-align: center;">
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                    <td align="center" style="padding: 6px 0 0; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 22px; font-weight: 400; color: #000000; text-decoration: none;">
+                    <a href="{{render_dynamic_content(dynamic_html[loop_var.id].url)}}{{{loop_var.url}}}" target="_blank" style="text-decoration: none; color: #000000;">
+                      {{render_dynamic_content(dynamic_html[loop_var.id].title)}}
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                    <td align="center" style="padding: 6px 0; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: 100; color: #999999; text-decoration: none;">
+                  
+                    <a href="{{render_dynamic_content(dynamic_html[loop_var.id].url)}}{{{loop_var.url}}}" target="_blank" style="text-decoration: none; color: #999999;">
+                      {{if render_dynamic_content(dynamic_html[loop_var.id].price)}}
+                        Price: {{render_dynamic_content(dynamic_html[loop_var.id].price)}}
+                        {{if (render_dynamic_content(dynamic_html[loop_var.id].reduction)) and (render_dynamic_content(dynamic_html[loop_var.id].reduction) != "") }}
+                          With a reduction of {{render_dynamic_content(dynamic_html[loop_var.id].reduction)}}.
+                        {{end}}
+                    {{end}}
+                    </a>
+                  </td>
+                </tr>
+                </table>
+              <!-- END SUBPRODUCT CARD -->
+            </td>
+            {{end}}
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+<!-- END 2X PRODUCT CARD -->
+
+
+<!-- BEGIN 1X PRODUCT CARD -->
+
+{{each grouping.down}}
+ <tr>
+    <td style="padding: 0 20px 20px;">
+      <table cellpadding="0" cellspacing="0" border="0" style="width:100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <tr>
+          <td align="center" style="padding: 0;">
+            <a target="_blank" style="text-decoration: none;" data-msys-linkname="single row" href="{{render_dynamic_content(dynamic_html[loop_var.id].url)}}{{{loop_var.url}}}">
+              <img alt="{{render_dynamic_content(dynamic_html[loop_var.id].title)}}" src="{{render_dynamic_content(dynamic_html[loop_var.id].image)}}" height="{{ if override_standard_height_long }} {{override_standard_height_long }} {{else}} {{render_dynamic_content(dynamic_html[loop_var.id].height)}} {{end}}" width="{{ if override_standard_width_long }} {{override_standard_width_long}} {{else}} {{render_dynamic_content(dynamic_html[loop_var.id].width)}} {{end}}" border="0" style="box-shadow: 10px 10px 5px #888888; outline: none;text-decoration: none;-ms-interpolation-mode: bicubic; border: 1px solid #dddddd; padding-bottom: 0; display: inline !important; vertical-align: bottom;">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding: 6px 0 0; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 22px; font-weight: 400; color: #000000; text-decoration: none;">
+            <a href="{{render_dynamic_content(dynamic_html[loop_var.id].url)}}{{{loop_var.url}}}" target="_blank" style="text-decoration: none; color: #000000;">
+              {{render_dynamic_content(dynamic_html[loop_var.id].title)}}
+            </a>
+          </td>
+        </tr>
+        <tr>
+         <td align="center" style="padding: 6px 0; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: 100; color: #999999; text-decoration: none;">
+            <a href="{{render_dynamic_content(dynamic_html[loop_var.id].url)}}{{{loop_var.url}}}" target="_blank" style="text-decoration: none; color: #999999;">
+                      {{if render_dynamic_content(dynamic_html[loop_var.id].price)}}
+                        Price: {{render_dynamic_content(dynamic_html[loop_var.id].price)}}
+                        {{if (render_dynamic_content(dynamic_html[loop_var.id].reduction)) and (render_dynamic_content(dynamic_html[loop_var.id].reduction) != "") }}
+                          With a reduction of {{render_dynamic_content(dynamic_html[loop_var.id].reduction)}}.
+                {{end}}
+              {{end}}
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  {{end}}
+</table>
+<!-- END 1X PRODUCT CARD -->
+{{end}}
+
+
+
+<!-- BEGIN SEE ALL DROPS BUTTON -->
+<table style="width:100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+  <tr>
+    <td align="center" style="padding: 0 0 20px;">
+      <a href="https://www.massdrop.com/buy" target="_blank" style="text-decoration: none; color: #ffffff;">
+        <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ff0000; border-radius: 3px;" bgcolor="#ff0000">
+          <tr>
+            <td style="padding: 15px 30px; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 14px; font-weight: 400; color: #ffffff;">
+              <a data-msys-linkname='All Drops' href="https://www.sparkdeals.com/buy" target="_blank" style="text-decoration: none; color: #ffffff;">
+                SEE ALL PERSONALIZED PRODUCTS
+              </a>
+            </td>
+          </tr>
+        </table>
+      </a>
+    </td>
+  </tr>
+</table>
+<!-- END SEE ALL DROPS BUTTON -->
+
+<!-- BEGIN NEWS SECTION WHICH DEMONSTRATES USAGE OF DYNAMIC HTML CHUNKS -->
+<table style="width:100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+  <tr>
+    {{if news}}
+        {{each news}} 
+            {{render_dynamic_content(dynamic_html[loop_var])}}
+        {{end}}
+    {{else}}
+        {{each default_news}} 
+            {{render_dynamic_content(dynamic_html[loop_var])}}
+        {{end}}
+    {{end}}
+  </tr>
+</table>
+<!-- END NEWS SECTION WHICH DEMONSTRATES USAGE OF DYNAMIC HTML CHUNKS -->
+
+
+<!--
+#################################################
+# CONTENT END - BEGIN FOOTER
+#################################################
+-->
+
+<table style="width:75%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+    <tr>
+      <td style="padding: 0 10px 20px;">
+        <table style="width:100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+          <tr>
+            <td style="width:33.3333333%" align="left" valign="top">
+              <table style="width:100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                <tr>
+                  <td width="25" align="left" valign="middle" style="line-height: 20px; font-size: 20px; height: 20px;">
+                    <a style="line-height: 20px; text-decoration:none; color:#000000;" href="https://www.facebook.com/massdrop" target="_blank"><img width="20" height="20" alt="Facebook" src="http://massdrop-s3.imgix.net/sailthru/fb_40x40.png?q=70&fm=jpg" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;border: none;"></a>
+                  </td>
+                  <td width="25" align="left" valign="middle" style="line-height: 20px; font-size: 20px; height: 20px;">
+                    <a style="line-height: 20px; text-decoration:none; color:#000000;" href="https://twitter.com/massdrop" target="_blank"><img width="20" height="20" alt="Twitter" src="http://massdrop-s3.imgix.net/sailthru/tw_40x40.png?q=70&fm=jpg" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;border: none;"></a>
+                  </td>
+                  <td align="left" valign="middle" style="line-height: 20px; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 300; font-size: 16px; color:#888888 !important;">
+                    &nbsp&nbsp
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td style="width:33.3333333%" align="center" valign="top" style="line-height: 20px; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 300; font-size: 16px; color:#888888 !important;">
+              <a data-msys-unsubscribe="1" data-msys-linkname="unsubscribe" style="line-height: 20px; text-decoration:none; color:#888888 !important; font-size: 12px;" href="http://pages.messagesystems.com/UnsubscribePage.html?mkt_unsubscribe=1&mkt_tok=eyJpIjoiT0dGa1ptUTFaR1prWWpCaSIsInQiOiJSU2oza29iXC9TK2FqZERJSE1WWmdpdjVnSUVsVzBzRTNkUmhXYWRHUjI0QmJGb0tYNzFoM0FNTkQwbHQ4SEpMNjQ0VGhGZVJOME1tZzd2TnJkMVNlQ2NoQkpkZFBFaU0wQXVXSFN0emZZMVU9In0%3D">Unsubscribe</a>
+            </td>
+            <td style="width:33.3333333%" align="right" valign="top" style="line-height: 20px; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 300; font-size: 16px; color:#888888 !important;">
+              <span style="line-height: 20px; text-decoration:none; color:#888888 !important; font-size: 12px;"><div>100&nbsp;Bush&nbsp;Street&nbsp;Ste&nbsp;1000</div><div>San&nbsp;Francisco,&nbsp;CA&nbsp;&nbsp;94104</div></span>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle" style="line-height: 20px; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 300; font-size: 16px; color:#888888 !important;">
+        <a href="http://dro.ps/jobs-email" target="_blank" style="line-height: 20px; text-decoration:none; color:#00afd8 !important; font-size: 12px;">
+          We're Hiring:
+        </a>
+        {{if job}}
+            {{each job}} 
+                <span style=\"font-family: arial, helvetica, sans-serif; color: rgb(85, 85, 90); font-size: 12px; text-decoration: none;\"> o &nbsp;{{render_dynamic_content(dynamic_html[loop_var])}}&nbsp;&nbsp;   </span></li>
+            {{end}}
+        {{else}}
+            {{each default_job}} 
+                <span style=\"font-family: arial, helvetica, sans-serif; color: rgb(85, 85, 90); font-size: 12px; text-decoration: none;\"> o &nbsp;{{render_dynamic_content(dynamic_html[loop_var])}}&nbsp;&nbsp;   </span></li>
+            {{end}}
+        {{end}}
+      </td>
+    </tr>
+</table>
+</body>
+</html>
