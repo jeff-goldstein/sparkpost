@@ -29,3 +29,8 @@
    o Dynamic html that allows for substitutions within substitution variables
    o White Labelling
    o Mulitple part HTML substitution (each product can have personalized URL parameters for each user)
+   
+4) Daily news:  This template demonstrates the following capabilities
+   o Array's within Arrays.  The top level is the high level product description, the next level are specific details
+   o Simple substitution
+
