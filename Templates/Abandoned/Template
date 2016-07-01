@@ -1,0 +1,238 @@
+<html>
+<head>
+	<title></title>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+</head>
+<body>
+<div role="presentation" style="background-color: rgb(255, 255, 255); margin: 4px 26px 0px 27px; word-wrap: break-word; font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 13px;" tabindex="0">
+<div style="display: table; width: 860px; box-sizing: border-box; background-color: inherit; padding-top: 12px; padding-left: 0px;" tabindex="0">
+<div style="display: table-cell; width: auto; word-wrap: break-word; word-break: break-word;">
+<div style="-webkit-padding-start: 0px;">
+<div style="-webkit-padding-start: 0px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: rgb(68, 68, 68);" width="580">
+	<tbody style="width: 580px;">
+		<tr style="-webkit-padding-start: 0px;">
+			<td style="border-spacing: 2px;" width="580">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word;" width="580">
+				<tbody style="width: 580px;">
+					<tr style="-webkit-padding-start: 0px;">
+						<td align="left" height="{{logo_height}}" rowspan="3" style="border-spacing: 2px;" width="{{logo_width}}">
+						  <a data_msys_linkname="Home" href="{{{company_home_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank">
+						      <img alt="{{company}}" border="0" height="{{logo_height}}" src="{{company_logo}}" style="border: 0px; display: block;" width="{{logo_width}}" /></a>
+						  </td>
+						<td align="right" style="border-spacing: 2px;" valign="middle">
+						<div style="font-size: 11px; color: rgb(102, 102, 102);"><a data_msys_linkname="Home" href="{{{company_home_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(102, 102, 102); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank">&nbsp;</a></div>
+						</td>
+					</tr>
+					<tr style="-webkit-padding-start: 0px;">
+						<td align="right" style="border-spacing: 2px;" valign="bottom" width="375">
+						<span style="letter-spacing: 0.05em; font-size: 12px;">
+						<a data_msys_linkname="Home" href="{{{company_home_url}}}?userid={{user_name}}" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(68, 68, 68); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank">
+						<span style="-webkit-padding-start: 0px;">
+						<span style="font-weight: 700;">SHOP</span></span>&nbsp;</a>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+						<a data_msys_linkname="Classes" href="{{{classes_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(68, 68, 68); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank">
+						<span style="-webkit-padding-start: 0px;">
+						<span style="font-weight: 700;">CLASSES</span></span>&nbsp;</a>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+						<a data_msys_linkname="Stores" href="{{{stores}}}" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(68, 68, 68); outline: none; background-position: initial initial; background-repeat: initial initial;" target="_blank">
+						<span style="-webkit-padding-start: 0px;"><span style="font-weight: 700;">STORES</span>
+						</span></a></span></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: rgb(68, 68, 68);" width="580">
+	<tbody style="width: 580px;">
+		<tr style="-webkit-padding-start: 0px;">
+			<td height="10" style="border-spacing: 2px;"></td>
+		</tr>
+	</tbody>
+</table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: rgb(68, 68, 68);" width="580">
+	<tbody style="width: 580px;">
+		<tr style="-webkit-padding-start: 0px;">
+		
+		    <td align="center" style="border-spacing: 2px;">
+			    <hr color="grey">
+			    {{ if free_shipping_flag == "Y" }}
+			        {{render_dynamic_content(dynamic_html.shipping_message)}}
+			    {{ else }}
+			        {{render_dynamic_content(dynamic_html.header_message)}}
+			    {{ end }}
+			    <hr color="grey">
+			</td>
+			
+		</tr>
+	</tbody>
+</table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: rgb(68, 68, 68);" width="580">
+	<tbody style="width: 580px;">
+		<tr style="-webkit-padding-start: 0px;">
+			<td height="30" style="border-spacing: 2px;"></td>
+		</tr>
+		<tr style="-webkit-padding-start: 0px;">
+			<td align="center" style="border-spacing: 2px;"><img alt="Still Browsing" border="0" src="{{browsing_message_img}}" style="border: 0px;" width="208" /></td>
+		</tr>
+		<tr style="-webkit-padding-start: 0px;">
+			<td align="center" height="30" style="border-spacing: 2px;"><br>Come back soon to pick up that item you've had your eye on:<br><br><br></td>
+		</tr>
+		<tr style="-webkit-padding-start: 0px;">
+			<td style="border-spacing: 2px;">
+			<table border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word;" width="100%">
+				<tbody style="width: 580px;">
+					<tr style="-webkit-padding-start: 0px;">
+						<td style="border-spacing: 2px;" width="15"></td>
+						<td style="border-spacing: 2px;">
+						<table border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word;" width="550">
+							<tbody style="width: 550px;">
+							    {{each abandoned_products}}
+								<tr style="-webkit-padding-start: 0px;">
+									<td style="border-spacing: 2px;" valign="top" width="260"><a href="{{{abandoned_products.prod_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank"><img border="0" src="{{abandoned_products.prod_img}}." style="border: 0px;" valign="top" width="260" /></a></td>
+									<td style="border-spacing: 2px;" width="20"></td>
+									<td style="border-spacing: 2px;" valign="top">
+									<td style="border-spacing: 2px;" valign="middle"><a data_msys_linkname="Left Behind Product" href="{{{abandoned_products.prod_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(68, 68, 68); outline: none; font-size: 18px; text-align: center; line-height: 21px; text-transform: uppercase;" target="_blank">{{abandoned_products.prod_name}}</a></td>
+                                </tr>
+                                {{end}}
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		    </td>
+			<td style="border-spacing: 2px;" width="15"></td>
+		</tr>
+		<tr style="-webkit-padding-start: 0px;">
+		    <td height="30" style="border-spacing: 2px;"></td>
+		</tr>
+		<tr style="-webkit-padding-start: 0px;">
+		    <td align="right" style="border-spacing: 2px;" valign="bottom"><a href="{{{company_home_url}}}?userid={{user_name}}" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank">
+			    <img alt="Keep Shopping" border="0" src="https://db.tt/5DWU4BPG" style="border: 0px;" width="160" /></a>
+		    </td>
+		</tr>
+		<tr style="-webkit-padding-start: 0px;">
+			<td height="50" style="border-spacing: 2px;"></td>
+		</tr>
+		<tr style="-webkit-padding-start: 0px;">
+			<td align="center" style="border-spacing: 2px;"><img alt="In Your Cart" border="0" src="https://db.tt/2OsifnYC" style="border: 0px;" width="250" /></td>
+		</tr>
+		<tr " style="-webkit-padding-start: 0px;">
+			<td height="15" " style="border-spacing: 2px;"></td>
+		</tr>
+		<tr style="-webkit-padding-start: 0px;">
+			<td style="border-spacing: 2px;">
+			<table border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word;" width="100%">
+				<tbody style="width: 580px;">
+					<tr style="-webkit-padding-start: 0px;">
+						{{each productlist}}
+						<td style="border-spacing: 2px;">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word;" width="180">
+							<tbody style="width: 180px;">
+								<tr style="-webkit-padding-start: 0px;">
+									<td style="border-spacing: 2px;" valign="top" width="180"><a data_msys_linkname="Suggestions" href="{{{loop_var.item_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank">
+									    <img border="0" src="{{loop_var.item_img}}" style="border: 0px;" valign="top" width="180" height="100"/></a>
+									</td>
+								</tr>
+								<tr style="-webkit-padding-start: 0px;">
+									<td height="10" style="border-spacing: 2px;"></td>
+								</tr>
+								<tr style="-webkit-padding-start: 0px;">
+									<td align="center" style="border-spacing: 2px;"><a href="{{{loop_var.item_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(0, 0, 0); outline: none;" target="_blank">{{loop_var.item_name}}</a></td>
+								</tr>
+								<tr style="-webkit-padding-start: 0px;">
+									<td align="center"style="border-spacing: 2px;" valign="bottom"><a href="{{{loop_var.item_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(0, 0, 0); outline: none; font-weight: bold;" target="_blank">{{loop_var.item_price}}</a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<td style="border-spacing: 2px;" width="20"></td>
+						{{end}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr style="-webkit-padding-start: 0px;">
+			<td height="25" style="border-spacing: 2px;"></td>
+		</tr>
+	</tbody>
+</table>
+
+{{render_dynamic_content(dynamic_html.section_break)}}
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: rgb(68, 68, 68);" width="580">
+	<tbody style="width: 580px;">
+		<tr style="-webkit-padding-start: 0px;">
+			<td style="border-spacing: 2px;"><a href="http://www.cabelas.com/browse.cmd?categoryId=106042680" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank"><img align="left" border="0" height="125" src="https://db.tt/bM5KqBBi" style="border: 0px; display: block;" width="150" /></a></td>
+			<td style="border-spacing: 2px;"><a href="http://www.cabelasoutdooradventures.com" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank"><img alt="" align="center" border="0" height="125" src="https://db.tt/5fxb2VbG" style="border: 0px; display: block;" width="150" /></a></td>
+			<td style="border-spacing: 2px;"><a href="https://www.cabelas.com/custserv/instant_credit.jsp" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank"><img align="right" border="0" height="125" src="https://db.tt/7hkovCZe" style="border: 0px; display: block;" width="150" /></a></td>
+		</tr>
+	</tbody>
+</table>
+
+{{render_dynamic_content(dynamic_html.section_break)}}		
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: rgb(68, 68, 68);" width="580">
+	<tbody style="width: 580px;">		
+		<tr style="-webkit-padding-start: 0px;">
+			<td style="border-spacing: 2px;"><a href="http://www.cabelas.com/content.jsp?pageName=CorporatePartners" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank"><img align="center" border="0" height="39" src="https://db.tt/K8XOxL1B" style="border: 0px; display: block;" width="195" /></a></td>
+			<td style="border-spacing: 2px;"><a href="http://www.cabelas.com/content.jsp?pageName=SponsoredEvents" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank"><img alt="" align="center" border="0" height="39" src="https://db.tt/uevu6B8l" style="border: 0px; display: block;" width="195" /></a></td>
+			<td style="border-spacing: 2px;"><a href="http://www.cabelas.com/content.jsp?pageName=ConservationPartners" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank"><img align="center" border="0" height="39" src="https://db.tt/s753j52x" style="border: 0px; display: block;" width="195" /></a></td>
+		</tr>
+	</tbody>
+</table>
+
+
+{{render_dynamic_content(dynamic_html.section_break)}}	
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: rgb(68, 68, 68);" width="580">
+	<tbody style="width: 580px;">
+		<tr style="-webkit-padding-start: 0px;">
+			   {{ each sociallist }}
+			      <td align="center" style="border-spacing: 2px;"><a href="{{{loop_var.url}}}" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank"><img alt="{{alt}}" border="0" height="20" src="{{sociallist.pict}}" style="border: 0px; display: block;" width="20" /></a></td>
+			   {{end}}
+		</tr>
+	</tbody>
+</table>
+
+{{render_dynamic_content(dynamic_html.section_break)}}	
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: rgb(68, 68, 68);" width="580">
+	<tbody style="width: 580px;">
+		<tr style="-webkit-padding-start: 0px;">
+			<td height="12" style="border-spacing: 2px;"></td>
+		</tr>
+		<tr style="-webkit-padding-start: 0px;">
+			<td style="border-spacing: 2px;" valign="top">
+			<div align="center" style="line-height: 18px; font-size: 11px; color: rgb(102, 102, 102);">{{company}} &nbsp;| &nbsp;123 Main St. &nbsp;|&nbsp; PleasantonVille, EU 42424<br style="-webkit-padding-start: 0px;" />
+			<a data_msys_unsubscribe="1" href="http://www.sparkpost.com/unsubscribe?{{email}}" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(102, 102, 102); outline: none;" target="_blank">Click here</a>&nbsp;to unsubscribe or change your email preferences.</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; word-break: break-word; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: rgb(68, 68, 68);" width="580">
+	<tbody style="width: 580px;">
+		<tr style="-webkit-padding-start: 0px;">
+			<td style="border-spacing: 2px;">
+			<div style="line-height: 18px; text-align: center; font-size: 11px; color: rgb(102, 102, 102);">
+			<p style="margin: 0px; padding: 0px;"><span style="font-weight: 700;">*FREE SHIPPING ON ORDERS OVER {{free_shipping}}, excluding vendor-shipped items</span>: Offer applies to ground shipping only for all orders placed on {{company}}.com or through our catalog and with a merchandise total of {{free_shipping}} or more. Valid for shipments bound to a single destination only within the continental United States. Gift cards, culinary classes, gift wrap, taxes, and prior purchases do not qualify toward the minimum purchase requirement, and offer cannot be applied to such items.&nbsp;<span style="font-weight: 700;">Rush shipping and shipping surcharges still apply.</span>&nbsp;Additional shipping charges apply to AK, HI, Puerto Rico, U.S. Virgin Islands and Guam. No adjustments to prior purchases.</p>
+			</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
