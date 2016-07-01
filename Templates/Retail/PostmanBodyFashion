@@ -9,7 +9,7 @@
 			"email": "support@fashion.com"
 		},
 		"template_id": "retail",
-		"use_draft_template": false
+		"use_draft_template": true
 	},
 	"campaign_id": "Marketing: Daily Promotional",
 	"substitution_data": {
@@ -22,8 +22,11 @@
         "job2" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"https://www.messagesystems.com/careers\">Sales Development Representative, San Francisco, CA</a>",
         "job3" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"https://www.messagesystems.com/careers\">Social Media Marketing, San Francisco, CA</a>",
         "job4" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Platform Developer, Columbia, MD</a>",
-        "job5" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Rain Catcher & Beer Drinker, Seattle, WA</a>",
-                "17823": {
+        "job5" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Rain Catcher & Beer Drinker, Seattle, WA</a>"
+	},
+	"objects" : 
+	{
+        "17823": {
             "url": "https://www.couturecandy.com/lara-dresses-21626-in-black",
             "height" : "200",
             "width" : "320",
@@ -270,7 +273,7 @@
             "reduction" : "10%",
             "owner" : "Shalini",
             "category" : "Fashion Outer Wear",
-            "title": "The Tanya Skirt",
+            "title": "The DE Jacket - Reversible Peplum",
             "image": "https://dl.dropboxusercontent.com/u/4387255/fashion/thede.jpg"
         },
         "18674": {
@@ -305,8 +308,7 @@
             "category" : "Dress",
             "title": "Simplicity in Looks",
             "image": "https://dl.dropboxusercontent.com/u/4387255/fashion/reddress.jpg"
-        }
-    },
+        }},
 	"default_personal": ["personal1", "personal2"],
 	"default_news": ["next1"],
 	"override_standard_height" : "400",
@@ -328,83 +330,83 @@
 			"news": ["next1"],
 			"leadDrop": {
 				"id": "18490",
-				"url": ""
+				"url": "&utm_placement=0&referer=Z7N49F&mode=guest_open"
 			},
 			"grouping": [{
 				"column": [{
 					"id": "18396",
-					"url": ""
+					"url": "&utm_placement=1&referer=Z7N49F&mode=guest_open"
 				}, {
 					"id": "18662",
-					"url": ""
+					"url": "&utm_placement=2&referer=Z7N49F&mode=guest_open"
 				}]
 			}, {
 				"column": [{
 					"id": "17823",
-					"url": ""
+					"url": "&utm_placement=4&referer=Z7N49F&mode=guest_open"
 				}, {
 					"id": "18408",
-					"url": ""
+					"url": "&utm_placement=5&referer=Z7N49F&mode=guest_open"
 				}]
 			}, {
 				"column": [{
 					"id": "18548",
-					"url": ""
+					"url": "&utm_placement=7&referer=Z7N49F&mode=guest_open"
 				}, {
 					"id": "18152",
-					"url": ""
+					"url": "&utm_placement=8&referer=Z7N49F&mode=guest_open"
 				}]
 			}, {
 				"column": [{
 					"id": "18465",
-					"url": ""
+					"url": "&utm_placement=10&referer=Z7N49F&mode=guest_open"
 				}, {
 					"id": "18475",
-					"url": ""
+					"url": "&utm_placement=11&referer=Z7N49F&mode=guest_open"
 				}]
 			}, {
 				"column": [{
 					"id": "18056",
-					"url": ""
+					"url": "&utm_placement=13&referer=Z7N49F&mode=guest_open"
 				}, {
 					"id": "18519",
-					"url": ""
+					"url": "&utm_placement=14&referer=Z7N49F&mode=guest_open"
 				}]
 			}, {
 				"column": [ 
 				{
 					"id": "18454",
-					"url": ""
+					"url": "&utm_placement=23&referer=Z7N49F&mode=guest_open"
 				},{
 					"id": "18585",
-					"url": ""
+					"url": "&utm_placement=17&referer=Z7N49F&mode=guest_open"
 				}]
 			}, {
 				"column": [{
 					"id": "18784",
-					"url": ""
+					"url": "&utm_placement=19&referer=Z7N49F&mode=guest_open"
 				}, 
 				{
 					"id": "18694",
-					"url": ""
+					"url": "&utm_placement=2&referer=Z7N49F&mode=guest_open"
 				},{
 					"id": "18289",
-					"url": ""
+					"url": "&utm_placement=20&referer=Z7N49F&mode=guest_open"
 				}]
 			}, {
 				"column": [{
 					"id": "18653",
-					"url": ""
+					"url": "&utm_placement=22&referer=Z7N49F&mode=guest_open"
 				}, {
 					"id": "18111",
-					"url": ""
+					"url": "&utm_placement=2&referer=Z7N49F&mode=guest_open"
 				},{
 					"id": "18495",
-					"url": ""
+					"url": "&utm_placement=16&referer=Z7N49F&mode=guest_open"
 				}],
 				"down": [{
 					"id": "18550",
-					"url": ""
+					"url": "&utm_placement=24&referer=Z7N49F&mode=guest_open"
 				}]
 			}]
 		}
