@@ -22,7 +22,10 @@
         "job2" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"https://www.messagesystems.com/careers\">Sales Development Representative, San Francisco, CA</a>",
         "job3" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"https://www.messagesystems.com/careers\">Social Media Marketing, San Francisco, CA</a>",
         "job4" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Platform Developer, Columbia, MD</a>",
-        "job5" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Rain Catcher & Beer Drinker, Seattle, WA</a>",
+        "job5" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Rain Catcher & Beer Drinker, Seattle, WA</a>"
+		},
+		"objects" : 
+		{
         "17823": {
             "url": "http://www.steepandcheap.com/rc/alps-mountaineering-on-sale",
             "height" : "720",
@@ -154,15 +157,15 @@
             "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_sunglasses_1200x952.jpg"
         }
     },
-		"default_personal": ["personal1", "personal2"],
-		"default_news": ["next1"],
-		"override_standard_height" : "350",
-        "override_standard_width" : "550",
-        "override_standard_height_long" : "160",
-        "override_standard_width_long" : "535",
-        "backgroundColor" : "#ffffff",
-        "company_home_url" : "www.sparkpost.com",
-        "company_logo" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTVYSp0xUPD8yNMYOyTS20VZBwbzt4J-pjta3FtjcT_0rM-cj2o"
+	"default_personal": ["personal1", "personal2"],
+	"default_news": ["next1"],
+	"override_standard_height" : "350",
+    "override_standard_width" : "550",
+    "override_standard_height_long" : "160",
+    "override_standard_width_long" : "535",
+    "backgroundColor" : "#ffffff",
+    "company_home_url" : "www.sparkpost.com",
+    "company_logo" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTVYSp0xUPD8yNMYOyTS20VZBwbzt4J-pjta3FtjcT_0rM-cj2o"
     },
 	"recipients": [{
 		"return_path": "postman@sparkpost.com",
