@@ -38,7 +38,4 @@ Retail: This template demonstrates the following capabilities
           variable does not exist, the system will use the specific product size variables.  If you want the product sizes to be the
           default, then change the logic in the template.
           
-   Since much of the data resides in the dynamic html json section, the render_dynamic_content macro
-   is used a lot. (i.e.  {{render_dynamic_content(dynamic_html )  Because the product data is not using html code and/or 
-   substitutions within substitution varialbes, this data can be removed from the dynamic content section.  That removes the need
-   for the render_dynamic_content macro for the products.
+  Moved the array of products out of the dynamic_html section.
