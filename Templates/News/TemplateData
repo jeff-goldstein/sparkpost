@@ -1,0 +1,145 @@
+{
+
+	"content": {
+		"template_id": "news-template",
+		"use_draft_template": true
+	},
+		"address": {
+			"email": "jeff.goldstein@sparkpost.com"
+		},
+		"metadata": {
+			"category": "Daily"
+		},
+		"tags": [
+			"Finance",
+			"Sports"
+		],
+
+			"today": "11/17/2015",
+			"first_name": "Jeff",
+			"last_name": "Goldstein",
+			"headerTo": "Jeff Goldstein",
+			"country": "United States",
+			"ip": "137.147.236.205",
+			"city": "San Benito",
+			"region": "TX",
+			"shirt_size": "XS",
+			"membershipid": "2014376",
+			"time_zone": "America/Chicago",
+			"phone": "(355)535-2977",
+			"purchased_to_date": "1,262.12 ",
+			"number_of_orders": "7",
+			"currency": "Dollar",
+			"username": "lgriffin0",
+			"gender": "Male",
+			"registered": "FALSE",
+			"date_joined": "",
+			"education": "College Degree",
+			"university": "Chico State University, Chico California",
+			"news": [{
+				"title": "Finance",
+				"stories": [{
+					"short_description": "Led Zeppelin did not copy 'Stairway to Heaven' intro, jury finds",
+					"long_description": "Music history will not be rewritten. A jury found Led Zeppelin frontman Robert Plant and guitarist Jimmy Page not guilty of copyright infringement on perhaps their most famous song, 'Stairway to Heaven.'",
+					"full_story": "http://money.cnn.com/2016/06/23/media/stairway-to-heaven-trial-verdict/index.html?iid=hp-toplead-dom",
+					"producer": "CNNMoney",
+					"date": "06/23/2016",
+					"image": "http://i2.cdn.turner.com/money/dam/assets/160623143909-zeppelin-old-new-split-780x439.jpg",
+					"more_summaries": [{
+						"link": "http://money.cnn.com/2016/06/02/news/brexit-eu-budget-cost-uk/index.html?iid=surge-story-summary",
+						"title": "How much does the EU really cost Britain?"
+					}, {
+						"link": "http://money.cnn.com/2016/06/22/real_estate/rent-affordability-housing-harvard/index.html?iid=surge-story-summary",
+						"title": "11 million Americans spend half their income on rent"
+					}]
+				}, {
+					"short_description": "Stocks Jump With Pound, Havens Fall as U.K. Votes on EU Future",
+					"long_description": "Stocks gained and the pound strengthened to its highest level this year, while haven assets weakened with voting underway in the U.K.'s referendum on its membership in the European Union. Oil rose above $50 a barrel. Banks led the S&P 500 Index higher to within 1 percent of its record, while European shares rose to a three-week high in above-average volume.",
+					"full_story": "http://www.bloomberg.com/news/articles/2016-06-22/pound-jumps-with-stock-futures-as-u-k-vote-day-dawns-yen-falls",
+					"producer": "Bloomberg",
+					"date": "06/23/2016",
+					"image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqHB1pXg5un4/v2/-1x-1.png",
+					"more_summaries": [{
+						"link": "http://www.independent.co.uk/news/business/news/financial-markets-position-themselves-for-remain-victory-a7098201.html",
+						"title": "EU Referendum"
+					}, {
+						"link": "http://www.marketwatch.com/story/beyond-brexit-these-4-things-will-drive-us-stocks-2016-06-23",
+						"title": "Beyond Brexit"
+					}, {
+						"link": "https://www.theguardian.com/business/2016/jun/23/china-japan-super-rich-asia-pacific-north-america-wealth",
+						"title": "China and Japan Super Wealthy"
+					}]
+				}, {
+					"short_description": "Banks should adopt chip-andPIN for transactions, 9 attorney general say",
+					"long_description": "The attorneys general in eight states -- Connecticut, Illinois, Maine, Massachusetts, New York, Rhode Island, Vermont and Washington -- and the District of Columbia are pressing credit-card issuers and banks to adopt chip-and-PIN rather than chip-and-signature to validate transactions. In a letter to American Express, Bank of America, Capital One, Citigroup, Discover, JPMorgan Chase, MasterCard and Visa, the attorneys general contend 'the chip-enabled cards issued in this country must be reinforced with the requirement that consumers enter a PIN to verify the transaction.'",
+					"full_story": "http://www.computerworld.com/article/3005519/retail-it/pressure-increases-on-banks-to-adopt-chip-and-pin.html",
+					"producer": "MSNBC",
+					"date": "11/17/2015",
+					"image": "http://cdn.smartbrief.com/sites/default/files/styles/article_summary_2_235_x_115/public/externals/06729d29308e50f0a635b6d3b7b9a116.jpg?itok=Aph0toH3",
+					"more_summaries": [{
+						"link": "http://www.smartbrief.com/tags/jpmorgan-chase",
+						"title": "JPMorgan Chase"
+					}, {
+						"link": "http://www.smartbrief.com/tags/american-express",
+						"title": "American Express"
+					}, {
+						"link": "http://www.smartbrief.com/tags/district-columbia",
+						"title": "District of Columbia"
+					}, {
+						"link": "http://www.smartbrief.com/tags/citigroup",
+						"title": "Citigroup"
+					}]
+				}]
+			}, {
+				"title": "Sports",
+				"stories": [{
+					"short_description": "Team Sky's squad to help Froome at Tour de France: Who's in, who's out, what will Thomas do?",
+					"long_description": "2013 and 2015 Tour champion Froome will be joined by Sergio Henao, Vasil Kiryienka, Mikel Landa, Mikel Nieve, Wout Poels, Luke Rowe, Ian Stannard and Geraint Thomas for the race, which begins on July 2nd and finishes on July 24th. Should Froome defend his crown - or one of the other Sky riders manage to win - it would be a fourth victory in five years for the British team, following Bradley Wiggins's victory in 2012.",
+					"full_story": "http://www.eurosport.com/cycling/tour-de-france/2016/team-sky-name-riders-to-help-froome-in-defence-of-tour-de-france-crown_sto5658575/story.shtml",
+					"producer": "Eurosport",
+					"date": "06/20/2016",
+					"image": "http://i.eurosport.com/2015/07/08/1634012-34678063-2560-1440.jpg?w=1450",
+					"more_summaries": [{
+						"link": "http://www.eurosport.com/cycling/tour-de-france/2016/etixx-quickstep-name-team-to-support-kittel-for-tour-de-france-stage-wins_sto5658260/story.shtml",
+						"title": "Etixx-QuickStep name team for Tour De France"
+					}, {
+						"link": "http://www.eurosport.com/cycling/tour-de-france/2015/activists-could-block-2017-tour-de-france-over-bahrain-prince-s-team_sto5641689/story.shtml",
+						"title": "Activits could block Tour over Bahrain Prince"
+					}]
+				}, {
+					"short_description": "Nets trade Thaddeus Young to Pacers for 20th pick, future 2nd-rounder",
+					"long_description": "The Brooklyn Nets have traded forward Thaddeus Young to the Indiana Pacers for the No. 20 overall pick in Thursday's NBA draft and a future protected second-round pick, sources confirmed to ESPN.  There are believed to be no other players in the trade, which has yet to be made official, as the Nets will be clearing additional cap space.  Young, who just turned 28, averaged 15.1 points and 9.0 rebounds last season. He will make $14.1 million in 2016-17, $14.7 million in 2017-18 and has a $13.7 million player option for 2018-19, according to The Vertical.",
+					"full_story": "http://espn.go.com/nba/story/_/id/16454768/brooklyn-nets-trade-thaddeus-young-indiana-pacers-20th-pick-future-second-rounder",
+					"date": "06/24/2016",
+					"producer": "ESPN",
+					"image": "http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3244.png&w=350&h=254",
+					"more_summaries": [{
+						"link": "http://espn.go.com/nba/draft2016/story/_/id/16452390/philadelphia-76ers-hot-pursuit-boston-celtics-no-3-pick",
+						"title": "76ers trying to acquire No. 3 pick from Celtics"
+					}, {
+						"link": "http://espn.go.com/nfl/story/_/id/16378780/ranking-nfl-head-coaches-players-32-1",
+						"title": "Ranking the coaches"
+					}]
+				}, {
+					"short_description": "Top Female Players Accuse U.S. Soccer of Wage Discrimination",
+					"long_description": "U.S. Soccer, the governing body for the sport in America, pays the members of the men’s and women’s national teams who represent the United States in international competitions. The men’s team has historically been mediocre. The women’s team has been a quadrennial phenomenon, winning world and Olympic championships and bringing much of the country to a standstill in the process.  Citing this disparity, as well as rising revenue numbers, five players on the women’s team filed a federal complaint Wednesday, accusing U.S. Soccer of wage discrimination because, they said, they earned as little as 40 percent of what players on the United States men’s national team earned even as they marched to the team’s third World Cup championship last year. The five players, some of the world’s most prominent women’s athletes, said they were being shortchanged on everything from bonuses to appearance fees to per diems.",
+					"full_story": "http://www.nytimes.com/2016/04/01/sports/soccer/uswnt-us-women-carli-lloyd-alex-morgan-hope-solo-complain.html?_r=0",
+					"date": "06/01/2016",
+					"producer": "NYTimes",
+					"image": "https://static01.nyt.com/images/2016/04/01/sports/01soccer-web/01soccer-web-master768.jpg",
+					"more_summaries": [{
+						"link": "http://www.nytimes.com/2016/06/23/sports/soccer/copa-america-us-argentina.html?ribbon-ad-idx=4&rref=sports/soccer",
+						"title": "COPA America"
+					}, {
+						"link": "http://www.nytimes.com/2016/06/24/sports/soccer/a-soccer-game-with-an-orchestral-soundtrack.html?ribbon-ad-idx=4&rref=sports/soccer",
+						"title": "The Sounds of Soccer"
+					}, {
+						"link": "http://www.nytimes.com/2016/06/23/sports/soccer/euro-2016-final-16-iceland-austria.html?ribbon-ad-idx=4&rref=sports/soccer",
+						"title": "Down to 16 - COPA"
+					}, {
+						"link": "http://www.nytimes.com/2016/06/23/sports/soccer/iceland-austria-euros-2016.html?ribbon-ad-idx=4&rref=sports/soccer",
+						"title": "Iceland?"
+					}]
+				}]
+			}]
+		}
