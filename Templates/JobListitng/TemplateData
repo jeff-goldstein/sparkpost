@@ -1,0 +1,163 @@
+{
+        "SubjectLine": "Your Daily Jobs As Requested",
+		"DelivChannel": "trans",
+		"apply_image" : "https://dl.dropboxusercontent.com/u/4387255/jobs/Apply-Button-Blue.jpg",
+		"logo" : "https://dl.dropboxusercontent.com/u/4387255/jobs/Jobs-Logo.png",
+		"caption_font_color" : "green",
+		"jobs" : {
+           "12345" :  {
+            	"job_html" : "http://click.snagajob-email.com/?qs=40a5b0b4aad1842ab8b9477895c4b3879366363ad8e53f6c6fbedb602565143a3aa718fc22cad233",
+            	"job_slot" : "1",
+            	"job_title" : "Evening Sitter For",
+            	"job_location" : "Pleasanton",
+                "job_notes" : "Updated Today"
+            },
+          "12363" :  {
+            	"job_html" : "http://click.snagajob-email.com/?qs=40a5b0b4aad1842a4b4e4d76c3e968f5d252a0d2401f8638a08dc31ae5b0ab3c1e64504a902e0d2f",
+            	"job_slot" : "2",
+            	"job_title" : "Housekeeping",
+            	"job_location" : "Pleasanton, CA",
+                "job_notes" : "Updated this week"
+            },	
+            "38723" : {
+            	"job_html" : "http://click.snagajob-email.com/?qs=40a5b0b4aad1842abc7e7ccc4266808d8da4967ef159a2572715f88b14f29f16c9dcc1f4cae1f2de",
+            	"job_slot" : "3",
+            	"job_title" : "Cashier Lead",
+            	"job_location" : "Pleasanton, CA",
+                "job_notes" : "Updated this week"
+            },
+           "87346" : {
+            	"job_html" : "http://click.snagajob-email.com/?qs=40a5b0b4aad1842a745ca5185560389beb475817bd40bf6b0d8c118dc0cde62fc26a61ace2efc7b1",
+            	"job_slot" : "4",
+            	"job_title" : "Home Instead",
+            	"job_location" : "Milpitas, CA"
+            },	
+           "75232" : {
+            	"job_html" : "http://click.snagajob-email.com/?qs=5f4456970b92801c0d385d79abb052ae750bb0cceebbecff40bb77ff5d777c8ac853e60ab3d7c196",
+            	"job_slot" : "5",
+            	"job_title" : "Sales Associate",
+            	"job_location" : "Pleasanton, CA"
+            },	
+           "99003" : {
+            	"job_html" : "http://click.snagajob-email.com/?qs=5f4456970b92801c979daff25c3201fd35a6d0ef5b5b3b56fec8f58432225d3538549827f330e6d4",
+            	"job_slot" : "6",
+            	"job_title" : "*Now Hiring* Assistant",
+            	"job_location" : "Livermore, CA"
+            },	
+            "62271" :{
+            	"job_html" : "http://click.snagajob-email.com/?qs=5f4456970b92801c96fe05d05da61d7d5005c60b2011afa9db8f54e5d7f72a9ecf577fadfa826652",
+            	"job_slot" : "7",
+            	"job_title" : "Toys R Us Off Hours",
+            	"job_location" : "Dublin, CA"
+            },	
+            "77099" :{
+            	"job_html" : "http://click.snagajob-email.com/?qs=5f4456970b92801c0603ab851a684e371fa8772aef2babd345779bbf6becf64ef7b0d0ad841ce030",
+            	"job_slot" : "8",
+            	"job_title" : "Retail Merchandising",
+            	"job_location" : "Dublin, CA (Updated this week)",
+                "job_notes" : "Updated this week"
+            },
+            "00366" : {
+            	"job_html" : "http://click.snagajob-email.com/?qs=5f4456970b92801caba30e9d50c627d7b58e08b3368cfdf91ef9500d5dda0f3530e80497b2be45cc",
+            	"job_slot" : "9",
+            	"job_title" : "Crew - Driver - Shift",
+            	"job_location" : "Dublin, CA",
+                "job_notes" : "1 Click apply"
+            },		
+            "52998" :{
+            	"job_html" : "http://click.snagajob-email.com/?qs=5f4456970b92801ccd346fd50128d532bb641d31c8cca6db0447a6b9d4c397fb1e6b3cfe3ef4acd1",
+            	"job_slot" : "10",
+            	"job_title" : "Cashiers",
+            	"job_location" : "Dublin, CA"
+            },	
+            "27623" : {
+            	"job_html" : "http://click.snagajob-email.com/?qs=5f4456970b92801c57fec40ed50e8fcffe0f6d59419c66fdd85398047d619d57aacac9dd3444575d",
+            	"job_slot" : "11",
+            	"job_title" : "Retail Sales Specialist",
+            	"job_location" : "Dublin, CA"
+            },	
+            "76050" : {
+            	"job_html" : "http://click.snagajob-email.com/?qs=5f4456970b92801c8eb20f4837934ac957300d84266a8d6e0840c1b1d2348ae25d8bac701190709f",
+            	"job_slot" : "12",
+            	"job_title" : "Teavana (a Starbucks Company)",
+            	"job_location" : "Walnut Creek, CA (Updated this week)",
+                "job_notes" : "Updated this week"
+            },	
+            "91128" : {
+            	"job_html" : "http://click.snagajob-email.com/?qs=5f4456970b92801ca25e5dbdf5165baa38243ca055aeb6a6acff93ccd4850abce6a6a0dc16e98347",
+            	"job_slot" : "13",
+            	"job_title" : "General Manager",
+            	"job_location" : "Pleasanton, CA"
+            }
+        },
+        "offers" : {
+           "1" :  {
+            	"offer_url" : "http://money.usnews.com/money/blogs/outside-voices-careers/2015/06/08/3-reasons-youre-not-getting-promoted",
+            	"offer_pict" : "https://dl.dropboxusercontent.com/u/4387255/jobs/3Reasons.png",
+            	"caption" : "3 Reasons You're Not Getting Promoted"
+            },
+           "2" :  {
+            	"offer_url" : "http://money.usnews.com/money/careers/articles/2015/01/13/infographic-the-best-jobs-of-2015",
+            	"offer_pict" : "https://dl.dropboxusercontent.com/u/4387255/jobs/BestJobs.png",
+            	"caption" : "Best Jobs of 2016!"
+            },	
+            "3" : {
+            	"offer_url" : "https://www.creditkarma.com",
+            	"offer_pict" : "https://dl.dropboxusercontent.com/u/4387255/jobs/creditscore.png",
+            	"caption" : "Free Credit Score"
+            },
+           "4" : {
+            	"offer_url" : "http://www.seemypersonality.com/#q1",
+            	"offer_pict" : "https://dl.dropboxusercontent.com/u/4387255/jobs/quiz.png",
+            	"caption" : "Understand Your Personality"
+            }
+        },
+        "row": [{
+				"column": [{
+					"id": "1"
+				}, {
+					"id": "2"
+				}]
+			}, {
+				"column": [{
+					"id": "3"
+				}, {
+					"id": "4"
+				}]
+			}],
+    "metadata" : 
+    {
+        "job": "Sales Engineer",
+        "month" : "February",
+        "region" : "Oakland"
+    },
+		"address":{"email":"jeff.goldstein@sparkpost.com"},
+    	"tags":[
+    	  "Sales",
+    	  "Engineer"],
+			"id":1,
+			"first_name":"Sam",
+			"last_name":"Goldstein",
+			"headerTo":"jeffsam0@ucsd.edu",
+			"country":"United States",
+			"city":"Pleasanton",
+			"region":"CA",
+			"membershipid":"2014376",
+			"time_zone":"America/Chicago",
+			"phone":"(355)535-2977",
+			"number_of_interviews":"7",
+			"username":"jgold",
+			"gender":"Male",
+			"registered":"FALSE",
+			"education":"College Degree",
+			"university":"Chico State University, Chico California",
+			"image" : "http://recs.snagajob.com/emailrecommendation/image?mobile=1&amp;jsid=55fc5f7d7e43fb23f8e8268b&amp;emailaddress=austeins@yahoo.com&amp;msg=72617&amp;zip=94588&amp;max=20&amp;new=1&amp;slot=",
+			"job": [
+			    {"id": "99003"},
+    			{"id": "76050"},
+    			{"id": "12363"},
+    			{"id": "91128"},
+    			{"id": "77099"}
+    		]
+ 
+}
