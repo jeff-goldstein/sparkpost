@@ -1,3 +1,10 @@
+Each Template folder will have the following files:
+  o The sample template
+  o Sample data that can be placed in the SparkPost UI for testing
+  o One or more Postman datasets for Transmission calls using that template.
+
+Current Templates:
+
 1) Invoice:  This template demonstrates the following capabilities
    o Array's within Arrays.  The top level is the high level product description, the next level are specific details
    o Setting Link Names
@@ -33,4 +40,10 @@
 4) Daily news:  This template demonstrates the following capabilities
    o Array's within Arrays.  The top level is the high level product description, the next level are specific details
    o Simple substitution
+   
+5) Abandoned Cart: This template demonstrates the following capabilities
+   o Simple substitution
+   o Loops
+   o Dynamic HTML
+   o Dynamic URL's
 
