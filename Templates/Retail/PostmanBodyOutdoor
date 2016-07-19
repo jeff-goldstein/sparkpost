@@ -23,140 +23,135 @@
         "job3" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"https://www.messagesystems.com/careers\">Social Media Marketing, San Francisco, CA</a>",
         "job4" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Platform Developer, Columbia, MD</a>",
         "job5" : "<a data-msys-linkname=\"jobs\" {{{link_format}}} href=\"http://page.messagesystems.com/careers\">Rain Catcher & Beer Drinker, Seattle, WA</a>"
-		},
-		"objects" : 
-		{
-        "17823": {
-            "url": "http://www.steepandcheap.com/rc/alps-mountaineering-on-sale",
+    },
+    "objects" : {
+    "17823": {
+            "url": "https://db.tt/emZu6fd2",
             "height" : "720",
             "width" : "1420",
             "price" : "$355.00",
             "reduction" : "$10",
-            "title": "ALPS Mountaineering On Sale",
+            "title": "ALPS Mountaineering Hiking Shoes",
             "owner" : "",
             "category" : "Outdoor",
-            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/alps.jpg"
+            "image": "https://db.tt/emZu6fd2"
         },
         "18056": {
-            "url": "http://www.steepandcheap.com/rc/ski-snowboard-clearance",
+            "url": "https://db.tt/4tZJ4G0J",
             "height" : "952",
             "width" : "1200",
             "price" : "$199.99 and Up",
             "reduction" : "Up To 62%",
             "owner" : "EggWedge",
             "category" : "Outdoor",
-            "title": "Ski & Snowboard",
-            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_skisnowboard_1200x952.jpg"
+            "title": "Hike the World With Blue Lake",
+            "image": "https://db.tt/4tZJ4G0J"
         },
         "18111": {
-            "url": "http://www.steepandcheap.com/rc/mountain-hardwear-on-sale",
+            "url": "https://db.tt/w97FMz9w",
             "height" : "952",
             "width" : "1200",
             "price" : "$259.00",
             "reduction" : "Up To 65% Off",
             "category" : "Outdoor",
-            "title": "Mountain Hardwear On Sale",
-            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_MHW_1200x952.jpg"
+            "title": "One Man's Hotel...Live Under the Stars",
+            "image": "https://db.tt/w97FMz9w"
         },
         "18152": {
-            "url": "http://www.steepandcheap.com/rc/outdoor-research-on-sale",
+            "url": "https://db.tt/JEPmoIyG",
             "height" : "952",
             "width" : "1200",
             "price" : "$295.00",
             "reduction" : "Up to 60% Off",
             "owner" : "Stanza",
             "category" : "Research",
-            "title": "Outdoor Research On Sale",
-            "image": "https://dl.dropboxusercontent.com/u/outdoor/fashion/SAC_OR_1200x952.jpg"
+            "title": "Easy Six Course Meals",
+            "image": "https://db.tt/JEPmoIyG"
         },
         "18289": {
-            "url": "http://www.steepandcheap.com/rc/patagonia-on-sale",
+            "url": "https://db.tt/GyyOtaJO",
             "height" : "952",
             "width" : "1200",
             "price" : "$24",
             "reduction" : "Up to 65% Off",
             "owner" : "Patagonia",
             "category" : "Fashion",
-            "title": "Apparel, Outerwear & More From Patagonia",
-            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_patagonia_1200x952.jpg"
+            "title": "Self Cleaning Pots! No, But Close",
+            "image": "https://db.tt/GyyOtaJO"
         },
         "18315": {
-            "url": "http://www.steepandcheap.com/rc/mens-shorts-boardshorts-on-sale",
+            "url": "https://db.tt/sSVMRwZ5",
             "height" : "952",
             "width" : "1200",
-            "price" : "$33.33",
+            "price" : "$333.33",
             "reduction" : "7%",
             "onwer" : "Board",
             "category" : "Clothing",
-            "title": "Men's Shorts & Boardshorts On Sale",
-            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_mensshorts_1200x952.jpg"
+            "title": "Two for One; Corn Snake and Hiking Shoes",
+            "image": "https://db.tt/sSVMRwZ5"
         },
         "18396": {
-            "url": "http://www.steepandcheap.com/rc/the-north-face-on-sale",
+            "url": "https://db.tt/FcOfWqZl",
             "height" : "952",
             "width" : "1200",
-            "price" : "$34",
+            "price" : "$534",
             "reduction" : "Up to 65% Off",
             "owner" : "gonza",
-            "category" : "Relaxed Fashion",
-            "title": "The North Face On Sale",
-            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_TNF_1200x952.jpg"
+            "category" : "Transportation",
+            "title": "Lady of the Lake Canoe",
+            "image": "https://db.tt/FcOfWqZl"
         },
         "18405": {
-            "url": "http://www.steepandcheap.com/rc/backpacks-on-sale",
+            "url": "https://db.tt/c5zLNZyD",
             "height" : "952",
             "width" : "1200",
             "price" : "$125.45",
             "reduction" : "84%",
-            "owner" : "EggWedge",
-            "category" : "Backpacks",
-            "title": "Backpacks On Sale",
-            "image" : "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_packs_1200x952.jpg"
+            "category" : "Hardware",
+            "title": "Relaxed Jeans?  Nope, Relaxed Axe",
+            "image" : "https://db.tt/c5zLNZyD"
         },
         "18408": {
-            "url": "http://www.steepandcheap.com/rc/dakine-on-sale",
+            "url": "https://db.tt/ygV5K0t8",
             "height" : "952",
             "width" : "1200",
             "price" : "$238",
             "reduction" : "Free Shipping",
-            "owner" : "EggWedge",
-            "category" : "Dakine",
-            "title": "Dakine On Sale",
-            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_dakine_1200x952.jpg"
+            "category" : "Fishing",
+            "title": "Nomo Fish Fishing Rods",
+            "image": "https://db.tt/ygV5K0t8"
         },
         "18439": {
-            "url": "http://www.steepandcheap.com/rc/prana-on-sale",
-            "height" : "952",
-            "width" : "1200",
-            "price" : "$55.",
-            "reduction" : "Up to 60% Off",
-            "category" : "Clothing",
-            "title": "Prana On Sale",
-            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_prana_1200x952.jpg"
-        },
-        "18454": {
-            "url": "http://www.steepandcheap.com/rc/salomon-on-sale",
+            "url": "https://db.tt/5wvuaZFL",
             "height" : "952",
             "width" : "1200",
             "price" : "$55",
+            "reduction" : "Up to 60% Off",
+            "category" : "Fishing",
+            "title": "Parana Fishing Reel",
+            "image": "https://db.tt/5wvuaZFL"
+        },
+        "18454": {
+            "url": "https://db.tt/hhDO0Hi3",
+            "height" : "952",
+            "width" : "1200",
+            "price" : "$255",
             "reduction" : "Up to 55% Off",
             "owner" : "Salomon",
-            "category" : "Hicking Boots",
-            "title": "Salomon On Sale",
-            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_salomen_1200x952.jpg"
+            "category" : "Used B Good",
+            "title": "Get Used Movie Canoe's, Proceeds go to Starving Actor's!",
+            "image": "https://db.tt/hhDO0Hi3"
         },
         "18465": {
-            "url": "http://www.steepandcheap.com/rc/sunglasses-on-sale",
+            "url": "https://db.tt/TXSzB4km",
             "height" : "952",
             "width" : "1200",
             "price" : "€65",
             "reduction" : "€10 or more, plus free shipping",
-            "owner" : "Style",
-            "category" : "Oakley",
-            "title": "Premium Sunglasses On Sale",
-            "image": "https://dl.dropboxusercontent.com/u/4387255/outdoor/SAC_sunglasses_1200x952.jpg"
-        }
-    },
+            "category" : "Rayz",
+            "title": "Easy Sight Flash Light",
+            "image": "https://db.tt/TXSzB4km"
+        }},
 	"default_personal": ["personal1", "personal2"],
 	"default_news": ["next1"],
 	"override_standard_height" : "350",
@@ -176,7 +171,7 @@
 			"first_name": "Sam the Man 2",
 			"job": ["job3", "job1"],
 			"news": ["next1"],
-			"leadDrop": {
+			"featured": {
 				"id": "18465",
 				"url": ""
 			},
@@ -207,9 +202,6 @@
 					"url": ""
 				},{
 					"id": "18454",
-					"url": ""
-				},{
-					"id": "18465",
 					"url": ""
 				}]
 			}]
