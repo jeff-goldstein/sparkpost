@@ -1,10 +1,4 @@
-{
-	
-	"content": {
-		"template_id": "abandoned",
-		"use_draft_template": true
-	},
-		"dynamic_html": {
+{"dynamic_html": {
 			"section_break": "<br><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"-webkit-padding-start: 0px; margin: 0px; padding: 0px; word-break: break-word; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: rgb(68, 68, 68);\" width=\"580\"><tbody style=\"-webkit-padding-start: 0px; width: 580px;\"><tr style=\"-webkit-padding-start: 0px;\"><td align=\"center\" height=\"1\" style=\"-webkit-padding-start: 0px; border-spacing: 2px;\" width=\"580\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"-webkit-padding-start: 0px; margin: 0px; padding: 0px; word-break: break-word;\" width=\"580\"><tbody style=\"-webkit-padding-start: 0px; width: 580px;\"><tr style=\"-webkit-padding-start: 0px;\"><td bgcolor=\"#aaaaaa\" height=\"1\" style=\"-webkit-padding-start: 0px; border-spacing: 2px;\" width=\"580\"></td></tr></tbody></table></td></tr></tbody></table><br>",
 			"member_level": "<strong>GOLD</strong>",
 			"shipping_message": "FREE SHIPPING ON ORDERS OVER {{free_shipping}} with promo code {{promo_code}}*",
@@ -12,49 +6,56 @@
 		},
 		"dynamic_subject": "Sorry to see you leave these in your shopping cart",
 		"DelivChannel": "trans",
-		"company_home_url": "http://www.cabela.com",
-		"company_logo": "https://db.tt/4piOJBHZ",
-		"classes_url": "http://www.cabelasoutdooradventures.com",
-		"stores": "http://www.cabelas.com/stores/stores_home.jsp",
+		"company_home_url": "http://www.sparkpost.com",
+		"company_logo": "https://db.tt/vmCFpB8C",
+		"classes_url": "http://www.company.com/classes.jsp",
+		"stores": "http://www.company.com/stores/stores_home.jsp",
 		"browsing_message_img": "https://db.tt/GrNBJRnf",
-
+		"credit_card_image" : "https://db.tt/hjDm60mJ",
+		"credit_card_url" : "https://db.tt/hjDm60mJ",
+		"gift_card_image" : "https://db.tt/cR0ToAy9",
+		"gift_card_url" : "https://db.tt/cR0ToAy9",
+		"adventures_image" : "https://db.tt/Ms4h4Cav",
+		"adventures_url" : "https://db.tt/Ms4h4Cav",
+		"links" : [
+		{
+		    "text" : "Blog",
+		    "link" : "https://www.sparkpost.com/blog/#.V5KDvYQbfDI"
+		},{
+		    "text" : "About",
+		    "link" : "https://www.sparkpost.com/about-us"
+		},{
+		    "text" : "Partners",
+		    "link" : "https://www.sparkpost.com/partners"
+		},{
+		    "text" : "Leadership",
+		    "link" : "https://www.sparkpost.com/about-us/leadership"
+		}],
 		"logo_height": "110",
 		"logo_width": "220",
 		"header_color": "#cc6600",
 		"header_box_color": "#fff4ea",
-		"company": "Cabela's",
+		"company": "SparkPost",
 		"free_shipping_flag": "N",
 		"free_shipping": "$79",
 		"promo_code": "SHIPFREE",
 		"sociallist": [{
-			"url": "https://www.facebook.com/Cabelas",
+			"url": "https://www.facebook.com/sparkpost",
 			"pict": "https://db.tt/hZ3QjdlJ",
 			"alt": "Facebook"
 		}, {
-			"url": "https://twitter.com/cabelas",
+			"url": "https://twitter.com/sparkpost",
 			"pict": "https://db.tt/5F23cSel",
 			"alt": "Twitter"
 		}, {
-			"url": "https://www.youtube.com/cabela",
+			"url": "https://www.youtube.com/sparkpost",
 			"pict": "https://db.tt/C6rnHIsz",
 			"alt": "YouTube"
 		}, {
-			"url": "https://www.pinterest.com/cabelas",
+			"url": "https://www.pinterest.com/sparkpost",
 			"pict": "https://db.tt/QUKt0Hx0",
 			"alt": "Pinterest"
 		}],
-	
-
-		"address": {
-			"email": "jeff.goldstein@sparkpost.com"
-		},
-		"metadata": {
-			"season": "Q1"
-		},
-		"tags": [
-			"abandoned",
-			"outdoor"
-		],
 			"user_name": "jeffreyca",
 			"first_name": "Jeff",
 			"last_name": "Goldstein",
@@ -76,35 +77,34 @@
 			"main_prod_img": "https://db.tt/59QKGYKG",
 			"main_prod_name": "Browning® McKinley -30°F Sleeping Bag",
 			"productlist": [{
-				"item_name": "Browning® Titan Cot XP",
+				"item_name": "ByrdLite Kerosene Lamp",
 				"short_description": "",
-				"item_url": "http://www.cabelas.com/catalog/product.jsp?productId=2218172",
-				"item_img": "https://db.tt/NqSjpVKd",
+				"item_url": "https://db.tt/XwtT1Y96",
+				"item_img": "https://db.tt/XwtT1Y96",
 				"sku": "IK-581866",
 				"item_price": "$149.99 US"
 			}, {
-				"item_name": "ALPS Velocity Air Beds",
+				"item_name": "Softbed Camping Mat",
 				"short_description": "",
-				"item_url": "http://www.cabelas.com/product/alps-velocity-air-beds/2218176.uts",
-				"item_img": "https://db.tt/hrFBrECj",
+				"item_url": "https://db.tt/DPc6FNWg",
+				"item_img": "https://db.tt/DPc6FNWg",
 				"sku": "IK-581867",
 				"item_price": "$99-$199 US"
 			}, {
-				"item_name": "Browning® Fleece Pillow",
+				"item_name": "Magic Hammock",
 				"short_description": "",
-				"item_url": "http://www.cabelas.com/product/browning-174-fleece-pillow/2218179.uts",
-				"item_img": "https://db.tt/kw9m99je",
+				"item_url": "https://db.tt/C3wKm5gh",
+				"item_img": "https://db.tt/C3wKm5gh",
 				"sku": "IK-581870",
 				"item_price": "$17.99 US"
 			}],
 			"abandoned_products": [{
-				"prod_url": "http://www.cabelas.com/product/camping/sleeping-bags|/pc/104795280/c/104770080/browning-174-mckinley-30-176-f-sleeping-bag/2218167.uts?destination=%2Fcatalog%2Fbrowse%2Fsleeping-bags%2F_%2FN-1100675%2B4294733642%2FNe-4294733642%2FNs-CATEGORY_SEQ_104770080%3FWTz_st%3DGuidedNav%26WTz_stype%3DGNU",
-				"prod_img": "https://db.tt/59QKGYKG",
-				"prod_name": "Browning® McKinley -30°F Sleeping Bag"
+				"prod_url": "https://db.tt/XmLMffUI",
+				"prod_img": "https://db.tt/XmLMffUI",
+				"prod_name": "Banty Bags -30°F Sleeping Bag"
 			}, {
-				"prod_url": "http://www.cabelas.com/product/camping/sleeping-bags|/pc/104795280/c/104770080/browning-reg-denali-mummy-sleeping-bag/1216791.uts?destination=%2Fcatalog%2Fbrowse%2Fsleeping-bags%2F_%2FN-1100675%2B4294733642%2FNe-4294733642%3FWTz_st%3DGuidedNav%26WTz_stype%3DGNU",
-				"prod_img": "https://db.tt/TpJrXXU4",
-				"prod_name": "Browning® Denali Mummy Sleeping Bag"
+				"prod_url": "https://db.tt/shzTM5cO",
+				"prod_img": "https://db.tt/shzTM5cO",
+				"prod_name": "Pickle Pad -10°F Mummy Sleeping Bag"
 			}]
-		
 }
