@@ -110,8 +110,8 @@
                   <table style="width:100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                     <tr>
                       <td valign="middle" align="center" style="padding: 5px 0 15px; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; line-height: 20px; font-weight: 400; vertical-align: middle;">
-                        <a style="text-decoration:none; color:#000000;" href="{{company_home_url}}" target="_blank">
-                          <img alt="New products selected for you." src="{{company_logo}}" width="75" height="20" border="0" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; padding-bottom: 0; display: inline !important; vertical-align: bottom;">
+                        <a style="text-decoration:none; color:#000000;" href="{{{company_home_url}}}" target="_blank">
+                          <img alt="New products selected for you." src="{{{company_logo}}}" width="75" height="20" border="0" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; padding-bottom: 0; display: inline !important; vertical-align: bottom;">
                         </a>
                       </td>
                     </tr>
@@ -137,32 +137,32 @@
 <table align="center" cellpadding="0" cellspacing="0" border="0" style="width:100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
   <tr>
     <td align="center" style="padding: 0;">
-      <a style="text-decoration:none;" href="{{objects[featured.id].url}}{{{featured.url}}}" target="_blank">
-        <img alt="{{objects[featured.id].title}}" src="{{objects[featured.id].image}}?w=580&h=175&fit=crop" width="580" height="175" border="0" style="box-shadow: 10px 10px 5px #888888; outline: none;text-decoration: none;-ms-interpolation-mode: bicubic; padding-bottom: 0; display: inline !important; vertical-align: center;">
+      <a style="text-decoration:none;" href="{{{objects[featured.id].url}}}{{{featured.url}}}" target="_blank">
+        <img alt="{{objects[featured.id].title}}" src="{{{objects[featured.id].image}}}" width="580" height="175" border="0" style="box-shadow: 10px 10px 5px #888888; outline: none;text-decoration: none;-ms-interpolation-mode: bicubic; padding-bottom: 0; display: inline !important; vertical-align: center;">
       </a>
     </td>
   </tr>
   <tr>
     <td align="center" style="padding: 24px 0 0; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; line-height: 24px; font-weight: 400;">
-      <a style="text-decoration:none;color:#000000;" href="{{objects[featured.id].url}}{{{featured.url}}}" target="_blank">
+      <a style="text-decoration:none;color:#000000;" href="{{{objects[featured.id].url}}}{{{featured.url}}}" target="_blank">
         {{objects[featured.id].title}}
       </a>
     </td>
   </tr>
   <tr>
     <td align="center" style="padding: 12px 0 0; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: 100; color: #999999;">
-      <a style="text-decoration:none;color:#999999;" href="{{objects[featured.id].url}}{{{featured.url}}}" target="_blank">
+      <a style="text-decoration:none;color:#999999;" href="{{{objects[featured.id].url}}}{{{featured.url}}}" target="_blank">
           Limited offer for {{render_dynamic_content(dynamic_html.member_level)}} level members at a rediculously reduced price of {{objects[featured.id].price}}.
       </a>
     </td>
   </tr>
   <tr>
     <td align="center" style="padding: 24px 0 24px;">
-      <a style="text-decoration: none; color: #ffffff;" href="{{objects[featured.id].url}}{{{featured.url}}}" target="_blank">
+      <a style="text-decoration: none; color: #ffffff;" href="{{{objects[featured.id].url}}}{{{featured.url}}}" target="_blank">
         <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #00afd8; border-radius: 3px;" bgcolor="#00afd8">
           <tr>
             <td style="padding: 15px 30px; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 14px; font-weight: 400; color: #ffffff;">
-              <a data-msys-linkname='Lead' style="text-decoration: none; color: #ffffff;" href="{{objects[featured.id].url}}{{{featured.url}}}" target="_blank">
+              <a data-msys-linkname='Lead' style="text-decoration: none; color: #ffffff;" href="{{{objects[featured.id].url}}}{{{featured.url}}}" target="_blank">
                 SEE MORE
               </a>
             </td>
@@ -196,14 +196,14 @@
                 <table cellpadding="0" cellspacing="0" border="0" style="width:100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                 <tr>
                     <td align="center" style="padding: 0;">
-                    <a data-msys-linkname="multiple row" href="{{objects[loop_var.id].url}}{{{loop_var.url}}}" target="_blank" style="text-decoration: none;">
-                      <img alt="{{objects[loop_var.id].title}}" src="{{objects[loop_var.id].image}}" height="{{ if override_standard_height }} {{override_standard_height}} {{else}} {{objects[loop_var.id].height}} {{end}}" width="{{ if override_standard_width }} {{override_standard_width}} {{else}} {{objects[loop_var.id].width}} {{end}}" border="0" style="box-shadow: 10px 10px 5px #888888; outline: none;text-decoration: none;-ms-interpolation-mode: bicubic; border: 1px solid #dddddd; padding-bottom: 0; display: inline !important; vertical-align: center;">
+                    <a data-msys-linkname="multiple row" href="{{{objects[loop_var.id].url}}}{{{loop_var.url}}}" target="_blank" style="text-decoration: none;">
+                      <img alt="{{objects[loop_var.id].title}}" src="{{{objects[loop_var.id].image}}}" height="{{ if override_standard_height }} {{override_standard_height}} {{else}} {{objects[loop_var.id].height}} {{end}}" width="{{ if override_standard_width }} {{override_standard_width}} {{else}} {{objects[loop_var.id].width}} {{end}}" border="0" style="box-shadow: 10px 10px 5px #888888; outline: none;text-decoration: none;-ms-interpolation-mode: bicubic; border: 1px solid #dddddd; padding-bottom: 0; display: inline !important; vertical-align: center;">
                     </a>
                   </td>
                 </tr>
                 <tr>
                     <td align="center" style="padding: 6px 0 0; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 22px; font-weight: 400; color: #000000; text-decoration: none;">
-                    <a href="{{objects[loop_var.id].url}}{{{loop_var.url}}}" target="_blank" style="text-decoration: none; color: #000000;">
+                    <a href="{{{objects[loop_var.id].url}}}{{{loop_var.url}}}" target="_blank" style="text-decoration: none; color: #000000;">
                       {{objects[loop_var.id].title}}
                     </a>
                   </td>
@@ -238,14 +238,14 @@
       <table cellpadding="0" cellspacing="0" border="0" style="width:100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
         <tr>
           <td align="center" style="padding: 0;">
-            <a target="_blank" style="text-decoration: none;" data-msys-linkname="single row" href="{{objects[loop_var.id].url}}{{{loop_var.url}}}">
-              <img alt="{{objects[loop_var.id].title}}" src="{{objects[loop_var.id].image}}" height="{{ if override_standard_height_long }} {{override_standard_height_long }} {{else}} {{objects[loop_var.id].height}} {{end}}" width="{{ if override_standard_width_long }} {{override_standard_width_long}} {{else}} {{objects[loop_var.id].width}} {{end}}" border="0" style="box-shadow: 10px 10px 5px #888888; outline: none;text-decoration: none;-ms-interpolation-mode: bicubic; border: 1px solid #dddddd; padding-bottom: 0; display: inline !important; vertical-align: bottom;">
+            <a target="_blank" style="text-decoration: none;" data-msys-linkname="single row" href="{{{objects[loop_var.id].url}}}{{{loop_var.url}}}">
+              <img alt="{{objects[loop_var.id].title}}" src="{{{objects[loop_var.id].image}}}" height="{{ if override_standard_height_long }} {{override_standard_height_long }} {{else}} {{objects[loop_var.id].height}} {{end}}" width="{{ if override_standard_width_long }} {{override_standard_width_long}} {{else}} {{objects[loop_var.id].width}} {{end}}" border="0" style="box-shadow: 10px 10px 5px #888888; outline: none;text-decoration: none;-ms-interpolation-mode: bicubic; border: 1px solid #dddddd; padding-bottom: 0; display: inline !important; vertical-align: bottom;">
             </a>
           </td>
         </tr>
         <tr>
           <td align="center" style="padding: 6px 0 0; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 22px; font-weight: 400; color: #000000; text-decoration: none;">
-            <a href="{{objects[loop_var.id].url}}{{{loop_var.url}}}" target="_blank" style="text-decoration: none; color: #000000;">
+            <a href="{{{objects[loop_var.id].url}}}{{{loop_var.url}}}" target="_blank" style="text-decoration: none; color: #000000;">
               {{objects[loop_var.id].title}}
             </a>
           </td>
