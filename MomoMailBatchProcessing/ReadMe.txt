@@ -8,8 +8,19 @@ is such a process for a SparkPost.  The MomoMail application accepts json
 formatted files that it uses as input to the SparkPost Web API to either send emails,
 upload recipient lists or to add/change templates.
 
-While this directory has sample json files (all of the files with a .json postfix)
-it is recommended that you read the api documentation which can be obtained without
+For sample input files for sending emails, simply look into the 'Templates' directory of 
+this Github repository and use any of the Postman examples.  Those examples are the same
+structure that would be used for the batch processing program.  The only change would be the
+addition of a field that is used to tell the batch program how many emails you expect to be
+processed for that specific file.  This is an optional value used to validate the real number
+of items processed verses expectations.  Instead of forcing a field na,e the parameters.ini file 
+defines which key value pair will be used for this purpose.  For example, if the parameters.ini
+file has the following entry: ExpectedFieldName = "expected", you would expect the following entry
+in the json file which represents the expectation that there will be 1,000 emails processed in
+this specific batch file: "expected" : "1000".
+
+
+To understand all options, it is recommended that you read the api documentation which can be obtained without
 login permissions on SparkPost.com (https://developers.sparkpost.com/api/).
 
 In general, MomoMail can accept any properly formed transmission json file as input.
@@ -36,7 +47,7 @@ Input Params (paramters.ini):
     # 13. FileTrackerToggle               - When set to "On", repeat file names cannot be processed
     # 14. TrackerFile                     - Name of file containing list of already processed files
     # 15. FileTrackerOffset               - How many of the last processed files to track
-    # 16. ValidateProcessedToggle         - When set to "On" the field name for the paramter "ExpectedNumberofItems" will be used to compare
+    # 16. ValidateProcessedToggle         - When set to "On" the field name for the paramter "ExpectedFieldName" will be used to compare
                                             how many items were processed compared to how many were expected to be processed. Default is off.
     # 17. ExpectedFieldName               - This is the Field Name in the json file that contains the expected number of items
     
