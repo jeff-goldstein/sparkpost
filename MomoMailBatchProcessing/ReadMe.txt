@@ -1,4 +1,26 @@
-Input Params (paramters.ini), all required:
+Purpose:
+MomoMail is a process that is used to integrate applications that generate emails
+with their SparkPost hosted MTA by using Drop Directory functionality.  Many systems that 
+create emails, don't actually call their mail system via SMTP or supported Web
+API's, instead they create a formatted file and drop that into a directory which
+is monitored by a process that submits those files to the MTA for delivery.  MomoMail,
+is such a process for a SparkPost.  The MomoMail application accepts json
+formatted files that it uses as input to the SparkPost Web API to either send emails,
+upload recipient lists or to add/change templates.
+
+While this directory has sample json files (all of the files with a .json postfix)
+it is recommended that you read the api documentation which can be obtained without
+login permissions on SparkPost.com (https://developers.sparkpost.com/api/).
+
+In general, MomoMail can accept any properly formed transmission json file as input.
+There are best practices that will help keep your MomoMail processes and MTA running 
+smoothly.  The first is to batch your email submissions as much as possible but to keep
+your submission batches to no more than 10,000 email submissions per json input file.
+You should also limit the size of the json input file.  This restriction can be
+dependent on the language your MomoMail application is written in (currently only PHP) 
+as-well-as the environment MomoMail is running on or SparkPost limits.  
+
+Input Params (paramters.ini):
     # 1.  BaseURL           		        - URL for Web API....DO NOT INCLUDE ANYTHING PAST VERSION INDICATION
     # 2.  Authorization                   - Web API Authorization Key
     # 3.  ProcessedFilesDirectory         - Location to archive processed files
