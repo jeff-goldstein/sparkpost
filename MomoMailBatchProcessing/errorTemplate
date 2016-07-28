@@ -1,0 +1,47 @@
+{
+  "options": {
+    "open_tracking": true,
+    "click_tracking": true
+  },
+  "campaign_id": "##campaign##",
+  "return_path": "steve@demo-t.sparkpostelite.com",
+  "substitution_data": {
+    "sender": "Drop Directory Process"
+  },
+  "tags":
+  [
+    "DropDirectory",
+    "Error",
+    "Transmission"
+  ],
+   "metadata":
+   {
+     "APIerror": "Transmission",
+     "binding" : "outbound",
+   },
+  "recipients": [
+    {
+      "return_path": "123@bounces.messagesystems.com",
+      "address": {
+        "email": "##admin##",
+        "name": "Mail Admin"
+      },
+      "substitution_data": {
+        "User": "Mail Admin",
+        "error": ##error##
+     }
+    }
+  ],
+  "content": {
+    "from": {
+      "name": "Drop Directory Process",
+      "email": "trends@demo-t.sparkpostelite.com"
+    },
+    "subject": "Drop Directory Error Detected: ##subject##",
+    "reply_to": "Drop Directory <no-reply@messagesystems.com>",
+    "headers": {
+      "X-Customer-Campaign-ID": "{{campaign_id}}"
+    },
+    "html": "<h3>A Transmission or Validation check error was found within the <br>MomoMail Drop Directory Mail process on file ##file##</h2><p><code>{{error}}</code><br><br>If JSON formatted output was produced, you may want to use online tool www.jsonlint.com to create a readble json format."
+  }
+}
