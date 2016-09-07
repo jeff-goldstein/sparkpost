@@ -44,6 +44,8 @@ h4 {
 
 table, th, td {
    border: 1px solid black;
+   width: 600px;
+   padding: 2px 2px 2px 4px;
 }
 
 tbody tr:nth-child(odd) {
@@ -63,7 +65,6 @@ $(function()
 </script>
 
 <body id="bkgnd">
-<h1><center>Campaign Submission Output</center></h1>
 <?php
 $key = $_GET["apikey"];
 if (empty($key)) $key="e8e6345ff301a92842beebff298541a18ffdbff7";
@@ -86,20 +87,24 @@ curl_setopt_array($curl, array(
 $response = curl_exec($curl);
 $err = curl_error($curl);
 curl_close($curl);
-echo $response;
+//echo $response;
 if ($err) {
   echo "cURL Error #:" . $err;
 }
-
+$someArray = json_decode($response, true);
 ?>
 <h1><center> SparkPostMail Scheduled Campaigns </center></h1>
+<br><br>
+<center><table>
+<tr>
+<th>Campaign Name</th>
+<th>Scheduled Time for Launch</th>
+</tr>
 <?php
   foreach ($someArray as $key => $value) 
   {foreach ($value as $key2 => $value2) 
- {foreach ($value2 as $key3 => $value3) 
-   {if ($key3 == "campaign_id") echo '<br>' . $value3;}}}
+   {if ($value2['state']=="submitted") echo "<tr><td><h3>" . $value2['campaign_id'] . "</h3></td><td><h3>" . $value2['start_time'] . "</h3></td></tr>";}}
 ?>
-
-
+</table></center>
 </body>
 </html>
