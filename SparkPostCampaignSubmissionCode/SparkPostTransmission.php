@@ -45,6 +45,10 @@ h4 {
 table, th, td {
    border: 1px solid black;
 }
+
+tbody tr:nth-child(odd) {
+   background-color: #ccc;
+}
 </style>
 
 <script>
@@ -66,16 +70,14 @@ $key = $_GET["apikey"];
 $template = $_GET["Template"];
 $recipients = $_GET["Recipients"];
 $now = $_GET["now"];
-$datetime = $_GET["datetime"];
+$date = $_GET["date"];
+$hour = $_GET["hour"];
+$minutes = $_GET["minutes"];
+$tz = $_GET["tz"];
 $campaign = $_GET["campaign"];
 $open = $_GET["open"];
 $click = $_GET["click"];
 $email = $_GET["email"];
-//$tag1 = trim($_GET['tag1'], " ");
-//$tag2 = trim($_GET['tag2'], " ");
-//$tag3 = trim($_GET['tag3'], " ");
-//$tag4 = trim($_GET['tag4'], " ");
-//$tag5 = trim($_GET['tag5'], " ");
 $meta1 = trim($_GET["meta1"], " ");
 $data1 = trim($_GET["data1"], " ");
 $meta2 = trim($_GET["meta2"], " ");
@@ -91,24 +93,14 @@ $data5 = trim($_GET["data5"], " ");
 $builditandtheywillcome = '{"options": { "open_tracking" :';
 if ($open == "T") $builditandtheywillcome .= 'true, "click_tracking" : '; else $builditandtheywillcome .= 'false, "click_tracking" : ';
 if ($click == "T") $builditandtheywillcome .= 'true, "start_time" : '; else $builditandtheywillcome .= 'false, "start_time" : ';
-if ($now == "T") $builditandtheywillcome .= '"now"}, '; else $builditandtheywillcome .= '"$datetime"}, ';
+if ($now == "T") $builditandtheywillcome .= '"now"}, '; else $builditandtheywillcome .= '"' . $date . 'T' . $hour . ':' . $minutes . ':00' . $tz . '"}, ';
 $builditandtheywillcome .= '"content" : {"template_id" : "' . $template . '","use_draft_template" : false  },';
 $builditandtheywillcome .= '"recipients" : {"list_id" : "' . $recipients . '"},';
-$builditandtheywillcome .= '"campaign_id" : "' . $campaign . '",';
-//if (($tag1 != "") or ($tag2 != "") or ($tag3 != "") or ($tag4 != "") or ($tag5 != ""))
-//{
-//   $builditandtheywillcome .= '"tags" : [';
-//   if ($tag1 != "") {$builditandtheywillcome .= '"' . $tag1 . '",';}
-//   if ($tag2 != "") {$builditandtheywillcome .= '"' . $tag2 . '",';}
-//   if ($tag3 != "") {$builditandtheywillcome .= '"' . $tag3 . '",';}
-//   if ($tag4 != "") {$builditandtheywillcome .= '"' . $tag4 . '",';}
-//   if ($tag5 != "") {$builditandtheywillcome .= '"' . $tag5 . '"';}
-//   $builditandtheywillcome = trim($builditandtheywillcome, ",");
-//   $builditandtheywillcome .= "],";
-// }
+$builditandtheywillcome .= '"campaign_id" : "' . $campaign . '" ';
+
  if (($meta1 != "") or ($meta2 != "") or ($meta3 != "") or ($meta4 != "") or ($meta5 != ""))
 {
-   $builditandtheywillcome .= '"metadata" : {';
+   $builditandtheywillcome .= ', "metadata" : {';
    if ($meta1 != "") {$builditandtheywillcome .= '"' . $meta1 . '":"' . $data1 . '",';}
    if ($meta2 != "") {$builditandtheywillcome .= '"' . $meta2 . '":"' . $data2 . '",';}
    if ($meta3 != "") {$builditandtheywillcome .= '"' . $meta3 . '":"' . $data3 . '",';}
@@ -148,14 +140,77 @@ if ($err) {
 } else {
   //echo $response;
 }
+
+$validationText = "<br><br><h1>Form input used for Campaign</h1><table>";
+$validationText .= "<tr><td>APIKey: </td><td>" . $key . "</td></tr>";
+$validationText .= "<tr><td>Template: </td><td>" . $template . "</td></tr>";
+$validationText .= "<tr><td>Recipients: </td><td>" . $recipients . "</td></tr>";
+$validationText .= "<tr><td>Send Now Flag: </td><td>" . $now . "</td></tr>";
+$validationText .= "<tr><td>Send Date: </td><td>" . $date . "</td></tr>";
+$validationText .= "<tr><td>Send Hour: </td><td>" . $hour . "</td></tr>";
+$validationText .= "<tr><td>Send Minutes: </td><td>" . $minutes . "</td></tr>";
+$validationText .= "<tr><td>TimeZone Offset from GMT: </td><td>" . $tz . "</td></tr>";
+$validationText .= "<tr><td>Track Open Flag: </td><td>" . $open . "</td></tr>";
+$validationText .= "<tr><td>Track Clicks Flag: </td><td>" . $click . "</td></tr></table>";
+$validationText .= "<p><table><tr><th colspan='2'><center>Meta Data Entries</center><th></tr>";
+$validationText .= "<tr><td width=300 height=30>" . $meta1 . "</td><td width=300 height=30>" . $data1 . "</td></tr>";
+$validationText .= "<tr><td width=300 height=30>" . $meta2 . "</td><td width=300 height=30>" . $data2 . "</td></tr>";
+$validationText .= "<tr><td width=300 height=30>" . $meta3 . "</td><td width=300 height=30>" . $data3 . "</td></tr>";
+$validationText .= "<tr><td width=300 height=30>" . $meta4 . "</td><td width=300 height=30>" . $data4 . "</td></tr>";
+$validationText .= "<tr><td width=300 height=30>" . $meta5 . "</td><td width=300 height=30>" . $data5 . "</td></tr></table>";
+
+echo $validationText;
 ?>
-<br><br>
+<h4>Email Confirmation Address: <?php echo $email ?></h4>
 <table><tr><td>
 <center><h4>Output from SparkPost Server</h4></center>
 <h3><?php echo "$response"; ?></h3></td></tr></table>
 
 <p>
 <a href="http://geekswithapersonality.com/cgi-bin/SparkPostSubmit.php?apikey=<?php echo $key ?>">Another Campaign?</a>
+
+
+<?php 
+$singlequoteResponse = str_replace('"',"'",$response);
+$singlequoteResponse = str_replace(array('{', '}'), array(""),$singlequoteResponse);
+//Build the payload
+$emailReceipt = '{"content":{"from": {"name": "SparkPost Campaign Admin","email": "SparkPost@geekwithapersonality.com"},';
+$emailReceipt .= '"subject" : "Your Campaign receipt for {{campaign_name}}", ';
+$emailReceipt .= '"reply_to" : "NoReply <no-reply@geekwithapersonality.com>", ';
+$emailReceipt .= '"html" : "<p>Your Campaign has been launched as requested.  Your input was: <br>' . $validationText . '<br> and the server response was: ' . $singlequoteResponse . '"},';
+$emailReceipt .= '"recipients": [{"address": {"email": "' . $email . '"},';
+$emailReceipt .= '"substitution_data": {"validationText": "' . $validationText . '",';
+$emailReceipt .= '"campaign_name": "' . $campaign . '"}';
+$emailReceipt .= "}]}";
+//echo htmlspecialchars($emailReceipt);
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://api.sparkpost.com/api/v1/transmissions",
+ CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "$emailReceipt",
+  CURLOPT_HTTPHEADER => array(
+    "authorization: $key",
+    "cache-control: no-cache",
+    "content-type: application/json",
+  ),
+));
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  //echo "admin email response: " . $response;
+}
+?>
 
 </body>
 </html>
