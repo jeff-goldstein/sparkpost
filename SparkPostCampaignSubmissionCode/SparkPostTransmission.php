@@ -66,7 +66,6 @@ $(function()
 <h1><center>Campaign Submission Output</center></h1>
 <?php
 $key = $_GET["apikey"];
-//if (empty($key)) $key="e8e6345ff301a92842beebff298541a18ffdbff7";
 $template = $_GET["Template"];
 $recipients = $_GET["Recipients"];
 $now = $_GET["now"];
