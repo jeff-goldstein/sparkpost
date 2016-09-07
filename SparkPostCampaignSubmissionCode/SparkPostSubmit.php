@@ -150,6 +150,8 @@ function myFunction()
 <body id="bkgnd">
 <?php
 $key = $_GET["apikey"];
+// seteam apikey 2ad1d234cb3274b8390eba0b3062f8bc4cd0e73e
+if (empty($key)) $key="e8e6345ff301a92842beebff298541a18ffdbff7";
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://api.sparkpost.com/api/v1/templates/?draft=false",
@@ -343,5 +345,9 @@ Metadata Field Name: <input type="textnormal" name="meta5" value=""> &nbsp;&nbsp
 <input type="reset" value="Reset" STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" >
 </form>
 <p>* Mandatory fields.</p>
+
+<form action="SparkPostScheduled.php">
+    <input type="submit" name="select" value="Show Current Scheduled Campaigns" onclick="select()" />
+</form>
 </body>
 </html>
