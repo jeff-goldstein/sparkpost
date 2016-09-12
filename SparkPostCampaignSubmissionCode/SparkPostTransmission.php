@@ -1,7 +1,22 @@
+<!-- Copyright 2016 Jeff Goldstein
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
 <!DOCTYPE html>
 <html><head>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title>SparkPost Campaign Submittion</title>
+   <link rel="shortcut icon" href="https://www.sparkpost.com/sites/default/files/spark.ico">
 </head>
 
 <style>
@@ -88,11 +103,13 @@ $data4 = trim($_GET["data4"], " ");
 $meta5 = trim($_GET["meta5"], " ");
 $data5 = trim($_GET["data5"], " ");
 
-//Build the payload
+//
+//Build the payload for the Transmission API call
+//
 $builditandtheywillcome = '{"options": { "open_tracking" :';
 if ($open == "T") $builditandtheywillcome .= 'true, "click_tracking" : '; else $builditandtheywillcome .= 'false, "click_tracking" : ';
 if ($click == "T") $builditandtheywillcome .= 'true, "start_time" : '; else $builditandtheywillcome .= 'false, "start_time" : ';
-if ($now == "T") $builditandtheywillcome .= '"now"}, '; else $builditandtheywillcome .= '"' . $date . 'T' . $hour . ':' . $minutes . ':00' . $tz . '"}, ';
+if (!empty($date)) $builditandtheywillcome .= '"' . $date . 'T' . $hour . ':' . $minutes . ':00' . $tz . '"}, '; else $builditandtheywillcome .= '"now"}, ';
 $builditandtheywillcome .= '"content" : {"template_id" : "' . $template . '","use_draft_template" : false  },';
 $builditandtheywillcome .= '"recipients" : {"list_id" : "' . $recipients . '"},';
 $builditandtheywillcome .= '"campaign_id" : "' . $campaign . '" ';
@@ -116,7 +133,7 @@ $curl = curl_init();
 
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://api.sparkpost.com/api/v1/transmissions",
- CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 30,
@@ -140,11 +157,16 @@ if ($err) {
   //echo $response;
 }
 
+//
+//Show the User what they entered and the system output from the API call
+//
 $validationText = "<br><br><h1>Form input used for Campaign</h1><table>";
-$validationText .= "<tr><td>APIKey: </td><td>" . $key . "</td></tr>";
+$validationText .= "<tr><td>Campaign Name: </td><td>" . $campaign . "</td></tr>";
 $validationText .= "<tr><td>Template: </td><td>" . $template . "</td></tr>";
 $validationText .= "<tr><td>Recipients: </td><td>" . $recipients . "</td></tr>";
-$validationText .= "<tr><td>Send Now Flag: </td><td>" . $now . "</td></tr>";
+$validationText .= "<tr><td>Send Now Flag: </td><td>" . $now;
+if (!empty($date)) $validationText .= "* (Send Date overrides Send Now Flag, Campaign Scheduled)";
+$validationText .=  "</td></tr>";
 $validationText .= "<tr><td>Send Date: </td><td>" . $date . "</td></tr>";
 $validationText .= "<tr><td>Send Hour: </td><td>" . $hour . "</td></tr>";
 $validationText .= "<tr><td>Send Minutes: </td><td>" . $minutes . "</td></tr>";
@@ -160,16 +182,19 @@ $validationText .= "<tr><td width=300 height=30>" . $meta5 . "</td><td width=300
 
 echo $validationText;
 ?>
+
 <h4>Email Confirmation Address: <?php echo $email ?></h4>
 <table><tr><td>
 <center><h4>Output from SparkPost Server</h4></center>
 <h3><?php echo "$response"; ?></h3></td></tr></table>
 
 <p>
-<a href="http://geekswithapersonality.com/cgi-bin/SparkPostSubmit.php?apikey=<?php echo $key ?>">Another Campaign?</a>
-
+<a href="SparkPostSubmit.php?apikey=<?php echo $key ?>">Another Campaign?</a>
 
 <?php 
+//
+// Now build the text that will be sent to the user via email
+//
 $singlequoteResponse = str_replace('"',"'",$response);
 $singlequoteResponse = str_replace(array('{', '}'), array(""),$singlequoteResponse);
 //Build the payload
