@@ -1,8 +1,33 @@
+<!-- Copyright 2016 Jeff Goldstein
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
 <!DOCTYPE html>
 <html><head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>SparkPost Campaign Submittion</title>
+   <link rel="shortcut icon" href="https://www.sparkpost.com/sites/default/files/spark.ico">
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+   <link rel="stylesheet" href="/resources/demos/style.css">
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+   <script>
+  /* Set Calendar format; Using jQuery calendar because it works better across different browsers than default form calendar */
+  $( function() {
+    $( "#datepicker" ).datepicker( { dateFormat: 'yy-mm-dd' });
+  } );
+  </script>
 
 <style>
 #bkgnd {
@@ -52,6 +77,7 @@ select {
     font-size: 12px;
 }
 
+/* Can use this when I don't want an expanding input field */
 input[type=textnormal] {
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -64,6 +90,7 @@ input[type=textnormal] {
     width : 200px;
 }
 
+/* This expands the text for more room while typing */
 input[type=text] {
     width: 130px;
     box-sizing: border-box;
@@ -83,9 +110,9 @@ input[type=text]:focus {
     border: 3px solid #555;
 }
 
-input[type=timeshort] {
-    width: 30px;
-    height: 20px;
+input[type=number] {
+    width: 40px;
+    height: 23px;
     box-sizing: border-box;
     border: 8px solid #black;
     border-radius: 4px;
@@ -98,8 +125,8 @@ input[type=timeshort] {
     transition: width 0.4s ease-in-out;
 }
 
-input[type=timeshort]:focus {
-    width: 50px;
+input[type=number]:focus {
+    width: 65px;
     border: 3px solid #555;
 }
 
@@ -129,9 +156,60 @@ input[type=date]:focus {
     color: white;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 5px 5px 5px;
+    font-size: 12px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* This forces more consistent look and field across browsers for pulldown select fields */
+@media screen and (-webkit-min-device-pixel-ratio:0) {  /*safari and chrome*/
+    select {
+        height:25px;
+        line-height:25px;
+        background:#f4f4f4;
+    } 
+}
+select::-moz-focus-inner { /*Remove button padding in FF*/ 
+    border: 0;
+    padding: 0;
+}
+@-moz-document url-prefix() { /* targets Firefox only */
+    select {
+        padding: 5px 0!important;
+    }
+}        
+@media screen\0 { /* IE Hacks: targets IE 8, 9 and 10 */        
+    select {
+        height:30px;
+        line-height:30px;
+    }     
+}
 </style>
 
+
 <script type="text/javascript">
+// This function is suppose to remove empty values from URL, but doesn't work.
+// Leaving in for the moment
 function myFunction()
 {
     var myForm = document.getElementById('form-id');
@@ -145,13 +223,14 @@ function myFunction()
     }
 }
 </script>
-
+</head> 
 
 <body id="bkgnd">
 <?php
-$key = $_GET["apikey"];
-// seteam apikey 2ad1d234cb3274b8390eba0b3062f8bc4cd0e73e
-if (empty($key)) $key="e8e6345ff301a92842beebff298541a18ffdbff7";
+//
+// Get The 'Published Only' Templates from the Account
+//
+$apikey = $_GET["apikey"];
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://api.sparkpost.com/api/v1/templates/?draft=false",
@@ -162,7 +241,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
-    "authorization: $key",
+    "authorization: $apikey",
     "cache-control: no-cache",
     "content-type: application/json",
   ),
@@ -175,29 +254,39 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 }
-
-  // Convert JSON string to Array
-  $someArray = json_decode($response, true);
-if (stripos($response, "Forbidden") !== false) {
+ 
+// Convert JSON string to Array
+$someArray = json_decode($response, true);
+if ((stripos($response, "Forbidden") == true) or (stripos($response, "Unauthorized" ) == true)) {
     echo "<h2>Alert Messages</h2><div class='alert'> WARNING: BAD API KEY, PLEASE RETURN TO <a href='http://geekswithapersonality.com/cgi-bin/SparkPostKey.php'>PREVIOUS PAGE</a> AND RE-ENTER</div>";
     }
 ?>
-<form action="SparkPostTransmission.php" method="get" onsubmit="myFunction()">
-<input type="hidden" name="apikey" value="<?php echo $key ?>">
+
 <h1><center> SparkPostMail Simple UI Campaign Generator </center></h1>
+<table>
+<tr><td>
+<form action="SparkPostTransmission.php" method="get" onsubmit="myFunction()">
+<input type="hidden" name="apikey" value="<?php echo $apikey ?>">
+
 <h3>Select a Template (Showing Published Templates Only):*</h3>
 <select name="Template">
-<?php
+  <?php
+  //
+  // Build the dropdown Selector from the Template API call
+  //
   foreach ($someArray as $key => $value) 
-  {foreach ($value as $key2 => $value2) 
- {foreach ($value2 as $key3 => $value3) 
-   {if ($key3 == "id") echo '<option value="'.$value3.'">'.$value3.'</option>';}}}
-?>
+     {foreach ($value as $key2 => $value2) 
+        {foreach ($value2 as $key3 => $value3) 
+           {if ($key3 == "id") echo '<option value="'.$value3.'">'.$value3.'</option>';}
+        }
+     }
+  ?>
 </select>
 
 <?php
-$key = $_GET["apikey"];
-if (empty($key)) $key="e8e6345ff301a92842beebff298541a18ffdbff7";
+//
+// Get The Stored Recipient-Lists Templates from the Account
+//
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://api.sparkpost.com/api/v1/recipient-lists",
@@ -208,7 +297,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
-    "authorization: $key",
+    "authorization: $apikey",
     "cache-control: no-cache",
     "content-type: application/json",
   ),
@@ -228,25 +317,34 @@ if ($err) {
 
 <h3>Select a Recipient List:*</h3>
 <select name="Recipients">
-<?php
+  <?php
+  //
+  // Build the dropdown Selector from the Template API call
+  //
   foreach ($someArrayofRecipients as $key => $value) 
-  {foreach ($value as $key2 => $value2) 
-  {foreach ($value2 as $key3 => $value3) 
-  {if ($key3 == "id") echo '<option value="'.$value3.'">'.$value3.'</option>';}}}
-?>
+     {foreach ($value as $key2 => $value2) 
+        {foreach ($value2 as $key3 => $value3) 
+           {if ($key3 == "id") echo '<option value="'.$value3.'">'.$value3.'</option>';}
+        }
+     }
+   ?>
 </select>
 
-<h3>Launch now OR enter data & time of campaign launch (DD-MM-YYYY HH:mm)*</h3>
+<h3>Launch now OR enter data & time of campaign launch (YYYY-MM-DD HH:mm)*
+
+<div class="tooltip"><a> <img height=35 width=35 src="https://dl.dropboxusercontent.com/u/4387255/info.png"> </a>
+<span class="tooltiptext">Note: <br>1) Any scheduled Campaign within 24 hours from running can not be cancelled. <p> 2) Campaigns can only be scheduled less than 32 days out.</span>
+</div></h3>
 <input type="checkbox" name="now" id=now value="T" checked> OR Enter Date/Time 
-<input type="date" id="date" data-format="YYYY-MM-DD" data-template="YYYY-MM-DD" name="date" placeholder="YYYY-MM-DD">
-<input type="timeshort" data-format="HH" data-template="HH" name="hour" value="00">
-<input type="timeshort" data-format="MM" data-template="MM" name="minutes" value="00">
+<input type="text" id="datepicker" data-format="YYYY-MM-DD" data-template="YYYY-MM-DD" name="date" placeholder="YYYY-MM-DD">
+<input type="number"  size="6" min="0" max="23" data-format="HH" data-template="HH" name="hour" value="00">
+<input type="number" size="6" min="0" max="59" data-format="MM" data-template="MM" name="minutes" value="00">
 <select name="tz">
 	<option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12:00">(GMT-12:00) International Date Line West</option>
 	<option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11:00">(GMT-11:00) Midway Island, Samoa</option>
 	<option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10:00">(GMT-10:00) Hawaii</option>
 	<option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-9:00">(GMT-09:00) Alaska</option>
-	<option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8:00">(GMT-08:00) Pacific Time (US & Canada)</option>
+	<option selected="selected" timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8:00">(GMT-08:00) Pacific Time (US & Canada)</option>
 	<option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8:00">(GMT-08:00) Tijuana, Baja California</option>
 	<option timeZoneId="7" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="-7:00">(GMT-07:00) Arizona</option>
 	<option timeZoneId="8" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7:00">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
@@ -331,7 +429,7 @@ if ($err) {
   <input name="campaign" type="text" required><br><br>
   <input type="checkbox" name="open" value="T" checked> Turn on Open Tracking<br>
   <input type="checkbox" name="click" value="T" checked> Turn on Click Tracking<br>
-<h2>Optional Items (leave blank if you don't want to use them)...</h2>
+<h3>Optional Items (leave blank if you don't want to use them)...</h3>
 <h4>Want Proof, Enter Your Email Address Here</h4>
 <input type="text" name="email" value="">
 <h4>Enter Meta Data: first column Is the Metadata Field Name, the second column is the data:</h4>
@@ -344,10 +442,58 @@ Metadata Field Name: <input type="textnormal" name="meta5" value=""> &nbsp;&nbsp
 <br><br><br><input type="submit" value="Submit" STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" >
 <input type="reset" value="Reset" STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" >
 </form>
+</td>
+
+<td style width="25"></td>
+
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://api.sparkpost.com/api/v1/transmissions/",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "authorization: $apikey",
+    "cache-control: no-cache",
+    "content-type: application/json",
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+//echo $response;
+if ($err) {
+  echo "cURL Error #:" . $err;
+}
+$someArray = json_decode($response, true);
+?>
+
+<td valign="top" style="padding-top: 30px;" >
+<table border="8" bgcolor="#F5870A">
+<tr><td><h3><center> Already Scheduled Campaigns </center></h3></td></tr>
+<tr><td><table>
+<tr>
+<th><u>Campaign Name</u></th>
+<th></th>
+<th><u>Scheduled Time for Launch</u></th>
+</tr>
+<?php
+  foreach ($someArray as $key => $value) 
+  {foreach ($value as $key2 => $value2) 
+   {if ($value2['state']=="submitted") echo "<tr><td><h4>" . $value2['campaign_id'] . "</h4></td><td style width='5'></td><td><h4>" . $value2['start_time'] . "</h4></td></tr>";}}
+?>
+</table></td></tr></table>
+</td></tr></table>
 <p>* Mandatory fields.</p>
 
-<form action="SparkPostScheduled.php">
-    <input type="submit" name="select" value="Show Current Scheduled Campaigns" onclick="select()" />
+<form action="SparkPostScheduled.php" method="get">
+   <input type="hidden" name="apikey" value="<?php echo $apikey ?>">
+   <input type="submit" name="select" value="Click On this Button to See Full Details of Current Scheduled Campaigns and/or Cancel Them." STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" onclick="select()" />
 </form>
 </body>
 </html>
