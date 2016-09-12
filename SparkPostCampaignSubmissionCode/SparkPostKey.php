@@ -1,6 +1,23 @@
+<!-- Copyright 2016 Jeff Goldstein
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
 <!DOCTYPE html>
-<html><head></head>
+<html><head>
+ <title>SparkPost Campaign Submission</title>
+ <link rel="shortcut icon" href="https://www.sparkpost.com/sites/default/files/spark.ico" type="image/vnd.microsoft.icon" />
+</head>
 <style>
+/* Set Background to SparkPost Flames */
 #bkgrnd {
     background-image: url(https://dl.dropboxusercontent.com/u/4387255/Color-Flame-BKGR_Transparent.png), url(https://dl.dropboxusercontent.com/u/4387255/Color-Flame-BKGR_Transparent.png);
     background-position: right bottom, left top;
@@ -39,6 +56,7 @@ h4 {
     color: #298272;
 }
 
+/* Expandable text fields when active */
 input[type=text] {
     width: 130px;
     box-sizing: border-box;
