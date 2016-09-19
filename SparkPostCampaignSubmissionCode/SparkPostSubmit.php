@@ -11,17 +11,18 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. -->
+
 <!DOCTYPE html>
 <html><head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>SparkPost Campaign Submittion</title>
-   <link rel="shortcut icon" href="https://www.sparkpost.com/sites/default/files/spark.ico">
+   <link rel="shortcut icon" href="https://dl.dropboxusercontent.com/u/4387255/Tools.ico">
    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
-   <link rel="stylesheet" href="/resources/demos/style.css">
    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+   <script src="ckeditor/ckeditor.js"></script>
    <script>
   /* Set Calendar format; Using jQuery calendar because it works better across different browsers than default form calendar */
   $( function() {
@@ -31,9 +32,9 @@ limitations under the License. -->
 
 <style>
 #bkgnd {
-    background-image: url(https://dl.dropboxusercontent.com/u/4387255/Color-Flame-BKGR_Transparent.png), url(https://dl.dropboxusercontent.com/u/4387255/Color-Flame-BKGR_Transparent.png);
+    background-image: url(https://dl.dropboxusercontent.com/u/4387255/bwback.jpg);
     background-position: right bottom, left top;
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat;
     padding: 15px;
 }
 
@@ -150,6 +151,13 @@ input[type=date]:focus {
     border: 3px solid #555;
 }
 
+#iframe1 {
+    border: solid 0 px;
+    border-radius: 8px;
+    padding-top: 1em;
+    margin: 0 auto;
+}
+
 .alert {
     padding: 20px;
     background-color: #f44336;
@@ -207,80 +215,100 @@ select::-moz-focus-inner { /*Remove button padding in FF*/
 </style>
 
 
-<script type="text/javascript">
-// This function is suppose to remove empty values from URL, but doesn't work.
-// Leaving in for the moment
-function myFunction()
-{
-    var myForm = document.getElementById('form-id');
-    var allInputs = myForm.getElementsByTagName('input');
-    var input, i;
-
-    for(i = 0; input = allInputs[i]; i++) {
-        if(input.getAttribute('name') && !input.value) {
-            input.setAttribute('name', '');
-        }
-    }
-}
-</script>
 </head> 
 
 <body id="bkgnd">
 <?php
+$apikey = $_GET["apikey"];
+?>
+<script type="text/javascript">
+function updateCall()
+{
+var selectList = document.getElementById("Template");
+var divAnswer  = document.getElementById("editor1");
+var selectList2 = document.getElementById("Recipients");
+//var apikey = "e8e6345ff301a92842beebff298541a18ffdbff7";
+var apikey = "<?php
+echo $apikey;
+?>";
+
+$.ajax({
+      url:'getPreview.php',
+     data: {"apikey" : apikey, "template" : selectList.value, "recipients" : selectList2.value},
+      complete: function (response) {
+          //$('#output').html(response.responseText);
+         // divAnswer.textContent = response.responseText;
+//document.getElementById("editor1").value =  response.responseText;
+$('#iframe1').contents().find('html').html(response.responseText);
+      },
+      error: function () {
+          $('#output').html('Bummer: there was an error!');
+      }
+  });
+//divAnswer.textContent = response.responseText;
+  return false;
+}
+
+</script>
+<?php
 //
 // Get The 'Published Only' Templates from the Account
 //
-$apikey = $_GET["apikey"];
 $curl = curl_init();
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.sparkpost.com/api/v1/templates/?draft=false",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => array(
-    "authorization: $apikey",
-    "cache-control: no-cache",
-    "content-type: application/json",
-  ),
+    CURLOPT_URL => "https://api.sparkpost.com/api/v1/templates/?draft=false",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET",
+    CURLOPT_HTTPHEADER => array(
+        "authorization: $apikey",
+        "cache-control: no-cache",
+        "content-type: application/json"
+    )
 ));
 
 $response = curl_exec($curl);
-$err = curl_error($curl);
+$err      = curl_error($curl);
 curl_close($curl);
 
 if ($err) {
-  echo "cURL Error #:" . $err;
+    echo "cURL Error #:" . $err;
 }
- 
+
 // Convert JSON string to Array
-$someArray = json_decode($response, true);
-if ((stripos($response, "Forbidden") == true) or (stripos($response, "Unauthorized" ) == true)) {
+$someArray    = json_decode($response, true);
+$viewTemplate = $response;
+if ((stripos($response, "Forbidden") == true) or (stripos($response, "Unauthorized") == true)) {
     echo "<h2>Alert Messages</h2><div class='alert'> WARNING: BAD API KEY, PLEASE RETURN TO <a href='http://geekswithapersonality.com/cgi-bin/SparkPostKey.php'>PREVIOUS PAGE</a> AND RE-ENTER</div>";
-    }
+}
 ?>
 
 <h1><center> SparkPostMail Simple UI Campaign Generator </center></h1>
 <table>
 <tr><td>
-<form action="SparkPostTransmission.php" method="get" onsubmit="myFunction()">
-<input type="hidden" name="apikey" value="<?php echo $apikey ?>">
+<form action="SparkPostTransmission.php" method="get">
+<input type="hidden" name="apikey" value="<?php
+echo $apikey;
+?>">
 
 <h3>Select a Template (Showing Published Templates Only):*</h3>
-<select name="Template">
+<select name="Template" id="Template" onchange="updateCall()">
   <?php
-  //
-  // Build the dropdown Selector from the Template API call
-  //
-  foreach ($someArray as $key => $value) 
-     {foreach ($value as $key2 => $value2) 
-        {foreach ($value2 as $key3 => $value3) 
-           {if ($key3 == "id") echo '<option value="'.$value3.'">'.$value3.'</option>';}
+//
+// Build the dropdown Selector from the Template API call
+//
+foreach ($someArray as $key => $value) {
+    foreach ($value as $key2 => $value2) {
+        foreach ($value2 as $key3 => $value3) {
+            if ($key3 == "id")
+                echo '<option value="' . $value3 . '">' . $value3 . '</option>';
         }
-     }
-  ?>
+    }
+}
+?>
 </select>
 
 <?php
@@ -289,45 +317,47 @@ if ((stripos($response, "Forbidden") == true) or (stripos($response, "Unauthoriz
 //
 $curl = curl_init();
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.sparkpost.com/api/v1/recipient-lists",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => array(
-    "authorization: $apikey",
-    "cache-control: no-cache",
-    "content-type: application/json",
-  ),
+    CURLOPT_URL => "https://api.sparkpost.com/api/v1/recipient-lists",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET",
+    CURLOPT_HTTPHEADER => array(
+        "authorization: $apikey",
+        "cache-control: no-cache",
+        "content-type: application/json"
+    )
 ));
 
 $response = curl_exec($curl);
-$err = curl_error($curl);
+$err      = curl_error($curl);
 curl_close($curl);
 
 if ($err) {
-  echo "cURL Error #:" . $err;
+    echo "cURL Error #:" . $err;
 }
 
-  // Convert JSON string to Array
-  $someArrayofRecipients = json_decode($response, true);
+// Convert JSON string to Array
+$someArrayofRecipients = json_decode($response, true);
 ?>
 
 <h3>Select a Recipient List:*</h3>
-<select name="Recipients">
+<select name="Recipients" id="Recipients" onchange="updateCall()">
   <?php
-  //
-  // Build the dropdown Selector from the Template API call
-  //
-  foreach ($someArrayofRecipients as $key => $value) 
-     {foreach ($value as $key2 => $value2) 
-        {foreach ($value2 as $key3 => $value3) 
-           {if ($key3 == "id") echo '<option value="'.$value3.'">'.$value3.'</option>';}
+//
+// Build the dropdown Selector from the Template API call
+//
+foreach ($someArrayofRecipients as $key => $value) {
+    foreach ($value as $key2 => $value2) {
+        foreach ($value2 as $key3 => $value3) {
+            if ($key3 == "id")
+                echo '<option value="' . $value3 . '">' . $value3 . '</option>';
         }
-     }
-   ?>
+    }
+}
+?>
 </select>
 
 <h3>Launch now OR enter data & time of campaign launch (YYYY-MM-DD HH:mm)*
@@ -449,26 +479,26 @@ Metadata Field Name: <input type="textnormal" name="meta5" value=""> &nbsp;&nbsp
 <?php
 $curl = curl_init();
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.sparkpost.com/api/v1/transmissions/",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => array(
-    "authorization: $apikey",
-    "cache-control: no-cache",
-    "content-type: application/json",
-  ),
+    CURLOPT_URL => "https://api.sparkpost.com/api/v1/transmissions/",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET",
+    CURLOPT_HTTPHEADER => array(
+        "authorization: $apikey",
+        "cache-control: no-cache",
+        "content-type: application/json"
+    )
 ));
 
 $response = curl_exec($curl);
-$err = curl_error($curl);
+$err      = curl_error($curl);
 curl_close($curl);
 //echo $response;
 if ($err) {
-  echo "cURL Error #:" . $err;
+    echo "cURL Error #:" . $err;
 }
 $someArray = json_decode($response, true);
 ?>
@@ -483,17 +513,31 @@ $someArray = json_decode($response, true);
 <th><u>Scheduled Time for Launch</u></th>
 </tr>
 <?php
-  foreach ($someArray as $key => $value) 
-  {foreach ($value as $key2 => $value2) 
-   {if ($value2['state']=="submitted") echo "<tr><td><h4>" . $value2['campaign_id'] . "</h4></td><td style width='5'></td><td><h4>" . $value2['start_time'] . "</h4></td></tr>";}}
+foreach ($someArray as $key => $value) {
+    foreach ($value as $key2 => $value2) {
+        if ($value2['state'] == "submitted")
+            echo "<tr><td><h4>" . $value2['campaign_id'] . "</h4></td><td style width='5'></td><td><h4>" . $value2['start_time'] . "</h4></td></tr>";
+    }
+}
 ?>
-</table></td></tr></table>
-</td></tr></table>
+</table></td></tr></table></td></table>
+
 <p>* Mandatory fields.</p>
 
+
 <form action="SparkPostScheduled.php" method="get">
-   <input type="hidden" name="apikey" value="<?php echo $apikey ?>">
+   <input type="hidden" name="apikey" value="<?php
+echo $apikey;
+?>">
    <input type="submit" name="select" value="Click On this Button to See Full Details of Current Scheduled Campaigns and/or Cancel Them." STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" onclick="select()" />
 </form>
+
+<h3>Preview Using Selected Template and First Member of Recipient List</h3>
+<br><i>**This feature is still in beta...Still working on error messaging...Large Recipient Lists may cause the Preview to malfunction</i>
+<div class="main">
+    <iframe id="iframe1" width="1200" height="600">
+    <iframe>
+</div>
+
 </body>
 </html>

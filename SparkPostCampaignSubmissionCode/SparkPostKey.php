@@ -14,14 +14,14 @@ limitations under the License. -->
 <!DOCTYPE html>
 <html><head>
  <title>SparkPost Campaign Submission</title>
- <link rel="shortcut icon" href="https://www.sparkpost.com/sites/default/files/spark.ico" type="image/vnd.microsoft.icon" />
+ <link rel="shortcut icon" href="https://dl.dropboxusercontent.com/u/4387255/Tools.ico" type="image/vnd.microsoft.icon" />
 </head>
 <style>
 /* Set Background to SparkPost Flames */
-#bkgrnd {
-    background-image: url(https://dl.dropboxusercontent.com/u/4387255/Color-Flame-BKGR_Transparent.png), url(https://dl.dropboxusercontent.com/u/4387255/Color-Flame-BKGR_Transparent.png);
+#bkgnd {
+    background-image: url(https://dl.dropboxusercontent.com/u/4387255/bwback.jpg);
     background-position: right bottom, left top;
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat;
     padding: 15px;
 }
 
