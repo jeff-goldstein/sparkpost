@@ -230,7 +230,7 @@ var selectList2 = document.getElementById("Recipients");
 var apikey = "<?php echo $apikey; ?>";
 
 $.ajax({
-      url:'testpreview.php',
+      url:'getPreview.php',
       data: {"apikey" : apikey, "template" : selectList.value, "recipients" : selectList2.value},
       complete: function (response) 
       {
