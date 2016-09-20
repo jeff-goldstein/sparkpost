@@ -248,10 +248,23 @@ $.ajax({
           }
           else
           {
-              xbutton.disabled = false;
-              xbutton.value = "Submit";
-              xbutton.style.color = "white";
-              xbutton.style.backgroundColor = "#72A4D2";
+              var strCheck = "MISSING KEY DATA";
+              var location = response.responseText.search(strCheck);
+              if (location > 0) 
+              {
+                  xbutton.disabled = true;
+                  xbutton.value = "Submit";
+                  xbutton.style.backgroundColor = "red";
+                  xbutton.style.color = "black";
+                  alert("Warning!! Missing important data needed for this template - Submit Turned off!");
+              }
+              else
+              {   
+                  xbutton.disabled = false;
+                  xbutton.value = "Submit";
+                  xbutton.style.color = "white";
+                  xbutton.style.backgroundColor = "#72A4D2";
+              }
           }
       },
       error: function () {
