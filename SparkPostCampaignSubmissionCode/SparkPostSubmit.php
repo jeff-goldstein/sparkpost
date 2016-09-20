@@ -227,22 +227,37 @@ function updateCall()
 var selectList = document.getElementById("Template");
 var divAnswer  = document.getElementById("editor1");
 var selectList2 = document.getElementById("Recipients");
-var apikey = "<?php
-echo $apikey;
-?>";
+var apikey = "<?php echo $apikey; ?>";
 
 $.ajax({
-      url:'getPreview.php',
+      url:'testpreview.php',
       data: {"apikey" : apikey, "template" : selectList.value, "recipients" : selectList2.value},
-      complete: function (response)
+      complete: function (response) 
       {
           $('#iframe1').contents().find('html').html(response.responseText);
+          xbutton = document.getElementById("submit");
+          var strCheck = "Matching Problem";
+          var location = response.responseText.search(strCheck);
+          if (location > 0) 
+          {
+              xbutton.disabled = true;
+              xbutton.value = "Submit";
+              xbutton.style.backgroundColor = "red";
+              xbutton.style.color = "black";
+              alert("Warning!! Template & Recipient error detected; please see preview box - Submit Turned off!");
+          }
+          else
+          {
+              xbutton.disabled = false;
+              xbutton.value = "Submit";
+              xbutton.style.color = "white";
+              xbutton.style.backgroundColor = "#72A4D2";
+          }
       },
       error: function () {
           $('#output').html('Bummer: there was an error!');
       }
   });
-//divAnswer.textContent = response.responseText;
   return false;
 }
 
@@ -466,7 +481,7 @@ Metadata Field Name: <input type="textnormal" name="meta3" value=""> &nbsp;&nbsp
 Metadata Field Name: <input type="textnormal" name="meta4" value=""> &nbsp;&nbsp;&nbsp;Data: <input type="textnormal" name="data4" value=""><br><br>
 Metadata Field Name: <input type="textnormal" name="meta5" value=""> &nbsp;&nbsp;&nbsp;Data: <input type="textnormal" name="data5" value=""><br><br>
 
-<br><br><br><input type="submit" value="Submit" STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" >
+<br><br><br><input type="submit" value="Submit" id="submit" STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" >
 <input type="reset" value="Reset" STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" >
 </form>
 </td>
