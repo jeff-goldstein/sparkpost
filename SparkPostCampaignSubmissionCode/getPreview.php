@@ -103,7 +103,7 @@ limitations under the License. -->
             $error_out .= "<pre>" . $error_string . "</pre>";
             echo $error_out;
         } else {
-            $preview_out = "<h3>***Preview for selected Template: <u>" . $template . "</u> and Recipient List: <u>" . $recipients . "</u></h3>" .  $preview;
+            $preview_out = '<h3 style="color:black; font-size:large"> ***Preview for selected Template: <u>' . $template . '</u> and Recipient List: <u>' . $recipients . '</u></h3>' .  $preview;
             echo $preview_out;
         }
     }
