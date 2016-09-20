@@ -227,19 +227,16 @@ function updateCall()
 var selectList = document.getElementById("Template");
 var divAnswer  = document.getElementById("editor1");
 var selectList2 = document.getElementById("Recipients");
-//var apikey = "e8e6345ff301a92842beebff298541a18ffdbff7";
 var apikey = "<?php
 echo $apikey;
 ?>";
 
 $.ajax({
       url:'getPreview.php',
-     data: {"apikey" : apikey, "template" : selectList.value, "recipients" : selectList2.value},
-      complete: function (response) {
-          //$('#output').html(response.responseText);
-         // divAnswer.textContent = response.responseText;
-//document.getElementById("editor1").value =  response.responseText;
-$('#iframe1').contents().find('html').html(response.responseText);
+      data: {"apikey" : apikey, "template" : selectList.value, "recipients" : selectList2.value},
+      complete: function (response)
+      {
+          $('#iframe1').contents().find('html').html(response.responseText);
       },
       error: function () {
           $('#output').html('Bummer: there was an error!');
