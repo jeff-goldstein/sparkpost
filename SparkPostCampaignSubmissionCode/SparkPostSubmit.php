@@ -212,9 +212,8 @@ select::-moz-focus-inner { /*Remove button padding in FF*/
         line-height:30px;
     }     
 }
+
 </style>
-
-
 </head> 
 
 <body id="bkgnd">
@@ -230,25 +229,27 @@ var selectList2 = document.getElementById("Recipients");
 var apikey = "<?php echo $apikey; ?>";
 
 $.ajax({
-      url:'testpreview.php',
+      url:'getPreview.php',
       data: {"apikey" : apikey, "template" : selectList.value, "recipients" : selectList2.value},
       complete: function (response) 
       {
           $('#iframe1').contents().find('html').html(response.responseText);
           xbutton = document.getElementById("submit");
-          var strCheck = "Matching Problem";
-          var location = response.responseText.search(strCheck);
-          if (location > 0) 
+          var strCheck1 = "attempt to call non-existent macro";
+          var strCheck2 = "crash";
+          var location1 = response.responseText.search(strCheck1);
+          var location2 = response.responseText.search(strCheck2);
+          if (location1 > 0  && location2 > 0)
           {
               xbutton.disabled = true;
               xbutton.value = "Submit";
               xbutton.style.backgroundColor = "red";
               xbutton.style.color = "black";
-              alert("Warning!! Template & Recipient error detected; please see preview box - Submit Turned off!");
+              alert("Warning!! Your data protection check was triggered, bad Recipient List selected - Submit Turned off!");
           }
           else
-          {
-              var strCheck = "MISSING KEY DATA";
+          {  
+              var strCheck = "Matching Problem";
               var location = response.responseText.search(strCheck);
               if (location > 0) 
               {
@@ -256,7 +257,7 @@ $.ajax({
                   xbutton.value = "Submit";
                   xbutton.style.backgroundColor = "red";
                   xbutton.style.color = "black";
-                  alert("Warning!! Missing important data needed for this template - Submit Turned off!");
+                  alert("Warning!! Template & Recipient error detected; please see preview box - Submit Turned off!");
               }
               else
               {   
