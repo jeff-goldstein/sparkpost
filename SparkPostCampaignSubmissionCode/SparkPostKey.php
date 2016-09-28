@@ -76,16 +76,118 @@ limitations under the License. -->
     width: 300px;
     border: 3px solid #555;
     }
+    
+    body {margin:0;}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
     </style>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script>
+function createhash() 
+{
+    var japikey = document.getElementById("key").value;
+    var jhash  = document.getElementById("hash").value;
+    jhash = CryptoJS.AES.encrypt(japikey, "sparkpost");
+}
+
+function d2h(d) {
+    return d.toString(16);
+}
+
+function stringToHex() {
+    var japikey = document.getElementById("key").value;
+    var str = '',
+        i = 0,
+        tmp_len = japikey.length,
+        c;
+ 
+    for (; i < tmp_len; i += 1) {
+        c = japikey.charCodeAt(i);
+        str += d2h(c);
+    }
+    document.keyform.key.value = str;
+    return true;
+}
+</script>
 </head>
+
 <body id="bkgnd">
+<ul class="topnav" id="myTopnav">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="SparkPostHelp.php">Help</a></li>
+  <li><a href="mailto:email.goldstein@gmail.com?subject=SparkPostMail">Contact</a></li>
+  <li><a href="https://developers.sparkpost.com/">SparkPost Documentation</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myNav()">☰</a>
+  </li>
+</ul>
+
+<script>
+function myNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
     <center>
         <h1>SparkPostMail Simple UI Campaign Generator</h1>
     </center>
-    <form action="SparkPostSubmit.php" id="keyform" name="keyform">
-        <h3>Your SparkPost API Key:</h3><input name="apikey" placeholder=
-        "API Key.." required="" type="text"><br>
-        <br>
+    <form action="SparkPostSubmit.php" id="keyform" name="keyform" onsubmit="stringToHex()">
+        <h3>Your SparkPost API Key:</h3>
+        <input id="key" name="apikey" placeholder="API Key.." required=true type="text" autocomplete="off">
+        <br><br>
         <input size="10" style=
         "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;"
         type="submit" value="Submit">
