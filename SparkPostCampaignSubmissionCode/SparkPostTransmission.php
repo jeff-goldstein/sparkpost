@@ -58,13 +58,66 @@ h4 {
     color: #298272;
 }
 
-table, th, td {
-   border: 1px solid black;
+h4.red { 
+    display: block;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #999999;
 }
 
-tbody tr:nth-child(odd) {
-   background-color: #ccc;
+body {margin:0;}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
 </style>
 
 <script>
@@ -79,9 +132,39 @@ $(function()
 </script>
 
 <body id="bkgnd">
-<h1><center>Campaign Submission Output</center></h1>
 <?php
-$key = $_GET["apikey"];
+//
+// get hash
+//
+$hash = $_GET["apikey"];
+?>
+<ul class="topnav" id="myTopnav">
+  <li><a class="active" href="SparkPostKey.php">Home</a></li>
+  <li><a class="active" href="SparkPostSubmit.php<?php echo '?apikey=' . $hash ?>">Campaign Generation</a></li>
+  <li><a class="active" href="SparkPostScheduled.php<?php echo '?apikey=' . $hash ?>">Scheduled Campaigns</a></li>
+  <li><a href="SparkPostHelp.php">Help</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="https://developers.sparkpost.com/">SparkPost Documentation</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myNav()">☰</a>
+  </li>
+</ul>
+<script>
+function myNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+<table width = 1000 border=0><tr><td><h1><center>Campaign Submission Receipt</center></h1></td></tr></table>
+<?php
+//
+// Get values entered by user
+//
+$key = hex2bin($hash);
 $template = $_GET["Template"];
 $recipients = $_GET["Recipients"];
 $now = $_GET["now"];
@@ -107,29 +190,33 @@ $data5 = trim($_GET["data5"], " ");
 //
 //Build the payload for the Transmission API call
 //
-$builditandtheywillcome = '{"options": { "open_tracking" :';
-if ($open == "T") $builditandtheywillcome .= 'true, "click_tracking" : '; else $builditandtheywillcome .= 'false, "click_tracking" : ';
-if ($click == "T") $builditandtheywillcome .= 'true, "start_time" : '; else $builditandtheywillcome .= 'false, "start_time" : ';
-if (!empty($date)) $builditandtheywillcome .= '"' . $date . 'T' . $hour . ':' . $minutes . ':00' . $tz . '"}, '; else $builditandtheywillcome .= '"now"}, ';
-$builditandtheywillcome .= '"content" : {"template_id" : "' . $template . '","use_draft_template" : false  },';
-$builditandtheywillcome .= '"recipients" : {"list_id" : "' . $recipients . '"},';
-$builditandtheywillcome .= '"campaign_id" : "' . $campaign . '" ';
+$transmissionLoad = '{"options": { "open_tracking" :';
+if ($open == "T") $transmissionLoad .= 'true, "click_tracking" : '; else $transmissionLoad .= 'false, "click_tracking" : ';
+if ($click == "T") $transmissionLoad .= 'true, "start_time" : '; else $transmissionLoad .= 'false, "start_time" : ';
+if (!empty($date)) $transmissionLoad .= '"' . $date . 'T' . $hour . ':' . $minutes . ':00' . $tz . '"}, '; else $transmissionLoad .= '"now"}, ';
+$transmissionLoad .= '"content" : {"template_id" : "' . $template . '","use_draft_template" : false  },';
+$transmissionLoad .= '"recipients" : {"list_id" : "' . $recipients . '"},';
+$transmissionLoad .= '"campaign_id" : "' . $campaign . '" ';
 
  if (($meta1 != "") or ($meta2 != "") or ($meta3 != "") or ($meta4 != "") or ($meta5 != ""))
 {
-   $builditandtheywillcome .= ', "metadata" : {';
-   if ($meta1 != "") {$builditandtheywillcome .= '"' . $meta1 . '":"' . $data1 . '",';}
-   if ($meta2 != "") {$builditandtheywillcome .= '"' . $meta2 . '":"' . $data2 . '",';}
-   if ($meta3 != "") {$builditandtheywillcome .= '"' . $meta3 . '":"' . $data3 . '",';}
-   if ($meta4 != "") {$builditandtheywillcome .= '"' . $meta4 . '":"' . $data4 . '",';}
-   if ($meta5 != "") {$builditandtheywillcome .= '"' . $meta5 . '":"' . $data5 . '"';}
-   $builditandtheywillcome = trim($builditandtheywillcome, ",");
-   $builditandtheywillcome .= "}";
+   $transmissionLoad .= ', "metadata" : {';
+   if ($meta1 != "") {$transmissionLoad .= '"' . $meta1 . '":"' . $data1 . '",';}
+   if ($meta2 != "") {$transmissionLoad .= '"' . $meta2 . '":"' . $data2 . '",';}
+   if ($meta3 != "") {$transmissionLoad .= '"' . $meta3 . '":"' . $data3 . '",';}
+   if ($meta4 != "") {$transmissionLoad .= '"' . $meta4 . '":"' . $data4 . '",';}
+   if ($meta5 != "") {$transmissionLoad .= '"' . $meta5 . '":"' . $data5 . '"';}
+   $transmissionLoad = trim($transmissionLoad, ",");
+   $transmissionLoad .= "}";
  }    
 
-$builditandtheywillcome .= "}";
-//echo $builditandtheywillcome;
+$transmissionLoad .= "}";
+//echo $transmissionLoad;
 
+
+//
+// Schedule the campaign
+//
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -140,7 +227,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "$builditandtheywillcome",
+  CURLOPT_POSTFIELDS => "$transmissionLoad",
   CURLOPT_HTTPHEADER => array(
     "authorization: $key",
     "cache-control: no-cache",
@@ -159,38 +246,37 @@ if ($err) {
 }
 
 //
-//Show the User what they entered and the system output from the API call
+//Build a table to echo what the user entered; this will be used in the email 
 //
-$validationText = "<br><br><h1>Form input used for Campaign</h1><table>";
-$validationText .= "<tr><td>Campaign Name: </td><td>" . $campaign . "</td></tr>";
-$validationText .= "<tr><td>Template: </td><td>" . $template . "</td></tr>";
-$validationText .= "<tr><td>Recipients: </td><td>" . $recipients . "</td></tr>";
-$validationText .= "<tr><td>Send Now Flag: </td><td>" . $now;
-if (!empty($date)) $validationText .= "* (Send Date overrides Send Now Flag, Campaign Scheduled)";
-$validationText .=  "</td></tr>";
-$validationText .= "<tr><td>Send Date: </td><td>" . $date . "</td></tr>";
-$validationText .= "<tr><td>Send Hour: </td><td>" . $hour . "</td></tr>";
-$validationText .= "<tr><td>Send Minutes: </td><td>" . $minutes . "</td></tr>";
-$validationText .= "<tr><td>TimeZone Offset from GMT: </td><td>" . $tz . "</td></tr>";
-$validationText .= "<tr><td>Track Open Flag: </td><td>" . $open . "</td></tr>";
-$validationText .= "<tr><td>Track Clicks Flag: </td><td>" . $click . "</td></tr></table>";
-$validationText .= "<p><table><tr><th colspan='2'><center>Meta Data Entries</center><th></tr>";
-$validationText .= "<tr><td width=300 height=30>" . $meta1 . "</td><td width=300 height=30>" . $data1 . "</td></tr>";
-$validationText .= "<tr><td width=300 height=30>" . $meta2 . "</td><td width=300 height=30>" . $data2 . "</td></tr>";
-$validationText .= "<tr><td width=300 height=30>" . $meta3 . "</td><td width=300 height=30>" . $data3 . "</td></tr>";
-$validationText .= "<tr><td width=300 height=30>" . $meta4 . "</td><td width=300 height=30>" . $data4 . "</td></tr>";
-$validationText .= "<tr><td width=300 height=30>" . $meta5 . "</td><td width=300 height=30>" . $data5 . "</td></tr></table>";
+//$validationText  = "<table width = 1000 border=0><tr><h1>Form input used for Campaign</h1></tr></table>";
+$validationText .= "<h4 id=red>Email Confirmation Sent To: " . $email . "</h4>";
+$validationText .= "<form><table width='1000' border=1><tr><td>";
+$validationText .= "<h5>Campaign Name: " . $campaign . "</h5>";
+$validationText .= "<h5>Template: " . $template . "</h5>";
+$validationText .= "<h5>Recipients: " . $recipients . "</h5>";
+$validationText .= "<h5>Send Now Flag: " . $now . "</h5>";
+$validationText .= "<h5>";
+if ($date && $now) {$validationText .= "</h5><h4><strong><i>**Notice** Send Date/Time was entered and will override Send Now Flag, Campaign Scheduled</i></strong><br>";}
+$validationText .= "   Scheduled Date/Time: " . $date . " at: " . $hour . ":" . $minutes . " with a timezone offset from GMT: " . $tz;
+if ($date && $now) {$validationText .= "</h4>";} else {$validationText .= "</h5>";}
+$validationText .= "<h5>Track Open Flag: " . $open . "</h5>";
+$validationText .= "<h5>Track Clicks Flag: " . $click . "</h5>";
+$validationText .= "<p><table width='400'>";
+//$validationText .= "<tr><th colspan='2'><center>Meta Data Entries</center></th></tr>";
+$validationText .= "<tr><th align=left>Metadata Names</th><th align=left>Metadata Values</th></tr>";
+$validationText .= "<tr><td width=200 height=30>" . $meta1 . "</td><td width=200 height=30>" . $data1 . "</td></tr>";
+$validationText .= "<tr><td width=200 height=30>" . $meta2 . "</td><td width=200 height=30>" . $data2 . "</td></tr>";
+$validationText .= "<tr><td width=200 height=30>" . $meta3 . "</td><td width=200 height=30>" . $data3 . "</td></tr>";
+$validationText .= "<tr><td width=200 height=30>" . $meta4 . "</td><td width=200 height=30>" . $data4 . "</td></tr>";
+$validationText .= "<tr><td width=200 height=30>" . $meta5 . "</td><td width=200 height=30>" . $data5 . "</td></tr></table></table>";
+$validationText .= "</td></table></tr></form>";
 
 echo $validationText;
 ?>
 
-<h4>Email Confirmation Address: <?php echo $email ?></h4>
-<table><tr><td>
+<table width="1000"><tr><td>
 <center><h4>Output from SparkPost Server</h4></center>
 <h3><?php echo "$response"; ?></h3></td></tr></table>
-
-<p>
-<a href="SparkPostSubmit.php?apikey=<?php echo $key ?>">Another Campaign?</a>
 
 <?php 
 //
