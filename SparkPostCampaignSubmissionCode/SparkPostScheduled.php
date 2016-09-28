@@ -108,7 +108,58 @@ input[type=expandtext] {
 
 input[type=expandtext]:focus {
     width: 250px;
-    border: 3px solid #555;
+    border: 3px solid #555;}
+    
+    body {margin:0;}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
 </style>
 </head>
 
@@ -130,7 +181,8 @@ $(function()
 if( isset($_GET['submit']) )
 {
 $id = htmlentities($_GET["id"]);
-$apikey = htmlentities($_GET["apikey"]);
+$hash = $_GET["apikey"];
+$apikey = hex2bin($hash);
 $url = "https://api.sparkpost.com/api/v1/transmissions/" . $id;
 //echo $url;
 $curl = curl_init();
@@ -166,9 +218,37 @@ header("Refresh:0");
 <body id="bkgnd">
 <?php
 //
+// get hash
+//
+$hash = $_GET["apikey"];
+?>
+<ul class="topnav" id="myTopnav">
+  <li><a class="active" href="SparkPostKey.php">Home</a></li>
+  <li><a class="active" href="SparkPostSubmit.php<?php echo '?apikey=' . $hash ?>">Campaign Generation</a></li>
+  <li><a href="SparkPostHelp.php">Help</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="https://developers.sparkpost.com/">SparkPost Documentation</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myNav()">☰</a>
+  </li>
+</ul>
+
+<script>
+function myNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+<?php
+//
 // get all transmission, then only grab the ones we want.  API can't search on 'state' yet
 //
-$apikey = $_GET["apikey"];
+//$hash = $_GET["apikey"];
+$apikey = hex2bin($hash);
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://api.sparkpost.com/api/v1/transmissions/",
@@ -218,14 +298,9 @@ $submittedOnly[] = array('state' => $value2['state'], 'campaign_id' => $value2['
 </table></center>
 <form name=getid action="" method="get">
 <h3>Enter The Internal Campaign ID You Wish to Cancel:</h3>
-<input type="hidden" name="apikey" value="<?php echo $apikey ?>">
-  <input name="id" type="expandtext" required placeholder="Campaign ID Number.."><br><br>
+<input type="hidden" name="apikey" value="<?php echo $hash ?>">
+<input name="id" type="expandtext" required placeholder="Campaign ID Number.."><br><br>
 <input type="submit" name="submit" value="Cancel Campaign" STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" >
-</form>
-<p>OR
-<form name=goback action="SparkPostSubmit.php">
-<input type="hidden" name="apikey" value="<?php echo $apikey ?>">
-<input type="submit" name="submit" value="Go Back To Campaign Creation Page" STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" >
 </form>
 <p>* Your Campaign Time has been converted to (and showing) GMT Time
 </body>
