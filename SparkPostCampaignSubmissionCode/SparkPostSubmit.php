@@ -347,7 +347,8 @@ function myNav() {
     return false;
     }
 
-    </script> <?php
+    </script> 
+    <?php
     //
     // Get The 'Published Only' Templates from the Account
     //
@@ -701,7 +702,7 @@ function myNav() {
                         <option value="+13:00">
                             (GMT+13:00) Nuku'alofa
                         </option>
-                    </select></p>
+                    </select>
                     <h3>Campaign Name:*</h3><input name="campaign" required="" type="text"><br>
                     <br>
                     <input checked name="open" type="checkbox" value="T"> Turn on Open Tracking<br>
@@ -790,9 +791,7 @@ function myNav() {
                         </td>
                     </tr>
                 </table>
-            </td>
-        </tr>
-    </table>
+
     <h3>Preview Using Selected Template and First Member of Recipient List</h3><br>
     <i>**This feature is still in beta...Still working on error messaging...Large Recipient Lists may cause the Preview to malfunction</i>
     <div class="main">
@@ -800,3 +799,4 @@ function myNav() {
     </div>
 </body>
 </html>
+
