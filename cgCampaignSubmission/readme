@@ -1,1 +1,10 @@
-hold
+Welcome to the Campaign Submission Application build on top of SparkPost API's.  This tool is put together in order to help SparkPost users build campaigns without having to build their own applications or purchasing a full blown campaign manager from one of their partners.  This applications is in no way competition for full blown applications that have content WYSIWYG editors, segmentation and analytics.  
+
+What this application does, it allow users to create a campaign using stored templates and either stored recipient lists, or entered recipient information in the form of CSV lists or JSON formats.  It will also allow the user to cancelled scheduled campaigns.
+
+There is no set-up required, all the user needs is an API Key with the appropriate authorization that allows for R/W capabilities to the Transmission, Recipient-list, Transmissions and Domain API’s.  If this system is being used on-premise or for Enterprise/Elite users, the user needs to enter in the API root directory.
+
+As for an on-premise installation, all the files need to be installed in the same page.  Yes, I’m not following best practices by having some of the components like CSS in their own directory, but that will come later.
+
+In the meantime, installation is simple.  Copy all of the files to the same directory and have your users go to the cgKey.php file to start the process.  The Campaign Manager needs no configuration. 
+
