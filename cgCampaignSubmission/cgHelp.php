@@ -10,7 +10,10 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License. -->
+limitations under the License. 
+
+File: cgHelp.php
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,7 +66,7 @@ table {
 <td valign="top"><a name="LoggingIn"></a>
 <h4>Logging in with a SparkPost API Key</h4>
 <strong>The</strong> first step in using the generator is to obtain a SparkPost API key which will give this application access to your account. As stated before this key is NOT stored by this application and is only used during your sessions. If you don't have an API Key and need some help in generating one, here is a SparkPost article on the subject: <a href="https://support.sparkpost.com/customer/portal/articles/1933377">Create API Keys.</a>
-<p>Once you have the key, you can use it on the login/entry&nbsp;page to start the campaign process. In order to protect your key, the system will obfuscate your key through the rest of the session. Also, I have turned off autofill for the field that requests the API key, so the browser probably won't fill in that field the next time you come back to that page. I state this because the SparkPost API generator does not hold the key either so if you loose that key you will have to create another one (luckily you can create as many as you wish). The only other field on this page is the API Root directory. The Campaign Generator <strong>defaults</strong> to the SparkPost.com API Root directory of <strong>(https://api.sparkpost.com/api/v1)</strong>, but if you are using this application onsite after downloading it from Github, or you are an Elite/Enterprise customer, you need to enter in the appropriate URL. The system doesn't care if you have a trailing '/' after 'v1' or not; it doesn't need/want it, but will strip it off if you put it into the field.</p>
+<p>Once you have the key, you can use it on the login/entry&nbsp;page to start the campaign process. In order to protect your key, the system will obfuscate your key through the rest of the session. Also, I have turned off auto-fill for the field that requests the API key, so the browser probably won't fill in that field the next time you come back to that page. I state this because the SparkPost API generator does not hold the key either so if you loose that key you will have to create another one (luckily you can create as many as you wish). The only other field on this page is the API Root directory. The Campaign Generator <strong>defaults</strong> to the SparkPost.com API Root directory of <strong>(https://api.sparkpost.com/api/v1)</strong>, but if you are using this application onsite after downloading it from Github, or you are an Elite/Enterprise customer, you need to enter in the appropriate URL. The system doesn't care if you have a trailing '/' after 'v1' or not; it doesn't need/want it, but will strip it off if you put it into the field.</p>
 </td>
 <td valign="top"><a href="https://dl.dropboxusercontent.com/u/4387255/cgScreenSnapshots/cgKey.png" target="_blank"><img src="https://dl.dropboxusercontent.com/u/4387255/cgScreenSnapshots/cgKey.png" alt="Campaign Generator Login Page" width="800" height="800&quot;" /></a></td>
 </tr>
@@ -88,7 +91,7 @@ table {
 <li>How many fields were found in the substitution data</li>
 <li>How many substitution fields match template fields</li>
 <li>How many fields did not match</li>
-<li>How many fields did not match, but were probably index fields within the data and would not expect to be found in the template. For example; let's say that the selected template is used to display 'x' number of products, where the number of products can change for each email. The products could be indexed in either the global substitution (or recipeint) data section in the following manner:
+<li>How many fields did not match, but were probably index fields within the data and would not expect to be found in the template. For example; let's say that the selected template is used to display 'x' number of products, where the number of products can change for each email. The products could be indexed in either the global substitution (or recipient) data section in the following manner:
 <pre>"products" : {
     "17823": {
             "url": "https://db.tt/emZu6fd2",
@@ -136,26 +139,26 @@ table {
 </pre>
 The numeric indexed products can then be used in a myriad number of ways. One example would be in a loop where the recipients data would have an array of which products to display: "products": ["18152", "18056"], while another users recipient data might have "products": ["17823", "18056", "18111" , "18152"]. Because the fields are solely being used within the json data structure for reference we wouldn't expect to see them referenced in the template fields themselves.</li>
 <br>
-<li>The last number represents what I call 'system indexes'. I plan on getting rid of those in the near future, but due to the language I'm using for some of the coding, the system add's array index numbers to my substitution fields when I make an array out of them before my comparison process (I know...blah, blah, blah). Anyway, any numberic substitution field under 50 is going to be labeled as a probably system index and the row will be displayed in 'yellow highlight' color. The only thing those index number affect is the comparison process.  They don't show up in your template or change anything in the campaign.  I'm only bringing it up because I haven't done the code to get rid of them and I don't want any confusion about where they came from.</li>
+<li>The last number represents what I call 'system indexes'. I plan on getting rid of those in the near future, but due to the language I'm using for some of the coding, the system adds array index numbers to my substitution fields when I make an array out of them before my comparison process (I know...blah, blah, blah). Anyway, any numeric substitution field under 50 is going to be labeled as a probably system index and the row will be displayed in 'yellow highlight' color. The only thing those index number affect is the comparison process.  They don't show up in your template or change anything in the campaign.  I'm only bringing it up because I haven't done the code to get rid of them and I don't want any confusion about where they came from.</li>
 <br></ul>
-<li>The second appoach is the reverse of the first. The Campaign Generator scans for all variables being used in the template and checks to see if there is matching substitution data. The summary is much simplier since it doesn't have to deal with the indexed products or system index numbers. So the summary simply shows:
+<li>The second approach is the reverse of the first. The Campaign Generator scans for all variables being used in the template and checks to see if there is matching substitution data. The summary is much simpler since it doesn't have to deal with the indexed products or system index numbers. So the summary simply shows:
 <ul><br>
 <li>How many fields were found in the template</li>
 <li>How many matches were found in the substitution data</li>
-<li>How many fields did not find a match in the substitition data</li>
+<li>How many fields did not find a match in the substitution data</li>
 </ul>
 </li>
 </ul>
-<br /> We haven't discussed how to add in 'global substitution data' into the system just yet, but <strong>YES</strong>, the system does compare both recipeint and global data to the template if any Global Data has been entered.</li>
+<br /> We haven't discussed how to add in 'global substitution data' into the system just yet, but <strong>YES</strong>, the system does compare both recipient and global data to the template if any Global Data has been entered.</li>
 <br>
 <li>If there is an error message from the server when it tries to create the preview, the system will warn you in three different ways:<br />
 <ul><br>
-<li>An Alert Box will display telling you of an issue.  If you wish to stop getting those warnings, some browsers let you select an option to stop recieving them.  That option will stay in affect until the next time you come to this application with a new browser session/tab.</li>
+<li>An Alert Box will display telling you of an issue.  If you wish to stop getting those warnings, some browsers let you select an option to stop receiving them.  That option will stay in affect until the next time you come to this application with a new browser session/tab.</li>
 <li>The error will display in the Preview Section</li>
-<li>The submit button will turn off and turn red. You will not be able to submit a campaign until you either press the reset button, or you use the Preview button on a good Template/Recipient combination.  The submit button will turn red only on significant errors that the SparkPost server found when trying to use the selected recipient data with that template.  You can easily have recipient data that just doesn't match the template and the server won't care.  So again, please look very carefully at the preview output. The server errors tend to be when conditional, loop or global datafields are missing.</li>
+<li>The submit button will turn off and turn red. You will not be able to submit a campaign until you either press the reset button, or you use the Preview button on a good Template/Recipient combination.  The submit button will turn red only on significant errors that the SparkPost server found when trying to use the selected recipient data with that template.  You can easily have recipient data that just doesn't match the template and the server won't care.  So again, please look very carefully at the preview output. The server errors tend to be when conditional, loop or global data fields are missing.</li>
 </ul>
 </ol>
-<p>Next to the 'Preview and Validate' button are two other buttons. The 'Show Global Sub' button exposes a new data entry field that allows the user to enter in.....you guessed, <em>Global Substitution data</em>. It is very very very important that you enter in this data properly. The field does have a sample in it that will only display when there is no data in that field; so as-soon-as you start to type data, it will dissapear. The expected format is a json structure with the key name "substitution_data" at the begining and the value(s) following it. It must be a proper json structure <strong>without</strong> the curly bracket before the substitution_data key word. Here is a 'simple' example:</p>
+<p>Next to the 'Preview and Validate' button are two other buttons. The 'Show Global Sub' button exposes a new data entry field that allows the user to enter in.....you guessed, <em>Global Substitution data</em>. It is very very very important that you enter in this data properly. The field does have a sample in it that will only display when there is no data in that field; so as-soon-as you start to type data, it will disappear. The expected format is a json structure with the key name "substitution_data" at the beginning and the value(s) following it. It must be a proper json structure <strong>without</strong> the curly bracket before the substitution_data key word. Here is a 'simple' example:</p>
 <pre>"substitution_data" : 
 {
      "company_home_url" : "www.sparkpost.com",
@@ -169,8 +172,8 @@ The numeric indexed products can then be used in a myriad number of ways. One ex
 }
 </pre>
 <p>The substitution data can be as complex as you need, but does have a length limit of 70K characters. As explained before, this data will be used in the preview and the data comparison features discussed earlier. Notice that this field is expandable by pulling on the lower right-hand corner of the box. This is extremely useful in helping you see what you have entered.</p>
-<p>The Global Data secution will also be used during the campaign itself.  Global Substitution fields are a great way to minimize your templates.  I use Global Substitution for product arrays and whitelabeling a template by changing CSS fields dynamically with substitution data!
-<p>The next button is the 'Send Test Email' button that allows you to send a test email to a comma seperated list of email addresses. It uses the same data that the preview is using, so those emails should be identical.</p>
+<p>The Global Data section will also be used during the campaign itself.  Global Substitution fields are a great way to minimize your templates.  I use Global Substitution for product arrays and white labeling a template by changing CSS fields dynamically with substitution data!
+<p>The next button is the 'Send Test Email' button that allows you to send a test email to a comma separated list of email addresses. It uses the same data that the preview is using, so those emails should be identical.</p>
 <p>Now you can pick when you want the campaign to go out. You can either have it go out immediately, or you can schedule it out. Currently, SparkPost will reject any scheduled campaign farther out than a month. If you enter in a scheduled date/time, that will take precedence over the 'now' flag. The hours are 0-23 military hours. The SparkPost Server thinks in GMT so you will want to set the offset for when you want the campaign to go out compared to GMT.</p>
 <p>You will notice that there are fields to allow for 5 metadata key value pairs to be added to the campaign. These key value pairs will be added to the campaign which in turn are added to the web hook events generated by SparkPost. I am guessing that 5 is enough, if not please give me feedback and/or make the changes yourself and submit them to the Github repository.</p>
 <p><em>If you are using ip_pools or bindings, you can use meta data to guide your emails to the proper location. For example, Enterprise users may have a meta data field called "binding" and the data would be "outbound". </em></p>
@@ -182,14 +185,14 @@ The numeric indexed products can then be used in a myriad number of ways. One ex
 <td valign="top">
 <h4><a id="CSVJSON" name="CSVJSON"></a>Using CSV or JSON data for Campaign Generation</h4>
 <strong>The</strong> second approach to submitting a campaign is very similar to the previous one (please refer to <a href="#StoredData">Using Stored Templates and Recipient Lists for Campaign Generation)</a> except that the recipient data is entered by you. While this is a lot more flexible, it can be more challenging to get the data correct. There are three large data entry fields; CSV and Recipients and Global Substitution Data fields. The Global field is initially hidden and can be displayed by pressing the 'Show Global Sub' button. The text on that button will toggle from 'show' or 'hide' depending on if the text field is being displayed or not.
-<p>The CSV field expects a typical csv list of data. The only field that MUST be in the list is the "address" field; all others are optional. Once entered, press the 'Convert to JSON' button in order to change your CSV file into something the server can understand. The first are the names of the fields, seperated by commas and incased in quotes. If you have substitution data, you must have a field name "substitution" and all data following it on the row will be concidered substitution_data fields. Here is an example:</p>
+<p>The CSV field expects a typical csv list of data. The only field that MUST be in the list is the "address" field; all others are optional. Once entered, press the 'Convert to JSON' button in order to change your CSV file into something the server can understand. The first are the names of the fields, separated by commas and incased in quotes. If you have substitution data, you must have a field name "substitution" and all data following it on the row will be considered substitution_data fields. Here is an example:</p>
 <p>&nbsp;</p>
 <pre>"address","UserName","substitution","first","id","city"
 "jeff.goldstein@sparkpost.com","Sam Smith","_","Sam",342,"Princeton"
 "austein@hotmail.com","Fred Frankly","_","Fred",38232,"Nowhere"
 "jeff@geekswithapersonality.com","Zachary Zupers","_","Zack",9,"Hidden Town"
 </pre>
-<p><strong>In each data row, use an underscore as the data for the "substitution" field . IT MUST BE AN UNDERSCORE!! The system will use the combination of the substitution/underscore to determin the begining of the substitution data.</strong> The above sample will change to the following JSON format which will be displayed in the Recipient data entry field (if you have data in the Recipient data field prior to hitting the 'Convert to JSON' button, that data will be overriden):</p>
+<p><strong>In each data row, use an underscore as the data for the "substitution" field . IT MUST BE AN UNDERSCORE!! The system will use the combination of the substitution/underscore to determine the beginning of the substitution data.</strong> The above sample will change to the following JSON format which will be displayed in the Recipient data entry field (if you have data in the Recipient data field prior to hitting the 'Convert to JSON' button, that data will be overridden):</p>
 <p>&nbsp;</p>
 <table border="0">
 <tbody>
@@ -227,7 +230,7 @@ The numeric indexed products can then be used in a myriad number of ways. One ex
  }]
 }
 </pre>
-<p><em>NOTE: JSONLINT is a great tool. There is also a PRO version: <a href="http://pro.jsonlint.com/">PRo JSONLINT</a>. JSON LINT is open source GitHub repository availalbe. These tools can save you a ton of time in figuring out why your JSON is being rejected.</em></p>
+<p><em>NOTE: JSONLINT is a great tool. There is also a PRO version: <a href="http://pro.jsonlint.com/">PRo JSONLINT</a>. JSON LINT is open source GitHub repository available. These tools can save you a ton of time in figuring out why your JSON is being rejected.</em></p>
 <p>Once you have your CSV converted to JSON, you can go ahead and leverage the "Preview and Validate" process to see how the email may look and how well the data and the template match. For more information on the "Preview and Validate" process, please refer to the <a href="#validate">Validate Process Description</a> given above. (I'm to lazy to upkeep both places :-).</p>
 <p>If you wish, you can skip the CSV process and enter (cut/paste) JSON directly into the Recipient data field, go right ahead. There is a sample of what the structure needs to look like in the data field itself. The field is expected to be a good JSON format and can have as many users in it as you with up to 700K of data. Depending on the number of substitution fields you have that could be a lot of users!!</p>
 <p>The Global data field works the same way as it does on the Campaign Generation Process that uses stored templates and recipient lists. Please refer to that text for further information.</p>
