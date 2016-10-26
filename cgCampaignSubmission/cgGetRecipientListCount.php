@@ -34,7 +34,7 @@ $recipientArray = json_decode($response, true);
 //echo "<pre>";
 //print_r($recipientArray);
 //echo "</pre>";
-$count = $recipientArray["results"]["total_accepted_recipients"];
+$count = trim($recipientArray["results"]["total_accepted_recipients"]);
 echo $count;
 }
 ?>
