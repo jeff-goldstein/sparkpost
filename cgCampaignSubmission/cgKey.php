@@ -75,8 +75,8 @@ limitations under the License. -->
                 information in order to create, schedule or cancel your
                 campaigns. The code behind this site is available from my
                 Github repository at: <a href=
-                "https://github.com/jeff-goldstein/sparkpost/tree/master/cgCampaignSubmissionCode" target="_blank">
-                https://github.com/jeff-goldstein/sparkpost/tree/master/cgCampaignSubmissionCode</a>.
+                "https://github.com/jeff-goldstein/sparkpost/tree/master/cgCampaignSubmission" target="_blank">
+                https://github.com/jeff-goldstein/sparkpost/tree/master/cgCampaignSubmission</a>.
             </td>
         </tr>
     </table>
