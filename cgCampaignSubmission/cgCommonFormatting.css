@@ -1,0 +1,283 @@
+ <style>
+    body 
+    {
+  		font-family: Helvetica, Arial;
+	}
+    #bkgnd 
+    {
+    	background-image: url(https://dl.dropboxusercontent.com/u/4387255/HalloweenBackground.jpg);
+    	background-repeat: repeat;
+    }
+    
+    div#container 
+    {
+        width:500px;
+        height:500px;
+        overflow:auto;
+    }
+    
+     #scrollable_table 
+     {
+        display: inline-block;
+        overflow-y:scroll;
+        border-collapse: collapse;
+    }
+    
+    table {
+    	border-collapse: collapse;
+	}
+
+    h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: Helvetica, Arial;
+    }
+
+    h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #298272;
+    font-family: Helvetica, Arial;
+    }
+
+    h4 { 
+    display: block;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #298272;
+    font-family: Helvetica, Arial;
+    }
+    
+    select {
+    padding: 16px 20px;
+    border: 1px;
+    border-color: #298272;
+    background-color: #ffffff;
+    font-size: 12px;
+    font-family: Helvetica, Arial;
+    }
+
+    /* Can use this when I don't want an expanding input field */
+    input[type=textnormal] {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    background-color: white;
+    padding: 2px 2px 2px 4px;
+    width : 200px;
+    font-family: Helvetica, Arial;
+    }
+
+    /* This expands the text for more room while typing */
+    input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 1px solid #black;
+    font-size: 12px;
+    background-color: white;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    }
+
+    input[type=text]:focus {
+    width: 250px;
+    border: 3px solid #555;
+    }
+    
+    /* This expands the text for more room while typing */
+    input[type=textdataentry] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 1px solid #black;
+    font-size: 12px;
+    background-color: white;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    }
+
+    input[type=textdataentry]:focus {
+    width: 400px;
+    height: 600px;
+    border: 3px solid #555;
+    }
+    
+    /* This expands the text for more room while typing */
+    input[type=longentry] {
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #black;
+    font-size: 12px;
+    background-color: white;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    }
+
+    input[type=longentry]:focus {
+    width: 500px;
+    border: 3px solid #555;
+    }
+
+    input[type=number] {
+    width: 40px;
+    height: 23px;
+    box-sizing: border-box;
+    border: 1px solid #black;
+    font-size: 12px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 2px 2px 2px 4px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    }
+
+    input[type=number]:focus {
+    width: 65px;
+    border: 3px solid #555;
+    }
+
+    input[type=date] {
+    width: 150px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 8px solid #black;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 2px 2px 2px 4px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    }
+
+    input[type=date]:focus {
+    width: 200px;
+    border: 3px solid #555;
+    }
+
+    #iframe1 {
+    border: solid 0 px;
+    border-radius: 8px;
+    padding-top: 1em;
+    margin: 0 auto;
+    font-family: Helvetica, Arial;
+    }
+
+    .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    }
+
+    .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 5px 5px 5px;
+    font-size: 12px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+    visibility: visible;
+    }
+
+    /* This forces more consistent look and field across browsers for pulldown select fields */
+    @media screen and (-webkit-min-device-pixel-ratio:0) {  /*safari and chrome*/
+    select {
+        height:25px;
+        line-height:25px;
+        background:#f4f4f4;
+    } 
+    }
+    select::-moz-focus-inner { /*Remove button padding in FF*/ 
+    border: 0;
+    padding: 0;
+    }
+    @-moz-document url-prefix() { /* targets Firefox only */
+    select {
+        padding: 5px 0!important;
+    }
+    }        
+    @media screen\0 { /* IE Hacks: targets IE 8, 9 and 10 */        
+    select {
+        height:30px;
+        line-height:30px;
+    }     
+    }
+    body {margin:0;}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+</style>
