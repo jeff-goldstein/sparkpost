@@ -469,7 +469,7 @@ function download()
 }'></textarea>
                 <h3>Launch now OR enter data & time of campaign launch (YYYY-MM-DD HH:mm)*
                 	<div class="tooltip"><a><img height="35" src="https://dl.dropboxusercontent.com/u/4387255/info.png" width="35"></a> 
-                		<span class="tooltiptext">Note:<br>1) Any scheduled Campaign within 24 hours from running can not be cancelled.<p>2) Campaigns can only be scheduled less than 32 days out.</span>
+                		<span class="tooltiptext">Note:<br>1) Campaigns scheduled within 10 minutes of running cannot be cancelled.<p>2) Campaigns can only be scheduled less than 32 days out.</span>
                 	</div>
                 </h3>
                 <input checked id="now" name="now" type="checkbox" value="T"> OR Enter Date/Time 
