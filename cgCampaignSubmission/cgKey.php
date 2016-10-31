@@ -10,7 +10,11 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License. -->
+limitations under the License. 
+
+File: cgKey.php
+Purpose: Landing page for logging in.
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,11 +63,13 @@ limitations under the License. -->
             Please remember that the SparkPost system only shows your API Key "once", so you need to keep the API Key safe where 
             you can get to it each time you use this or any application that needs an API Key.  If you loose the API Key you can always create a new one.<p>
                     
-            At a minimum, you need to select 'Recipient Lists: Read/Write, Templates: Read/Write, and Transmissions: Read/Write'.
+            At a minimum, you need to select 'Recipient Lists: Read/Write, Templates: Read/Write, Transmissions: Read/Write and Sending Domains: Read'.
+            
+            <br><br><br><h2>For a secure link you may use <a href="http://geekwithapersonality.ipage.com/cgi-bin/cgKey.php"> Secured Campaign Generator</a></h2>
         </td>
     </tr>
 </table>
-<br><br><br><br>
+<br><br><br>
 <center>
     <table border="1" style="background-color:#a3e9f7" width="75%" cellpadding="20">
         <tr>
