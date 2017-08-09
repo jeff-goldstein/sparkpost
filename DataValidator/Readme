@@ -1,0 +1,54 @@
+    /* Copyright 2017 Jeff Goldstein
+    
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License. 
+    
+    File: SubDataCheckLibrary.php
+    Purpose: Compare Template Substitution Fields against Substitution Data being sent to the template.
+    The main function, SubDataCheck is meant to be called with the substitution data and/or global substitution data just before adding it into the transmission call.  
+    It will check to make sure that there is a corresponding substitution field for each field the template is looking for.
+    
+    EndPoint (1)
+    SubDataCheck, the main application is expecting the following parameters:
+    
+    Paramter Name                 Required Y/N        	Notes
+    --------------------------    ------------        	-------------------------------------------------------------------------------------------------------------------------------------------------
+    apikey								              Y               This application uses your account to get the Template from your account.  It needs an API key with the ability to read templates
+    apiroot                           	Y               For SparkPost.com this should be: https://api.sparkpost.com/api/v1/  For Enterprise customers, use your unique URL
+    template                          	Y               The Template ID you are validating against            
+    recsub                            	N               This can be blank, but if sent you must send it in the following format
+    												  	                        {"substitution_data" : {fields.........arrays......etc}}
+    globalsub                        	  N               This can be blank, but if sent you must send it in the following format
+    												  	                        {"substitution_data" : {fields.........arrays......etc}}
+    substitutionItemList            	  Y               An empty array that SubDataCheck will fill with a list of all fields found in the rec and global substitution data blocks
+    templateItemList                	  Y               An empty array that SubDataCheck will fill with a list of all fields found in the template
+    missingFields                    	  Y               An empty array that SubDataCheck will fill with a list of any field found in the template but NOT being sent to it via the recipient/global data
+    
+    
+    EndPoint (2)
+    IsJson, is a short function that allows you to validate the structure of your data (recipient/global) before sending it to SubDataCheck.  Just like SubDataCheck, the substitution_data block must be surrounded by {}  
+     
+    Paramter Name                 Required Y/N        	Notes
+    --------------------------    ------------        	-------------------------------------------------------------------------------------------------------------------------------------------------
+    string                            	Y               The function will validate the string to make sure they are properly formatted JSON
+    
+    
+    EndPoint (3)
+    BuildTemplateFields, will scan a template and build an array with all of the fields found in the template.
+    
+    Paramter Name                 Required Y/N        	Notes
+    --------------------------    ------------        	-------------------------------------------------------------------------------------------------------------------------------------------------
+    apikey								              Y               This application uses your account to get the Template from your account.  It needs an API key with the ability to read templates
+    apiroot                           	Y               For SparkPost.com this should be: https://api.sparkpost.com/api/v1/  For Enterprise customers, use your unique URL
+    template                          	Y               The Template ID you are requesting the field list from              
+    templateItemList                	  Y               An empty array that SubDataCheck will fill with a list of all fields found in the template
+      
