@@ -125,7 +125,6 @@
                 $json_check_result = ' Unknown error';
                 break;
         }
-        //return (json_last_error() == JSON_ERROR_NONE);
         return $json_check_result;
     }
     
@@ -171,7 +170,7 @@
     
     function NewWordValidation($word, $substitutionItemList, $keywords, &$missingFields, &$templateItemList)
     {
-        if (!in_array($word, $keywords) && (strlen($word) > 0)) //Check against keywords first
+        if (!in_array($word, $keywords) && (mb_strlen($word) > 0)) //Check against keywords first
         {
         	if (!array_key_exists($word, $templateItemList)) //Check against already found items in the template
             {
@@ -195,13 +194,13 @@
             $index  = 0;
             $start  = 0;
             $end    = 0;
-            $length = strlen($shredvalue);
+            $length = mb_strlen($shredvalue);
             while ($index < $length) {
-                $currentChar = substr($shredvalue, $index, 1);
+                $currentChar = mb_substr($shredvalue, $index, 1);
                 $stop        = preg_match($scanText, $currentChar);
                 if ($stop && $index != 0) {
-                    $word = substr($shredvalue, $start, $end - $start);
-                    if ((substr($word,0,1) != "'") && (substr($word, 0, 1) != '"'))  // check to see if the item is a constant ie. within quotes
+                    $word = mb_substr($shredvalue, $start, $end - $start);
+                    if ((mb_substr($word,0,1) != "'") && (mb_substr($word, 0, 1) != '"'))  // check to see if the item is a constant ie. within quotes
                     {
                     	NewWordValidation($word, $substitutionItemList, $keywords, $missingFields, $templateItemList);
                     	$start = $index + 1;
@@ -212,8 +211,8 @@
                 $index++;
                 $end++;
             }
-            $word = substr($shredvalue, $start, $end - $start);
-            if ((substr($word,0,1) != "'") && (substr($word, 0, 1) != '"'))  // check to see if the item is a constant ie. within quotes
+            $word = mb_substr($shredvalue, $start, $end - $start);
+            if ((mb_substr($word,0,1) != "'") && (mb_substr($word, 0, 1) != '"'))  // check to see if the item is a constant ie. within quotes
             {
             	NewWordValidation($word, $substitutionItemList, $keywords, $missingFields, $templateItemList);
             }
@@ -238,13 +237,13 @@
             $index  = 0;
             $start  = 0;
             $end    = 0;
-            $length = strlen($shredvalue);
+            $length = mb_strlen($shredvalue);
             while ($index < $length) {
-                $currentChar = substr($shredvalue, $index, 1);
+                $currentChar = mb_substr($shredvalue, $index, 1);
                 $stop        = preg_match($scanText, $currentChar);
                 if ($stop && $index != 0) {
-                    $word = substr($shredvalue, $start, $end - $start);
-                    if ((substr($word,0,1) != "'") && (substr($word, 0, 1) != '"'))  // check to see if the item is a constant ie. within quotes
+                    $word = mb_substr($shredvalue, $start, $end - $start);
+                    if ((mb_substr($word,0,1) != "'") && (mb_substr($word, 0, 1) != '"'))  // check to see if the item is a constant ie. within quotes
                     { 
                     	NewWordValidation($word, $substitutionItemList, $keywords, $missingFields, $templateItemList);
                     	$start = $index + 1;
@@ -255,8 +254,8 @@
                 $index++;
                 $end++;
             }
-            $word = substr($shredvalue, $start, $end - $start);
-            if ((substr($word,0,1) != "'") && (substr($word, 0, 1) != '"')) // check to see if the item is a constant ie. within quotes
+            $word = mb_substr($shredvalue, $start, $end - $start);
+            if ((mb_substr($word,0,1) != "'") && (mb_substr($word, 0, 1) != '"')) // check to see if the item is a constant ie. within quotes
             {
             	NewWordValidation($word, $substitutionItemList, $keywords, $missingFields, $templateItemList);
             }
@@ -285,55 +284,55 @@
     //
         // Now let's see what data we actually have, and create one substitution group for the comparisons
         //
-        //echo "strlen of glob: " . strlen($globalsub) . " and strlen of recsub: " . strlen($recsub);            
-        if ((strlen($globalsub) > 1) && (strlen($recsub) > 1)) //we have both global and personal substitution data
+        //echo "mb_strlen of glob: " . mb_strlen($globalsub) . " and mb_strlen of recsub: " . mb_strlen($recsub);            
+        if ((mb_strlen($globalsub) > 1) && (mb_strlen($recsub) > 1)) //we have both global and personal substitution data
             {
             // We will concatenate recipient data after the global data into one substitution_data object
             // We need to remove/change some quotes, commas, brackets to do this
             
             // Since we had a full JSON structure, we need to clean make some changes to contactentate the two structures into one JSON structure
             $pos    = strpos($recsub, "{"); // Find first bracket.  This should be the first character
-            $recsub = substr($recsub, $pos + 1); // Remove first bracket
+            $recsub = mb_substr($recsub, $pos + 1); // Remove first bracket
             $pos    = strpos($recsub, "{"); // Find the begining of the actual fields after the 'substitution_data' key name
-            $recsub = substr($recsub, $pos + 1); // Strip 'substitution_data and opening bracket since the Global Substitution will have that bracket
-            if (substr($recsub, -1) == ",")
-                $recsub = substr($recsub, 0, -1); //remove trailing comma user entered
-            $recsub = substr($recsub, 0, -1); //remove trailing }
+            $recsub = mb_substr($recsub, $pos + 1); // Strip 'substitution_data and opening bracket since the Global Substitution will have that bracket
+            if (mb_substr($recsub, -1) == ",")
+                $recsub = mb_substr($recsub, 0, -1); //remove trailing comma user entered
+            $recsub = mb_substr($recsub, 0, -1); //remove trailing }
             
             // Now chance the global substitution data
             $pos       = strpos($globalsub, "{"); // Find first bracket.  This should be the first character
-            $globalsub = substr($globalsub, $pos + 1); // Remove first bracket
+            $globalsub = mb_substr($globalsub, $pos + 1); // Remove first bracket
             $pos       = strpos($globalsub, "{"); // Find the begining of the actual fields after the 'substitution_data' key name
-            $globalsub = substr($globalsub, $pos); // Strip 'substitution_data but leave the first bracket.  We still need a properly formed JSON for decoding
-            $globalsub = substr($globalsub, 0, -2); //Remove the last two brackets so it's open to concatenate recsub
+            $globalsub = mb_substr($globalsub, $pos); // Strip 'substitution_data but leave the first bracket.  We still need a properly formed JSON for decoding
+            $globalsub = mb_substr($globalsub, 0, -2); //Remove the last two brackets so it's open to concatenate recsub
             $globalsub = $globalsub . ","; //add closing comma before recsub
             $subEntry  = $globalsub . $recsub;
         }
-        if ((strlen($globalsub) > 1) && (strlen($recsub) < 1)) //global substitution only
+        if ((mb_strlen($globalsub) > 1) && (mb_strlen($recsub) < 1)) //global substitution only
             {
             $pos       = strpos($globalsub, "{"); // Find first bracket.  This should be the first character
-            $globalsub = substr($globalsub, $pos + 1); // Remove first bracket
+            $globalsub = mb_substr($globalsub, $pos + 1); // Remove first bracket
             $pos       = strpos($globalsub, "{"); // Find the begining of the actual fields after the 'substitution_data' key name
-            $globalsub = substr($globalsub, $pos); // Strip 'substitution_data
+            $globalsub = mb_substr($globalsub, $pos); // Strip 'substitution_data
             $subEntry  = trim($globalsub); //remove any white space
-            $subEntry  = substr($subEntry, 0, -1); //Remove the last bracket that matched the leading bracket
+            $subEntry  = mb_substr($subEntry, 0, -1); //Remove the last bracket that matched the leading bracket
         }
-        if ((strlen($globalsub) < 1) && (strlen($recsub) > 1)) //personal substitution only
+        if ((mb_strlen($globalsub) < 1) && (mb_strlen($recsub) > 1)) //personal substitution only
             {
             //Expecting full json structure with beginning and ending {} backets.
             $pos    = strpos($recsub, "{"); // Remove first bracket
-            $recsub = substr($recsub, $pos + 1); // Remove first bracket
+            $recsub = mb_substr($recsub, $pos + 1); // Remove first bracket
             $pos    = strpos($recsub, "{"); // Find the begining of the actual fields after the 'substitution_data' key name
-            $recsub = substr($recsub, $pos); // Strip 'substitution_data
-            if (substr($recsub, -1) == ",")
-                $recsub = substr($recsub, 0, -1); //remove trailing comma user entered
-            if (substr($recsub, -1) == "}")
-                $recsub = substr($recsub, 0, -1); //remove trailing comma user entered
+            $recsub = mb_substr($recsub, $pos); // Strip 'substitution_data
+            if (mb_substr($recsub, -1) == ",")
+                $recsub = mb_substr($recsub, 0, -1); //remove trailing comma user entered
+            if (mb_substr($recsub, -1) == "}")
+                $recsub = mb_substr($recsub, 0, -1); //remove trailing comma user entered
             $recsub   = trim($recsub); //remove any white space
             $subEntry = $recsub;
         }
         // Create an empty array object.  Will fail at the begining of the loop
-        if ((strlen($globalsub) < 1) && (strlen($recsub) < 1)) {
+        if ((mb_strlen($globalsub) < 1) && (mb_strlen($recsub) < 1)) {
             $recsub   = json_decode("{}");
             //$subEntry = '{"substitution_data":' . $recsub . '}';
             $subEntry = json_encode($recsub);
