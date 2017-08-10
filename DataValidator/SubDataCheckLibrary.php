@@ -29,9 +29,9 @@
     apikey								Y               This application uses your account to get the Template from your account.  It needs an API key with the ability to read templates
     apiroot                           	Y               For SparkPost.com this should be: https://api.sparkpost.com/api/v1/  For Enterprise customers, use your unique URL
     template                          	Y               The Template ID you are validating against            
-    recsub                            	N               This can be blank, but if sent you must send it in the following format
+    recsub                            	Y               This can be an empty array, but if send dat you must send it in the following format
     												  	{"substitution_data" : {fields.........arrays......etc}}
-    globalsub                        	N               This can be blank, but if sent you must send it in the following format
+    globalsub                        	Y               This can be an empty array, but if send data you must send it in the following format
     												  	{"substitution_data" : {fields.........arrays......etc}}
     substitutionItemList            	Y               An empty array that SubDataCheck will fill with a list of all fields found in the rec and global substitution data blocks
     templateItemList                	Y               An empty array that SubDataCheck will fill with a list of all fields found in the template
@@ -73,9 +73,9 @@
     	echo "\napikey\t\t\t\t\tY\tThis application uses your account to get the Template from your account.  It needs an API key with the ability to read templates";
     	echo "\napiroot\t\t\t\t\tY\tFor SparkPost.com this should be: https://api.sparkpost.com/api/v1/  For Enterprise customers, use your unique URL";
     	echo "\ntemplate\t\t\t\tY\tThe Template ID you are validating against";   
-    	echo "\nrecsub\t\t\t\t\tN\tThis can be blank, but if sent you must send it in the following format";
+    	echo "\nrecsub\t\t\t\t\tY\tThis can be an empty array, but if send data you must send it in the following format";
     	echo "\n\t\t\t\t\t\t{'substitution_data' : {fields.........arrays......etc}}";
-    	echo "\nglobalsub\t\t\t\tN\tThis can be blank, but if sent you must send it in the following format";
+    	echo "\nglobalsub\t\t\t\tY\tThis can be an empty array, but if send data you must send it in the following format";
     	echo "\n\t\t\t\t\t\t{'substitution_data' : {fields.........arrays......etc}}";
     	echo "\nsubstitutionItemList\t\t\tY\tAn empty array that SubDataCheck will fill with a list of all fields found in the rec and global substitution data blocks";
     	echo "\ntemplateItemList\t\t\tY\tAn empty array that SubDataCheck will fill with a list of all fields found in the template";
@@ -184,8 +184,7 @@
     }
     
     function CompareTemplateFields($storedRawTemplate, $substitutionItemList, $keywords, &$missingFields, &$templateItemList)
-    {
-        
+    {      
         $initialParse   = "/{{(.*)}}/U";
         $getNumberFound = preg_match_all($initialParse, $storedRawTemplate, $shreded);
         $shreded        = $shreded[1];
@@ -220,8 +219,7 @@
     }
     
     function BuildTemplateFields($apikey, $apiroot, $template, &$templateItemList, $filename = NULL)
-    {
-        
+    {   
         $substitutionItemList = array();
         $missingFields = array();
         $storedRawTemplate = NULL;
