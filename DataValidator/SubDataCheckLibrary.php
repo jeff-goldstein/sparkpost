@@ -1,5 +1,7 @@
 <?php {
     ini_set('memory_limit', '512M');
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
     /* Copyright 2017 Jeff Goldstein
     
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -154,7 +156,14 @@
         
         $response          = curl_exec($curl);
         $encodedResponse   = json_decode($response, true);
-        $errorFromAPI      = $encodedResponse["errors"];
+        if(curl_exec($curl) === false) 
+        {
+        	$errorFromAPI      = curl_error($curl);
+        }
+        else
+        {
+        	$errorFromAPI = "No Error";
+        }
         $storedRawTemplate = $encodedResponse["results"]["content"]["html"];
         curl_close($curl);
         return $errorFromAPI;
@@ -257,6 +266,7 @@
     function BuildSubstitutionArray($string, &$substitutionItemList)
     {
         //Build the list of substitutions fields
+        $key = NULL;
         if (is_array($string)) {
             foreach ($string as $key => $value) {
                 $substitutionItemList[$key] = "anything";
