@@ -112,7 +112,7 @@
     
     
     $templateItemList = array();
-    BuildTemplateFields($apikey, $apiroot, $template, $templateItemList);
+    BuildTemplateFields($apikey, $apiroot, $template, $templateItemList, 'listoutput.txt');
     echo "\n\n-----The following output is data coming from the BuildTemplateFields function which produces a list of fields the template is looking for";
     echo "\n\nWhat Template Fields did we find?\n";
     foreach (array_keys($templateItemList) as $paramName)
