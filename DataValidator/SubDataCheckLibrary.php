@@ -219,7 +219,7 @@
         }
     }
     
-    function BuildTemplateFields($apikey, $apiroot, $template, &$templateItemList)
+    function BuildTemplateFields($apikey, $apiroot, $template, &$templateItemList, $filename = NULL)
     {
         
         $substitutionItemList = array();
@@ -259,6 +259,13 @@
             {
             	NewWordValidation($word, $substitutionItemList, $keywords, $missingFields, $templateItemList);
             }
+        }
+        if ($filename != NULL)
+        {
+        	$templatenames = NULL;
+        	foreach (array_keys($templateItemList) as $paramName)
+        		$templatenames .= $paramName . "\n";
+        	file_put_contents ($filename, $templatenames, LOCK_EX );
         }
     }
     
