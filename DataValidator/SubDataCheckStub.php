@@ -3,7 +3,7 @@
     $templateItemList     = array();
     $missingFields        = array();
     
-    $apikey   = "xxx";
+    $apikey   = "e8e6345ff301a92842beebff298541a18ffdbff7";
     $apiroot  = "https://api.sparkpost.com/api/v1/";
     $template = "invoice";
     $recsub   = '{
@@ -70,8 +70,7 @@
                 ]
             }
         ]
-    }
-}';
+    }}';
     
     $globalsub = '{"substitution_data" : 
     {
@@ -96,27 +95,32 @@
     //"billing_phone": "(925) 462-3433",
     
     include 'SubDataCheckLibrary.php';
-    SubDataCheck($apikey, $apiroot, $template, $recsub, $globalsub, $substitutionItemList, $templateItemList, $missingFields);
+    SubDataCheck($apikey, $apiroot, $template, $recsub, $globalsub, $substitutionItemList, $templateItemList, $missingFields, False);
     echo "\n\n-----The following output is data coming from the SubDataCheck function which checks what fields are missing from input substitution data that the template is looking for.";
-    echo "\n\nWhich Template Fields are Missing from Subsitution Data?\n";
-    foreach (array_keys($missingFields) as $paramName)
-        echo "\t" . $paramName . "\n";
+    echo "\n\nWhich Template Fields are Missing from Subsitution Data and/or may be NULL/Empty?\n";
+    foreach ($missingFields as $key => $value) {
+        echo "\nKey: " . $key . "\t\tValue: " . $value;
+                }
     
-    echo "\n\nWhat Template Fields did we find?\n";
-    foreach (array_keys($templateItemList) as $paramName)
-        echo "\t" . $paramName . "\n";
+    echo "\n\nWhat Template Fields did we find and was there content?\n";
+    foreach ($templateItemList as $key => $value) {
+        echo "\nKey: " . $key . "\t\tValue: " . $value;
+                }
     
-    echo "\n\nWhat Substitution Fields did we find?\n";
-    foreach (array_keys($substitutionItemList) as $paramName)
-        echo "\t" . $paramName . "\n";
+    
+    echo "\n\nWhat Substitution Fields did we find and was there content?\n";
+    foreach ($substitutionItemList as $key => $value) {
+        echo "\nKey: " . $key . "\t\tValue: " . $value;
+                }
     
     
     $templateItemList = array();
-    BuildTemplateFields($apikey, $apiroot, $template, $templateItemList, 'listoutput.txt');
+    BuildTemplateFields($apikey, $apiroot, $template, $templateItemList, 'fieldoutput.txt');
     echo "\n\n-----The following output is data coming from the BuildTemplateFields function which produces a list of fields the template is looking for";
     echo "\n\nWhat Template Fields did we find?\n";
-    foreach (array_keys($templateItemList) as $paramName)
-        echo "\t" . $paramName . "\n";
+    foreach ($templateItemList as $key => $value) {
+        echo "\nKey: " . $key . "\t\tValue: " . $value;
+                }
     
     $results = isJson($recsub);
     echo "\n\n-----The following output is a sample coming from the function 'isJson' that checks that can check if the passed string is a proper Json structure\n";
