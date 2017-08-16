@@ -3,7 +3,7 @@
     $templateItemList     = array();
     $missingFields        = array();
     
-    $apikey   = "e8e6345ff301a92842beebff298541a18ffdbff7";
+    $apikey   = "xxxxxxxx<use your own>xxxxxxxxxxx";
     $apiroot  = "https://api.sparkpost.com/api/v1/";
     $template = "invoice";
     $recsub   = '{
@@ -94,32 +94,39 @@
     // Recipient
     //"billing_phone": "(925) 462-3433",
     
+	
+	function pretty_array_print($print_array)
+    {
+    	printf("\n%-50s %s\n", "KEY", "VALUE");
+    	$headbreak = str_repeat("=", 45);
+    	echo $headbreak . "      ";
+    	$headbreak = str_repeat("=", 15);
+    	echo $headbreak . "\n";
+
+    	foreach ($print_array as $key => $value) 
+    	{
+        	printf("%-50s %s\n", $key, $value);
+        }
+	}
+    
     include 'SubDataCheckLibrary.php';
     SubDataCheck($apikey, $apiroot, $template, $recsub, $globalsub, $substitutionItemList, $templateItemList, $missingFields, False);
-    echo "\n\n-----The following output is data coming from the SubDataCheck function which checks what fields are missing from input substitution data that the template is looking for.";
-    echo "\n\nWhich Template Fields are Missing from Subsitution Data and/or may be NULL/Empty?\n";
-    foreach ($missingFields as $key => $value) {
-        echo "\nKey: " . $key . "\t\tValue: " . $value;
-                }
+    echo "\n\nThe following output is data coming from the SubDataCheck function which checks what fields are missing from input substitution data that the template is using.";
+    echo "\nSubDataCheck accepts a parameter to force the search to also identify fields that are empty, they will be denoted with the value of 'Empty' when this data is requested.\n";
+    pretty_array_print($missingFields);
     
-    echo "\n\nWhat Template Fields did we find and was there content?\n";
-    foreach ($templateItemList as $key => $value) {
-        echo "\nKey: " . $key . "\t\tValue: " . $value;
-                }
+    echo "\n\nThis is a full list of Fields found within the template.\n";
+    pretty_array_print($templateItemList);
     
-    
-    echo "\n\nWhat Substitution Fields did we find and was there content?\n";
-    foreach ($substitutionItemList as $key => $value) {
-        echo "\nKey: " . $key . "\t\tValue: " . $value;
-                }
-    
+    echo "\n\nThis is a full list of the substitution fields identified and whether data was found or if it was left empty.\n";
+    pretty_array_print($substitutionItemList); 
     
     $templateItemList = array();
     BuildTemplateFields($apikey, $apiroot, $template, $templateItemList, 'fieldoutput.txt');
-    echo "\n\n-----The following output is data coming from the BuildTemplateFields function which produces a list of fields the template is looking for";
-    echo "\n\nWhat Template Fields did we find?\n";
+    echo "\n\n-----The following output is data coming from the BuildTemplateFields function which produces a list of fields the template is using.";
+    echo "\n\nThis function is similar to SubDataCheck, but only builds the list of template fields.\n";
     foreach ($templateItemList as $key => $value) {
-        echo "\nKey: " . $key . "\t\tValue: " . $value;
+        printf("Field: %sn", $key);
                 }
     
     $results = isJson($recsub);
