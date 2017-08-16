@@ -3,7 +3,7 @@
     $templateItemList     = array();
     $missingFields        = array();
     
-    $apikey   = "xxxxxxxx<use your own>xxxxxxxxxxx";
+    $apikey   = "<use your own>";
     $apiroot  = "https://api.sparkpost.com/api/v1/";
     $template = "invoice";
     $recsub   = '{
@@ -111,6 +111,21 @@
     
     include 'SubDataCheckLibrary.php';
     SubDataCheck($apikey, $apiroot, $template, $recsub, $globalsub, $substitutionItemList, $templateItemList, $missingFields, False);
+/*  Paramter Name                	Required Y/N        	Notes
+    --------------------------    ------------        	-------------------------------------------------------------------------------------------------------------------------------------------------
+    apikey								Y               This application uses your account to get the Template from your account.  It needs an API key with the ability to read templates
+    apiroot                           	Y               For SparkPost.com this should be: https://api.sparkpost.com/api/v1/  For Enterprise customers, use your unique URL
+    template                          	Y               The Template ID you are validating against            
+    recsub                            	Y               This can be an empty string, but if you send data you must send it in the following format
+    												  	{"substitution_data" : {fields.........arrays......etc}}
+    globalsub                      		Y               This can be an empty string, but if you send data you must send it in the following format
+    												  	{"substitution_data" : {fields.........arrays......etc}}
+    substitutionItemList            	Y               An empty array that SubDataCheck will fill with a list of all fields found in the rec and global substitution data blocks
+    templateItemList                	Y               An empty array that SubDataCheck will fill with a list of all fields found in the template
+    missingFields                  		Y               An empty array that SubDataCheck will fill with a list of any fields found in the template but missing from the recipient/global data or optionally, empty/NULL
+    addEmptyFieldstoMissingListFlag		Y				If you want empty/Null substitution fields to be added to the MissingFields list send TRUE; otherwise False
+ */
+    
     echo "\n\nThe following output is data coming from the SubDataCheck function which checks what fields are missing from input substitution data that the template is using.";
     echo "\nSubDataCheck accepts a parameter to force the search to also identify fields that are empty, they will be denoted with the value of 'Empty' when this data is requested.\n";
     pretty_array_print($missingFields);
@@ -123,6 +138,15 @@
     
     $templateItemList = array();
     BuildTemplateFields($apikey, $apiroot, $template, $templateItemList, 'fieldoutput.txt');
+/*  Paramter Name                Required Y/N        	Notes
+    --------------------------    ------------        	-------------------------------------------------------------------------------------------------------------------------------------------------
+    apikey								Y               This application uses your account to get the Template from your account.  It needs an API key with the ability to read templates
+    apiroot                           	Y               For SparkPost.com this should be: https://api.sparkpost.com/api/v1/  For Enterprise customers, use your unique URL
+    template                          	Y               The Template ID you are requesting the field list from              
+    templateItemList                	Y               An empty array that SubDataCheck will fill with a list of all fields found in the template
+    filename							N				If a filename is sent to the function, it will dump the templateItemList out to that file
+*/
+
     echo "\n\n-----The following output is data coming from the BuildTemplateFields function which produces a list of fields the template is using.";
     echo "\n\nThis function is similar to SubDataCheck, but only builds the list of template fields.\n";
     foreach ($templateItemList as $key => $value) {
