@@ -19,35 +19,54 @@
 		},
 		"dynamic_subject": "Sorry to see you leave these in your shopping cart",
 		"DelivChannel": "trans",
-		"company_home_url": "http://www.cabela.com",
-		"company_logo": "https://db.tt/4piOJBHZ",
-		"classes_url": "http://www.cabelasoutdooradventures.com",
-		"stores": "http://www.cabelas.com/stores/stores_home.jsp",
-		"browsing_message_img": "https://db.tt/GrNBJRnf",
-
+		"company_home_url": "http://www.sparkpost.com",
+		"company_logo": "http://www.geekwithapersonality.com/pictures/sparkpostlogo.jpeg",
+		"classes_url": "http://www.company.com/classes.jsp",
+		"stores": "http://www.company.com/stores/stores_home.jsp",
+		"browsing_message_img": "http://www.geekwithapersonality.com/pictures/Camping/SAC_packs_1200x952.jpg",
+		"credit_card_image" : "http://www.geekwithapersonality.com/pictures/cabelaclubcard.png",
+		"credit_card_url" : "http://www.cabelas.com/custserv/custserv.jsp?pageName=clubvisainfo",
+		"gift_card_image" : "http://www.geekwithapersonality.com/pictures/Camping/gift-card.jpg",
+		"gift_card_url" : "http://www.geekwithapersonality.com/pictures/Camping/gift-card.jpg",
+		"adventures_image" : "http://www.geekwithapersonality.com/pictures/Camping/alps.jpg",
+		"adventures_url" : "http://www.geekwithapersonality.com/pictures/Camping/alps.jpg",
+		"links" : [
+		{
+		    "text" : "Blog",
+		    "link" : "https://www.sparkpost.com/blog/#.V5KDvYQbfDI"
+		},{
+		    "text" : "About",
+		    "link" : "https://www.sparkpost.com/about-us"
+		},{
+		    "text" : "Partners",
+		    "link" : "https://www.sparkpost.com/partners"
+		},{
+		    "text" : "Leadership",
+		    "link" : "https://www.sparkpost.com/about-us/leadership"
+		}],
 		"logo_height": "110",
 		"logo_width": "220",
 		"header_color": "#cc6600",
 		"header_box_color": "#fff4ea",
-		"company": "Cabela's",
+		"company": "SparkPost",
 		"free_shipping_flag": "N",
 		"free_shipping": "$79",
 		"promo_code": "SHIPFREE",
 		"sociallist": [{
-			"url": "https://www.facebook.com/Cabelas",
-			"pict": "https://db.tt/hZ3QjdlJ",
+			"url": "https://www.facebook.com/sparkpost",
+			"pict": "http://www.geekwithapersonality.com/pictures/Facebook_Logo.jpg",
 			"alt": "Facebook"
 		}, {
-			"url": "https://twitter.com/cabelas",
-			"pict": "https://db.tt/5F23cSel",
+			"url": "https://twitter.com/sparkpost",
+			"pict": "http://www.geekwithapersonality.com/pictures/Twitter-Bird_Logo.png",
 			"alt": "Twitter"
 		}, {
-			"url": "https://www.youtube.com/cabela",
-			"pict": "https://db.tt/C6rnHIsz",
+			"url": "https://www.youtube.com/sparkpost",
+			"pict": "http://www.geekwithapersonality.com/pictures/youtube-icon.png",
 			"alt": "YouTube"
 		}, {
-			"url": "https://www.pinterest.com/cabelas",
-			"pict": "https://db.tt/QUKt0Hx0",
+			"url": "https://www.pinterest.com/sparkpost",
+			"pict": "http://www.geekwithapersonality.com/pictures/Pinterest_Logo.png",
 			"alt": "Pinterest"
 		}]
 	},
@@ -58,7 +77,7 @@
 	"recipients": [{
 		"return_path": "jeff.goldstein@mail.geekwithapersonality.com",
 		"address": {
-			"email": "jeff.goldstein@sparkpost.com"
+			"email": "email.goldstein@gmail.com"
 		},
 		"metadata": {
 			"season": "Q1"
@@ -68,7 +87,7 @@
 			"outdoor"
 		],
 		"substitution_data": {
-			"user_name": "jeffreyca",
+		"user_name": "jeffreyca",
 			"first_name": "Jeff",
 			"last_name": "Goldstein",
 			"shipping_street_addr1": "659 Windmill Ln",
@@ -86,38 +105,38 @@
 			"billing_country": "United States",
 			"billing_phone": "(925) 462-5333",
 			"main_prod_url": "http://www.cabelas.com/product/camping/sleeping-bags|/pc/104795280/c/104770080/browning-174-mckinley-30-176-f-sleeping-bag/2218167.uts?destination=%2Fcatalog%2Fbrowse%2Fsleeping-bags%2F_%2FN-1100675%2B4294733642%2FNe-4294733642%2FNs-CATEGORY_SEQ_104770080%3FWTz_st%3DGuidedNav%26WTz_stype%3DGNU",
-			"main_prod_img": "https://db.tt/59QKGYKG",
+			"main_prod_img": "http://www.geekwithapersonality.com/pictures/Camping/mainbag.png",
 			"main_prod_name": "Browning® McKinley -30°F Sleeping Bag",
 			"productlist": [{
-				"item_name": "Browning® Titan Cot XP",
+				"item_name": "ByrdLite Kerosene Lamp",
 				"short_description": "",
-				"item_url": "http://www.cabelas.com/catalog/product.jsp?productId=2218172",
-				"item_img": "https://db.tt/NqSjpVKd",
+				"item_url": "http://www.geekwithapersonality.com/pictures/Camping/lantern.jpg",
+				"item_img": "http://www.geekwithapersonality.com/pictures/Camping/lantern.jpg",
 				"sku": "IK-581866",
 				"item_price": "$149.99 US"
 			}, {
-				"item_name": "ALPS Velocity Air Beds",
+				"item_name": "Softbed Camping Mat",
 				"short_description": "",
-				"item_url": "http://www.cabelas.com/product/alps-velocity-air-beds/2218176.uts",
-				"item_img": "https://db.tt/hrFBrECj",
+				"item_url": "http://www.geekwithapersonality.com/pictures/Camping/Closed-Cell-sleeping_pad.gif",
+				"item_img": "http://www.geekwithapersonality.com/pictures/Camping/Closed-Cell-sleeping_pad.gif",
 				"sku": "IK-581867",
 				"item_price": "$99-$199 US"
 			}, {
-				"item_name": "Browning® Fleece Pillow",
+				"item_name": "Magic Hammock",
 				"short_description": "",
-				"item_url": "http://www.cabelas.com/product/browning-174-fleece-pillow/2218179.uts",
-				"item_img": "https://db.tt/kw9m99je",
+				"item_url": "http://www.geekwithapersonality.com/pictures/Camping/hammock.jpg",
+				"item_img": "http://www.geekwithapersonality.com/pictures/Camping/hammock.jpg",
 				"sku": "IK-581870",
 				"item_price": "$17.99 US"
 			}],
 			"abandoned_products": [{
-				"prod_url": "http://www.cabelas.com/product/camping/sleeping-bags|/pc/104795280/c/104770080/browning-174-mckinley-30-176-f-sleeping-bag/2218167.uts?destination=%2Fcatalog%2Fbrowse%2Fsleeping-bags%2F_%2FN-1100675%2B4294733642%2FNe-4294733642%2FNs-CATEGORY_SEQ_104770080%3FWTz_st%3DGuidedNav%26WTz_stype%3DGNU",
-				"prod_img": "https://db.tt/59QKGYKG",
-				"prod_name": "Browning® McKinley -30°F Sleeping Bag"
+				"prod_url": "http://www.geekwithapersonality.com/pictures/Camping/redsleepingbag.jpg",
+				"prod_img": "http://www.geekwithapersonality.com/pictures/Camping/redsleepingbag.jpg",
+				"prod_name": "Banty Bags -30°F Sleeping Bag"
 			}, {
-				"prod_url": "http://www.cabelas.com/product/camping/sleeping-bags|/pc/104795280/c/104770080/browning-reg-denali-mummy-sleeping-bag/1216791.uts?destination=%2Fcatalog%2Fbrowse%2Fsleeping-bags%2F_%2FN-1100675%2B4294733642%2FNe-4294733642%3FWTz_st%3DGuidedNav%26WTz_stype%3DGNU",
-				"prod_img": "https://db.tt/TpJrXXU4",
-				"prod_name": "Browning® Denali Mummy Sleeping Bag"
+				"prod_url": "http://www.geekwithapersonality.com/pictures/Camping/sleepingbag.png",
+				"prod_img": "http://www.geekwithapersonality.com/pictures/Camping/sleepingbag.png",
+				"prod_name": "Pickle Pad -10°F Mummy Sleeping Bag"
 			}]
 		}
 	}]
