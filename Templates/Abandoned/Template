@@ -76,7 +76,7 @@
 			<td height="30" style="border-spacing: 2px;"></td>
 		</tr>
 		<tr style="-webkit-padding-start: 0px;">
-			<td align="center" style="border-spacing: 2px;"><img alt="Still Browsing" border="0" src="{{browsing_message_img}}" style="border: 0px;" width="208" /></td>
+			<td align="center" style="border-spacing: 2px;"><img alt="Still Browsing" border="0" src="{{{browsing_message_img}}}" style="border: 0px;" width="208" /></td>
 		</tr>
 		<tr style="-webkit-padding-start: 0px;">
 			<td align="center" height="30" style="border-spacing: 2px;"><br>Come back soon to pick up that item you've had your eye on:<br><br><br></td>
@@ -92,7 +92,7 @@
 							<tbody style="width: 550px;">
 							    {{each abandoned_products}}
 								<tr style="-webkit-padding-start: 0px;">
-									<td style="border-spacing: 2px;" valign="top" width="260"><a data-msys-linkname="Left Behind Product" href="{{{loop_var.prod_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank"><img border="0" src="{{abandoned_products.prod_img}}." style="border: 0px;" valign="top" width="260" /></a></td>
+									<td style="border-spacing: 2px;" valign="top" width="260"><a data-msys-linkname="Left Behind Product" href="{{{loop_var.prod_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank"><img border="0" src="{{{loop_var.prod_url}}}" style="border: 0px;" valign="top" width="260" /></a></td>
 									<td style="border-spacing: 2px;" width="20"></td>
 									<td style="border-spacing: 2px;" valign="top">
 									<td style="border-spacing: 2px;" valign="middle"><a data-msys-linkname="Left Behind Product" href="{{{loop_var.prod_url}}}" rel="nofollow" style="margin: 0px; padding: 0px; text-decoration: none; background-color: transparent; color: rgb(68, 68, 68); outline: none; font-size: 18px; text-align: center; line-height: 21px; text-transform: uppercase;" target="_blank">{{abandoned_products.prod_name}}</a></td>
@@ -112,14 +112,14 @@
 		</tr>
 		<tr style="-webkit-padding-start: 0px;">
 		    <td align="right" style="border-spacing: 2px;" valign="bottom"><a href="{{{company_home_url}}}?userid={{user_name}}" rel="nofollow" style="margin: 0px; padding: 0px; background-color: transparent; color: rgb(25, 106, 212); outline: none;" target="_blank">
-			    <img alt="Keep Shopping" border="0" src="https://db.tt/5DWU4BPG" style="border: 0px;" width="160" /></a>
+			    <img alt="Keep Shopping" border="0" src="http://www.geekwithapersonality.com/pictures/keepshopping.png" style="border: 0px;" width="80" /></a>
 		    </td>
 		</tr>
 		<tr style="-webkit-padding-start: 0px;">
 			<td height="50" style="border-spacing: 2px;"></td>
 		</tr>
 		<tr style="-webkit-padding-start: 0px;">
-			<td align="center" style="border-spacing: 2px;"><img alt="In Your Cart" border="0" src="https://db.tt/2OsifnYC" style="border: 0px;" width="250" /></td>
+			<td align="center" style="border-spacing: 2px;"><img alt="In Your Cart" border="0" src="http://www.geekwithapersonality.com/pictures/cart.jpeg" style="border: 0px;" width="50" /></td>
 		</tr>
 		<tr " style="-webkit-padding-start: 0px;">
 			<td height="15" " style="border-spacing: 2px;"></td>
