@@ -7,16 +7,16 @@
 		"dynamic_subject": "Sorry to see you leave these in your shopping cart",
 		"DelivChannel": "trans",
 		"company_home_url": "http://www.sparkpost.com",
-		"company_logo": "https://db.tt/vmCFpB8C",
+		"company_logo": "http://www.geekwithapersonality.com/pictures/sparkpostlogo.jpeg",
 		"classes_url": "http://www.company.com/classes.jsp",
 		"stores": "http://www.company.com/stores/stores_home.jsp",
-		"browsing_message_img": "https://db.tt/GrNBJRnf",
-		"credit_card_image" : "https://db.tt/hjDm60mJ",
-		"credit_card_url" : "https://db.tt/hjDm60mJ",
-		"gift_card_image" : "https://db.tt/cR0ToAy9",
-		"gift_card_url" : "https://db.tt/cR0ToAy9",
-		"adventures_image" : "https://db.tt/Ms4h4Cav",
-		"adventures_url" : "https://db.tt/Ms4h4Cav",
+		"browsing_message_img": "http://www.geekwithapersonality.com/pictures/Camping/SAC_packs_1200x952.jpg",
+		"credit_card_image" : "http://www.geekwithapersonality.com/pictures/cabelaclubcard.png",
+		"credit_card_url" : "http://www.cabelas.com/custserv/custserv.jsp?pageName=clubvisainfo",
+		"gift_card_image" : "http://www.geekwithapersonality.com/pictures/Camping/gift-card.jpg",
+		"gift_card_url" : "http://www.geekwithapersonality.com/pictures/Camping/gift-card.jpg",
+		"adventures_image" : "http://www.geekwithapersonality.com/pictures/Camping/alps.jpg",
+		"adventures_url" : "http://www.geekwithapersonality.com/pictures/Camping/alps.jpg",
 		"links" : [
 		{
 		    "text" : "Blog",
@@ -41,19 +41,19 @@
 		"promo_code": "SHIPFREE",
 		"sociallist": [{
 			"url": "https://www.facebook.com/sparkpost",
-			"pict": "https://db.tt/hZ3QjdlJ",
+			"pict": "http://www.geekwithapersonality.com/pictures/Facebook_Logo.jpg",
 			"alt": "Facebook"
 		}, {
 			"url": "https://twitter.com/sparkpost",
-			"pict": "https://db.tt/5F23cSel",
+			"pict": "http://www.geekwithapersonality.com/pictures/Twitter-Bird_Logo.jpg",
 			"alt": "Twitter"
 		}, {
 			"url": "https://www.youtube.com/sparkpost",
-			"pict": "https://db.tt/C6rnHIsz",
+			"pict": "http://www.geekwithapersonality.com/pictures/youtube-icon.png",
 			"alt": "YouTube"
 		}, {
 			"url": "https://www.pinterest.com/sparkpost",
-			"pict": "https://db.tt/QUKt0Hx0",
+			"pict": "http://www.geekwithapersonality.com/pictures/Pinterest_Logo.png",
 			"alt": "Pinterest"
 		}],
 			"user_name": "jeffreyca",
@@ -74,37 +74,37 @@
 			"billing_country": "United States",
 			"billing_phone": "(925) 462-5333",
 			"main_prod_url": "http://www.cabelas.com/product/camping/sleeping-bags|/pc/104795280/c/104770080/browning-174-mckinley-30-176-f-sleeping-bag/2218167.uts?destination=%2Fcatalog%2Fbrowse%2Fsleeping-bags%2F_%2FN-1100675%2B4294733642%2FNe-4294733642%2FNs-CATEGORY_SEQ_104770080%3FWTz_st%3DGuidedNav%26WTz_stype%3DGNU",
-			"main_prod_img": "https://db.tt/59QKGYKG",
+			"main_prod_img": "http://www.geekwithapersonality.com/pictures/Camping/mainbag.png",
 			"main_prod_name": "Browning® McKinley -30°F Sleeping Bag",
 			"productlist": [{
 				"item_name": "ByrdLite Kerosene Lamp",
 				"short_description": "",
-				"item_url": "https://db.tt/XwtT1Y96",
-				"item_img": "https://db.tt/XwtT1Y96",
+				"item_url": "http://www.geekwithapersonality.com/pictures/Camping/lantern.jpg",
+				"item_img": "http://www.geekwithapersonality.com/pictures/Camping/lantern.jpg",
 				"sku": "IK-581866",
 				"item_price": "$149.99 US"
 			}, {
 				"item_name": "Softbed Camping Mat",
 				"short_description": "",
-				"item_url": "https://db.tt/DPc6FNWg",
-				"item_img": "https://db.tt/DPc6FNWg",
+				"item_url": "http://www.geekwithapersonality.com/pictures/Camping/Closed-Cell-sleeping_pad.gif",
+				"item_img": "http://www.geekwithapersonality.com/pictures/Camping/Closed-Cell-sleeping_pad.gif",
 				"sku": "IK-581867",
 				"item_price": "$99-$199 US"
 			}, {
 				"item_name": "Magic Hammock",
 				"short_description": "",
-				"item_url": "https://db.tt/C3wKm5gh",
-				"item_img": "https://db.tt/C3wKm5gh",
+				"item_url": "http://www.geekwithapersonality.com/pictures/Camping/hammock.jpg",
+				"item_img": "http://www.geekwithapersonality.com/pictures/Camping/hammock.jpg",
 				"sku": "IK-581870",
 				"item_price": "$17.99 US"
 			}],
 			"abandoned_products": [{
-				"prod_url": "https://db.tt/XmLMffUI",
-				"prod_img": "https://db.tt/XmLMffUI",
+				"prod_url": "http://www.geekwithapersonality.com/pictures/Camping/redsleepingbag.jpg",
+				"prod_img": "http://www.geekwithapersonality.com/pictures/Camping/redsleepingbag.jpg",
 				"prod_name": "Banty Bags -30°F Sleeping Bag"
 			}, {
-				"prod_url": "https://db.tt/shzTM5cO",
-				"prod_img": "https://db.tt/shzTM5cO",
+				"prod_url": "http://www.geekwithapersonality.com/pictures/Camping/sleepingbag.png",
+				"prod_img": "http://www.geekwithapersonality.com/pictures/Camping/sleepingbag.png",
 				"prod_name": "Pickle Pad -10°F Mummy Sleeping Bag"
 			}]
 }
